@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 400;
+  src: url(/assets/spina/Metropolis-Regular-c9cfcc47329e42ace45023c6c0f809d3596bb467f536bafa4e9b8581acf4759c.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-RegularItalic-a0685fff40f99d2dad9623d933fb3d58bc1e3a2d2ad6c04ebf6047c89508afe3.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 100;
+  src: url(/assets/spina/Metropolis-Thin-b5fa37706a60c4d1195a3568508c3818ca8bd79badcf09b76c10a9e1a4c5915a.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 100;
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-ThinItalic-9fa9ef7bbf779705bd01f4d0df9839bd1a41c294a7d6c16648be26fcebc4d199.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 200;
+  src: url(/assets/spina/Metropolis-ExtraLight-8dddb7cf5fca021da2a0a514cfe685684f12179f0c5f4225972bdf0c37d473a3.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 200;
+  src: url(/assets/spina/Metropolis-ExtraLightItalic-bfc92ecd4d4f4e95b4e1364748afbc0c73e9e98419698a1c06b116c100252858.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 300;
+  src: url(/assets/spina/Metropolis-Light-684dcea981b2eeb1f7d5573dae824b18bf88af05047dac67e791d654ebafd721.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 300;
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-LightItalic-f407048afc2bfb73a9799758c4f8815c7089429ad71d4ac3f2169b06ccaec30a.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 500;
+  src: url(/assets/spina/Metropolis-Medium-ac01766924caa47d4d5003e0511029259b1cf09e9f76a662382120bc3a42ab6c.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 500;
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-MediumItalic-9c98ba48c14e4a24ac71f694fb0169fa2accafd1dbcea56d6808c3278f353213.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 600;
+  src: url(/assets/spina/Metropolis-SemiBold-55a2d38a26092c641c6a092c6d9617ad19cfbe5201726465c7fc06d5baf9d555.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 600;
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-SemiBoldItalic-1330a4c098d640540f3b1234989ea290dd3493e9f04a6d38c27d57edd8e11838.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 700;
+  src: url(/assets/spina/Metropolis-Bold-0ba80213bf41a4e3672358eafea0c15abaff2154db6d36447663b93eb860388e.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 700;
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-BoldItalic-dd9b330b29cd09d74712a69584bba3c1dd429010f8614324815dbf3491284a52.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 800;
+  src: url(/assets/spina/Metropolis-ExtraBold-0c9d6890ad56470466c969f2217b5fdfc3030ad583e171bdaadea2c8a255c478.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 800;
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-ExtraBoldItalic-5b2d1e1ee59ef08a13e7a8094d50102aa0aa1d2a261d9239a14c37f8544b9884.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 900;
+  src: url(/assets/spina/Metropolis-Black-aa1ddf8aee081453463eda5557254ce97ff79aed2596758119660b8630f6fd95.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 900;
+  font-style: italic;
+  src: url(/assets/spina/Metropolis-BlackItalic-ade6201f35d9e36a49d558c9a68c842b8be2605517aa4766c790333f958118bd.woff2) format("woff2");
+}

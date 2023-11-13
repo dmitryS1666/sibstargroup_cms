@@ -1,0 +1,720 @@
+.home-supply-basis {
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 1439px) {
+    padding-top: 50px;
+  }
+
+  .container {
+    padding-top: 15px;
+    border-top: 1px solid $color-dark;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 10;
+  }
+
+  &__h2 {
+    margin-bottom: 35px;
+
+    @media (max-height: 480px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-height: 480px) {
+      gap: 10px;
+    }
+  }
+
+  &__button-close {
+    display: none;
+
+    img {
+      max-height: 52px;
+
+      @media (max-width: 991px) {
+        max-height: 42px;
+      }
+    }
+
+    &_show {
+      display: inline-flex;
+    }
+  }
+}
+
+.home-supply-basis-map {
+  position: relative;
+  z-index: 1;
+
+  &__background {
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__path {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+
+    &_show {
+      opacity: 1;
+    }
+  }
+}
+
+.home-supply-basis-map-item {
+  position: absolute;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+
+  &__dot {
+    width: 1.4583333333333333vw;
+    height: 1.4583333333333333vw;
+    border-radius: 50%;
+    background-color: #f00000;
+    position: relative;
+  }
+
+  &__name {
+    color: $color-dark;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    margin-bottom: 5px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  &__plus {
+    &:before,
+    &:after {
+      content: '';
+      width: 50%;
+      height: 2px;
+      background-color: $color-white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      transform-origin: 50% 50%;
+
+      @media (max-height: 480px) {
+        height: 1px;
+      }
+    }
+
+    &:after {
+      transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    }
+  }
+
+  &_small {
+    cursor: pointer;
+
+    .home-supply-basis-map-item__dot {
+      width: 1.1805555555555556vw;
+      height: 1.1805555555555556vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -2vw;
+        margin-top: -2vw;
+        border-radius: 50%;
+        background-color: rgba(240, 0, 0, 0.3);
+        transform: scale(0);
+        animation: pulseDot 3s linear infinite;
+      }
+
+      &:after {
+        animation-delay: 1s;
+      }
+    }
+
+    .home-supply-basis-map-item__name {
+      font-size: 13px;
+    }
+  }
+
+  &_hide {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &_kuzbas {
+    left: 13.125%;
+    top: 37.84530386740331%;
+
+    .home-supply-basis-map-item__name {
+      top: 100%;
+      margin-top: 5px;
+      bottom: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  &_hakassia {
+    left: 17.708333333333336%;
+    top: 36.46408839779006%;
+  }
+
+  &_blagoveshensk {
+    left: 76.66666666666667%;
+    top: 54.972375690607734%;
+  }
+
+  &_habarovsk {
+    left: 88.40277777777777%;
+    top: 63.67403314917127%;
+  }
+
+  &_mihajlo-semenovoskaya {
+    left: 85.20833333333333%;
+    top: 66.4364640883978%;
+
+    .home-supply-basis-map-item__name {
+      bottom: 50%;
+      transform: translateY(50%);
+      left: auto;
+      right: 100%;
+      margin-right: 5px;
+      text-align: right;
+      margin-bottom: 3px;
+    }
+  }
+
+  &_grodekovo {
+    left: 83.26388888888889%;
+    top: 82.4585635359116%;
+  }
+
+  &_kamyshovaya {
+    left: 81.59722222222221%;
+    top: 89.9171270718232%;
+  }
+}
+
+.home-supply-basis-map-video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: $color-light;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: none;
+  animation: fadeIn 0.3s ease 1 forwards;
+  align-items: center;
+  overflow: hidden;
+
+  &_show {
+    display: flex;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+
+    > svg {
+      position: absolute;
+    }
+  }
+
+  &__poster {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__path {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    display: none;
+    animation: fadeIn 0.3s ease 1 forwards;
+    background: transparent;
+    width: 100%;
+    mask-size: 100% auto;
+
+    .home-supply-basis-map-video_dap & {
+      //clip-path: url('#mask-dap');
+      mask-image: url('/assets/img/mask-dap.svg');
+    }
+
+    .home-supply-basis-map-video_fob & {
+      //clip-path: url('#mask-fob');
+      mask-image: url('/assets/img/mask-fob.svg');
+    }
+
+    .home-supply-basis-map-video_cfr & {
+      //clip-path: url('#mask-cfr');
+      mask-image: url('/assets/img/mask-cfr.svg');
+    }
+
+    &_show {
+      display: block;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+    cursor: pointer;
+    z-index: 20;
+    border-radius: 50%;
+    transform: rotate(-54deg) skew(0deg, 34deg);
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -45px;
+      margin-top: -45px;
+      border-radius: 50%;
+      background-color: rgba(64, 198, 255, 0.4);
+      transform: scale(0);
+      animation: pulseDot 3s linear infinite;
+
+      @media (max-width: 480px) {
+        width: 60px;
+        height: 60px;
+        margin-left: -30px;
+        margin-top: -30px;
+      }
+    }
+
+    &:after {
+      animation-delay: 1s;
+    }
+
+    &_active {
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+
+    &_dap-01 {
+      left: 40.619979%;
+      top: 64.27201%;
+    }
+
+    &_dap-02 {
+      left: 72.219979%;
+      top: 42.64201%;
+    }
+
+    &_dap-03 {
+      left: 82.019979%;
+      top: 35.12201%;
+    }
+
+    &_fob-01 {
+      left: 61.719979%;
+      top: 61.77201%;
+    }
+
+    &_fob-02 {
+      left: 75.637146%;
+      top: 42.733486%;
+    }
+
+    &_cfr-01 {
+      left: 42.3199790136%;
+      top: 69.81201%;
+    }
+
+    &_cfr-02 {
+      left: 58.1471458552%;
+      top: 41.273486%;
+    }
+  }
+
+  &__city {
+    color: #252739;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+
+    @media (max-height: 480px) {
+      font-size: 10px;
+    }
+
+    &_cfr-01 {
+      left: 44.119979%;
+      top: 69.21201%;
+      justify-content: flex-start;
+    }
+
+    &_cfr-02 {
+      left: 60.319979%;
+      top: 41.01201%;
+      justify-content: flex-start;
+    }
+
+    &_cfr-03 {
+      left: 69.619979%;
+      top: 33.91201%;
+      justify-content: flex-start;
+    }
+
+    &_dap-01 {
+      left: 29.119979%;
+      top: 81.21201%;
+    }
+
+    &_dap-02 {
+      left: 42.519979%;
+      top: 63.81201%;
+      justify-content: flex-start;
+    }
+
+    &_dap-03 {
+      left: 45.519979%;
+      top: 41.21201%;
+    }
+
+    &_dap-04 {
+      left: 72.319979%;
+      top: 45.21201%;
+    }
+
+    &_dap-05 {
+      left: 66.419979%;
+      top: 23.21201%;
+    }
+
+    &_dap-06 {
+      left: 82.119979%;
+      top: 37.21201%;
+    }
+
+    &_fob-01 {
+      left: 41.619979%;
+      top: 58.21201%;
+    }
+
+    &_fob-02 {
+      left: 61.719979%;
+      top: 64.21201%;
+    }
+
+    &_fob-03 {
+      left: 47.119979%;
+      top: 32.21201%;
+    }
+
+    &_fob-04 {
+      left: 75.719979%;
+      top: 45.21201%;
+    }
+  }
+}
+
+.home-supply-basis-map-popup {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14.87%;
+  z-index: 15;
+  border-radius: 24px;
+  background: $color-white;
+  box-shadow: 0px 6px 15px 0px rgba(33, 33, 33, 0.25);
+  width: 278px;
+  overflow: hidden;
+  min-height: 337px;
+  display: none;
+
+  @media (max-width: 991px) {
+    min-height: initial;
+    width: 220px;
+    bottom: 10%;
+  }
+
+  &:hover .home-supply-basis-map-popup__link {
+    color: $color-dark;
+    border-color: $color-dark;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &_show {
+    display: block;
+  }
+
+  &__item {
+    padding: 30px 25px;
+    background: url('/assets/img/supply-basis-border.svg') 0 100% repeat-x;
+
+    @media (max-width: 991px) {
+      padding: 15px;
+    }
+
+    @media (max-width: 991px) {
+      padding: 10px 15px;
+    }
+
+    &:last-child {
+      background: none;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 20;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__type {
+    color: $color-dark;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 5px;
+    opacity: 0.5;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    color: $color-dark;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+
+    @media (max-width: 991px) {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__city {
+    color: $color-dark;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 3px;
+
+    @media (max-width: 991px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    color: $color-primary;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+    border-bottom: 1px solid $color-primary;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: border 0.3s ease, color 0.3s ease;
+    will-change: border, color;
+
+    @media (max-width: 991px) {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+.home-supply-basis-map-video-popup {
+  position: absolute;
+  right: 1.8%;
+  bottom: 12%;
+  border-radius: 24px;
+  background: $color-white;
+  box-shadow: 0px 6px 15px 0px rgba(33, 33, 33, 0.25);
+  width: 278px;
+  padding: 30px 25px 25px;
+  display: none;
+  z-index: 30;
+
+  @media (max-width: 1439px) {
+    width: 19.3vw;
+    padding: 2.08vw 1.73vw 1.73vw;
+  }
+
+  &_show {
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 10;
+
+    @media (max-width: 1439px) {
+      right: 0.69vw;
+      top: 0.69vw;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+
+      @media (max-width: 1439px) {
+        width: 2.77vw;
+        height: 2.77vw;
+      }
+    }
+  }
+
+  &__type {
+    color: $color-dark;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    opacity: 0.5;
+    margin-bottom: 5px;
+
+    @media (max-width: 1439px) {
+      font-size: 1.25vw;
+      line-height: 1.38vw;
+      margin-bottom: 1.38vw;
+    }
+  }
+
+  &__city {
+    color: $color-dark;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+
+    @media (max-width: 1439px) {
+      font-size: 1.66vw;
+      line-height: 1.875vw;
+    }
+  }
+
+  &__head {
+    margin-bottom: 42px;
+
+    @media (max-width: 1439px) {
+      margin-bottom: 2.91vw;
+    }
+  }
+
+  &__title {
+    color: $color-dark;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+
+    @media (max-width: 1439px) {
+      font-size: 5.55vw;
+      margin-bottom: 2.22vw;
+    }
+  }
+
+  .button {
+    padding: 10px 10px 15px;
+    width: 100%;
+
+    @media (max-width: 1439px) {
+      padding: 0.69vw 0.69vw 1.04vw;
+      font-size: 1.25vw;
+      line-height: 1.73vw;
+    }
+  }
+}

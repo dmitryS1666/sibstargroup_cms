@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 10
+  host: <%= ENV.fetch('DATABASE_HOST', 'localhost') %>
+  port: <%= ENV.fetch('DATABASE_PORT', 5434) %>
+  database: sibstar_g
+  username: sushi
+  password: 0590
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  database: sibstar_g_production
+  username: sibstar_g
+  password: sibstar_g

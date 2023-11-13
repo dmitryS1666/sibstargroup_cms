@@ -1,0 +1,112 @@
+.choices {
+  margin-bottom: 0;
+
+  &[data-type*='select-one'] {
+    .choices__inner {
+      padding-bottom: 2px;
+    }
+
+    &:after {
+      border: none;
+      background: url('/assets/img/icons/select-arrow.svg') 50% 50% no-repeat;
+      width: 24px;
+      height: 24px;
+      margin-top: -12px;
+      right: 15px;
+      z-index: 4;
+    }
+
+    &.is-open:after {
+      margin-top: -12px;
+    }
+  }
+
+  &__inner {
+    border-radius: 10px;
+    border: 1px solid $color-dark;
+    height: 50px;
+    padding: 2px 30px 2px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    background-color: $color-light;
+
+    @media (max-height: 480px) {
+      height: 40px;
+    }
+
+    .is-focused &,
+    .is-open & {
+      border-radius: 10px;
+      border-color: $color-primary;
+    }
+  }
+
+  &__list {
+    &--single {
+      padding: 0;
+      display: block;
+    }
+
+    &--dropdown {
+      padding-top: 10px;
+      margin-top: -10px;
+      border: 1px solid $color-dark;
+      border-top: 0;
+      border-radius: 0 0 10px 10px;
+
+      &.choices__list[aria-expanded] {
+        margin-top: -10px;
+        border-radius: 0 0 10px 10px;
+
+        .is-open & {
+          border-color: $color-dark;
+        }
+      }
+
+      &.choices__list[aria-expanded] .choices__item--selectable,
+      .choices__item--selectable {
+        padding-right: 20px;
+
+        &:after {
+          content: none;
+        }
+
+        &.is-highlighted {
+          background: transparent;
+          color: $color-primary;
+        }
+      }
+
+      &.choices__list[aria-expanded] .choices__item,
+      .choices__item {
+        padding: 10px 20px 14px;
+        color: $color-dark;
+        font-size: 16px;
+        line-height: 1;
+        letter-spacing: 0.8px;
+        border-bottom: 1px solid rgba(37, 39, 57, 0.5);
+        transition: color 0.3s ease;
+        will-change: color;
+
+        @media (max-height: 480px) {
+          font-size: 14px;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:after {
+          content: none;
+        }
+
+        &.is-highlighted {
+          background: transparent;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}

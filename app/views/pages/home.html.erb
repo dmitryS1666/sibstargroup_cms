@@ -1,0 +1,240 @@
+<div class="home-hero">
+  <video class="home-hero__background" autoplay="true" muted="muted" loop="true" playsinline="playsinline">
+    <source src="assets/video/hero.mp4" type="video/mp4"/>
+    <source src="assets/video/hero.webm" type="video/webm"/>
+  </video>
+
+  <div class="container">
+    <div class="home-hero__left">
+      <h1>
+        <%= @titles['slogan'][0]['title'] %>
+      </h1>
+      <a class="button button_primary popup-open" href="#popup-order">
+        <%= @buttons['btn_order'][0]['title'] %>
+      </a>
+    </div>
+    <div class="home-hero__right">
+      <div class="home-hero-counter">
+        <div class="home-hero-counter__text"><%= @titles['coal_supplied'][0]['title'] %></div>
+        <div class="home-hero-counter__main">>&nbsp;<span class="home-hero-counter__value" data-counter="1000000" data-speed="500">0</span><span class="home-hero-counter_small">&nbsp;тонн</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-hero__scroll"><img src="assets/icons/angle-down.svg" alt=""/></div>
+</div>
+
+<div class="home-about home-section" id="about">
+  <div class="home-about-head">
+    <div class="container">
+      <div class="home-about-head__title">SIBSTAR GROUP</div>
+      <h2 class="home-about-head__h2"><%= @titles['about_company'][0]['title'] %></h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="home-about-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide home-about-slider__slide">
+          <div class="home-about-slider__content">
+            <div class="home-about-slider__text">
+              Мы расширяем не только географию сотрудничества, но&nbsp;и&nbsp;структуру
+              поставляемой продукции.
+            </div>
+          </div>
+          <div class="home-about-slider__image">
+            <img src="assets/about-01.jpg" alt="" srcset="assets/about-01.jpg 1x, assets/about-01@2x.jpg 2x, assets/about-01@3x.jpg 3x"/>
+          </div>
+        </div>
+        <div class="swiper-slide home-about-slider__slide">
+          <div class="home-about-slider__content">
+            <div class="home-about-slider__text">
+              Отгрузки энергоносителей осуществляются в адрес производственных
+              гигантов Юго-восточной Азии и Турции. Наши ключевые партнеры — крупные промышленные предприятия Китая
+              и
+              Турции.
+            </div>
+          </div>
+          <div class="home-about-slider__image">
+            <img src="assets/about-02.jpg" alt="" srcset="assets/about-02.jpg 1x, assets/about-02@2x.jpg 2x, assets/about-02@3x.jpg 3x"/>
+          </div>
+        </div>
+        <div class="swiper-slide home-about-slider__slide">
+          <div class="home-about-slider__content">
+            <div class="home-about-slider__text">
+              «СИБСТАР» — ваш надежный партнер для энергетического угля с 2019
+              года.
+            </div>
+          </div>
+          <div class="home-about-slider__image">
+            <img src="assets/about-03.jpg" alt="" srcset="assets/about-03.jpg 1x, assets/about-03@2x.jpg 2x, assets/about-03@3x.jpg 3x"/>
+          </div>
+        </div>
+      </div>
+      <div class="home-about-slider-navigation">
+        <div class="home-about-slider-navigation__item"></div>
+      </div>
+    </div>
+    <div class="home-about__command">
+      <a class="button button_outline popup-open" href="#popup-command">
+        <%= @buttons['btn_command'][0]['title'] %>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="home-coal-sales home-section" id="coal-sales">
+  <div class="container">
+    <h2 class="home-coal-sales__h2"><%= @titles['coal_sales'][0]['title'] %></h2>
+    <p class="home-coal-sales__start-text">
+      <%= @general['coal_desc'][0]['text'] %>
+    </p>
+    <%= render 'shared/home_coal_sales_accordion/dpk' %>
+    <%= render 'shared/home_coal_sales_accordion/do' %>
+    <%= render 'shared/home_coal_sales_accordion/domssh' %>
+    <%= render 'shared/home_coal_sales_accordion/g' %>
+    <%= render 'shared/home_coal_sales_accordion/tomssh' %>
+  </div>
+</div>
+<div class="home-supply-basis home-section" id="supply-basis">
+  <div class="container">
+    <h2 class="home-supply-basis__h2"><%= @titles['supply_basic'][0]['title'] %></h2>
+    <div class="home-supply-basis__buttons">
+      <button class="button button_outline" data-path="dap" data-cities="mihajlo-semenovoskaya,grodekovo,kamyshovaya">DAP</button>
+      <button class="button button_outline" data-path="fob" data-cities="blagoveshensk,habarovsk">FOB</button>
+      <button class="button button_outline" data-path="cfr" data-cities="habarovsk">CFR</button>
+      <button class="button home-supply-basis__button-close"><img src="assets/icons/close.svg" alt=""/></button>
+    </div>
+  </div>
+  <div class="home-supply-basis-map">
+    <div class="home-supply-basis-map__background">
+      <img src="assets/supply-basis-map.jpg" alt="" srcset="assets/supply-basis-map.jpg 1x, assets/supply-basis-map@2x.jpg 2x, assets/supply-basis-map@3x.jpg 3x"/>
+    </div>
+    <div class="home-supply-basis-map__path home-supply-basis-map__path_default">
+      <img src="assets/supply-basis-path-default.svg" alt=""/></div>
+    <div class="home-supply-basis-map__path home-supply-basis-map__path_dap">
+      <img src="assets/supply-basis-path-dap.svg" alt=""/></div>
+    <div class="home-supply-basis-map__path home-supply-basis-map__path_fob">
+      <img src="assets/supply-basis-path-fob.svg" alt=""/></div>
+    <div class="home-supply-basis-map__path home-supply-basis-map__path_cfr">
+      <img src="assets/supply-basis-path-cfr.svg" alt=""/></div>
+    <div class="home-supply-basis-map-item home-supply-basis-map-item_kuzbas" data-city="kuzbas">
+      <div class="home-supply-basis-map-item__dot"></div>
+      <div class="home-supply-basis-map-item__name">Кузбасс</div>
+    </div>
+    <div class="home-supply-basis-map-item home-supply-basis-map-item_hakassia" data-city="hakassia">
+      <div class="home-supply-basis-map-item__dot"></div>
+      <div class="home-supply-basis-map-item__name">Хакассия</div>
+    </div>
+    <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_blagoveshensk" data-city="blagoveshensk">
+      <div class="home-supply-basis-map-item__dot">
+        <div class="home-supply-basis-map-item__plus"></div>
+      </div>
+      <div class="home-supply-basis-map-item__name">Благовещенск</div>
+    </div>
+    <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_habarovsk" data-city="habarovsk">
+      <div class="home-supply-basis-map-item__dot">
+        <div class="home-supply-basis-map-item__plus"></div>
+      </div>
+      <div class="home-supply-basis-map-item__name">Хабаровск</div>
+    </div>
+    <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_mihajlo-semenovoskaya" data-city="mihajlo-semenovoskaya">
+      <div class="home-supply-basis-map-item__dot">
+        <div class="home-supply-basis-map-item__plus"></div>
+      </div>
+      <div class="home-supply-basis-map-item__name">Михайло-Семёновская</div>
+    </div>
+    <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_grodekovo" data-city="grodekovo">
+      <div class="home-supply-basis-map-item__dot">
+        <div class="home-supply-basis-map-item__plus"></div>
+      </div>
+      <div class="home-supply-basis-map-item__name">Гродеково</div>
+    </div>
+    <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_kamyshovaya" data-city="kamyshovaya">
+      <div class="home-supply-basis-map-item__dot">
+        <div class="home-supply-basis-map-item__plus"></div>
+      </div>
+      <div class="home-supply-basis-map-item__name">Камышовая</div>
+    </div>
+    <div class="home-supply-basis-map-popup home-supply-basis-map-popup_blagoveshensk">
+      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Речной порт</div>
+        <div class="home-supply-basis-map-popup__title">Благовещенск</div>
+      </div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__link" data-path="fob">FOB</div>
+        <div class="home-supply-basis-map-popup__city">Хэйхе</div>
+      </div>
+    </div>
+    <div class="home-supply-basis-map-popup home-supply-basis-map-popup_habarovsk">
+      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Речной порт</div>
+        <div class="home-supply-basis-map-popup__title">Хабаровск</div>
+      </div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__link" data-path="fob">FOB</div>
+        <div class="home-supply-basis-map-popup__city">Тунцзян</div>
+      </div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__link" data-path="cfr">СFR</div>
+        <div class="home-supply-basis-map-popup__city">Фуюань</div>
+        <div class="home-supply-basis-map-popup__city">Тунцзян</div>
+      </div>
+    </div>
+    <div class="home-supply-basis-map-popup home-supply-basis-map-popup_mihajlo-semenovoskaya">
+      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Речной порт</div>
+        <div class="home-supply-basis-map-popup__title">Михайло-Семёновская</div>
+      </div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__link" data-path="dap">DAP</div>
+        <div class="home-supply-basis-map-popup__city">Тунцзян</div>
+      </div>
+    </div>
+    <div class="home-supply-basis-map-popup home-supply-basis-map-popup_grodekovo">
+      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Речной порт</div>
+        <div class="home-supply-basis-map-popup__title">Гродеково</div>
+      </div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__link" data-path="dap">DAP</div>
+        <div class="home-supply-basis-map-popup__city">Суйфэнхэ</div>
+      </div>
+    </div>
+    <div class="home-supply-basis-map-popup home-supply-basis-map-popup_kamyshovaya">
+      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Речной порт</div>
+        <div class="home-supply-basis-map-popup__title">Камышовая</div>
+      </div>
+      <div class="home-supply-basis-map-popup__item">
+        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__link" data-path="dap">DAP</div>
+        <div class="home-supply-basis-map-popup__city">Хунчунь</div>
+      </div>
+    </div>
+    <%= render 'shared/video/dap' %>
+    <%= render 'shared/video/fob' %>
+    <%= render 'shared/video/cfr' %>
+  </div>
+</div>
+<div class="home-news home-section" id="news">
+  <div class="container">
+    <h2 class="home-news__h2"><%= @titles['news'][0]['title'] %></h2>
+    <div class="news-list">
+      <a class="news-list-item popup-open" href="#popup-news" data-link="/assets/html/news-04.html"><span class="news-list-item__date">10.10.2023</span><span class="news-list-item__title">Участие компании «Сибстаргруп» в международной угольной выставке China coal and mining expo 2023 в Пекине</span><span class="news-list-item__more">Читать далее<span class="news-list-item__more_arrow">→</span></span></a><a class="news-list-item popup-open" href="#popup-news" data-link="/assets/html/news-03.html"><span class="news-list-item__date">04.10.2023</span><span class="news-list-item__title">Открытие филиала в г. Тунцзян</span><span class="news-list-item__more">Читать далее<span class="news-list-item__more_arrow">→</span></span></a><a class="news-list-item popup-open" href="#popup-news" data-link="/assets/html/news-02.html"><span class="news-list-item__date">01.10.2023</span><span class="news-list-item__title">Открытие филиала в Гонконге</span><span class="news-list-item__more">Читать далее<span class="news-list-item__more_arrow">→</span></span></a>
+    </div>
+    <div class="home-news__button">
+      <a class="button button_outline button_invert" href="news.html">
+        <%= @buttons['btn_news'][0]['title'] %>
+      </a>
+    </div>
+  </div>
+</div>
+<%= render 'shared/navigation_page' %>

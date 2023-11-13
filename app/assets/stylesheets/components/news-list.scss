@@ -1,0 +1,105 @@
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.news-list-item {
+  width: calc(33.33% - (40px / 3));
+  border-radius: 24px;
+  background-color: $color-light;
+  padding: 35px 30px 122px 35px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  will-change: background-color, transform;
+  text-decoration: none;
+  height: 393px;
+
+  @media (max-width: 991px) {
+    padding: 20px;
+    height: auto;
+    min-height: 200px;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    transform: translateY(-10px);
+    text-decoration: none;
+
+    .news-list-item__date,
+    .news-list-item__title {
+      color: $color-light;
+    }
+
+    .news-list-item__more {
+      opacity: 1;
+
+      &_arrow {
+        transition: transform 0.3s 0.1s ease;
+        transform: translateX(15px);
+      }
+    }
+  }
+
+  &__date {
+    color: rgba(37, 39, 57, 0.5);
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    will-change: color;
+    display: block;
+
+    @media (max-width: 991px) {
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    color: $color-dark;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    transition: color 0.3s ease;
+    will-change: color;
+    display: block;
+
+    @media (max-width: 1349px) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    @media (max-width: 991px) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__more {
+    position: absolute;
+    left: 35px;
+    bottom: 38px;
+    display: flex;
+    align-items: center;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+    opacity: 0;
+    pointer-events: none;
+
+    @media (max-width: 991px) {
+      font-size: 12px;
+      line-height: 1;
+      left: 20px;
+      display: none;
+    }
+
+    &_arrow {
+      transition: transform 0.3s ease;
+      will-change: transform;
+    }
+  }
+}

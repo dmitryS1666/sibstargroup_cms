@@ -1,0 +1,92 @@
+<footer class="footer home-section" id="contact">
+  <div class="container">
+    <div class="footer__head">
+      <h2 class="footer__h2">
+        <%= @general['footer_q'][0]['text'] %>
+      </h2>
+      <div class="footer__buttons">
+        <a class="button button_outline button_invert popup-open" href="#popup-email-us">
+          <%= @buttons['btn_mail'][0]['title'] %>
+        </a>
+        <a class="button button_primary popup-open" href="#popup-order">
+          <%= @buttons['btn_order'][0]['title'] %>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__middle">
+      <div class="footer-info">
+        <div class="footer-info__title">
+          <%= @contacts['gq'][0]['title'] %>
+        </div>
+        <div class="footer-info__item">
+          <%= @contacts['gq'][0]['person'] %>
+        </div>
+        <div class="footer-info__item">
+          <%= @contacts['gq'][0]['phone_num'] %>
+        </div>
+        <a class="footer-info__item" href="mailto:v.zvereva@sibstargroup.com">
+          <%= @contacts['gq'][0]['address'] %>
+        </a>
+        <div class="footer-info__item">
+          <span class="popup-open" data-popup="popup-qr-01">WeChat</span>: wxid_o3oelzk9rg2f12
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="footer-info__title">
+          <%= @contacts['cooperation'][0]['title'] %>
+        </div>
+        <div class="footer-info__item">
+          <%= @contacts['cooperation'][0]['person'] %>
+        </div>
+        <div class="footer-info__item">
+          <%= @contacts['cooperation'][0]['phone_num'] %>
+        </div>
+        <a class="footer-info__item" href="mailto:sales@sibstargroup.com">
+          <%= @contacts['cooperation'][0]['address'] %>
+        </a>
+        <div class="footer-info__item">
+          <span class="popup-open" data-popup="popup-qr-02">WeChat</span>: wxid_dvrnvu1tj3pj12
+        </div>
+      </div>
+      <div class="footer-info">
+        <div class="footer-info__title">
+          <%= @contacts['contact'][0]['title'] %>
+        </div>
+        <div class="footer-info__item">
+          <%= @contacts['contact'][0]['phone_num'] %>
+        </div>
+        <div class="footer-info__text">
+          <%= @contacts['contact'][0]['address'] %>
+        </div>
+        <div class="footer-info__item">
+          <%= @contacts['contact'][1]['phone_num'] %>
+        </div>
+        <div class="footer-info__text">
+          <%= @contacts['contact'][1]['address'] %>
+        </div>
+        <div class="footer-info__item">
+          <%= @contacts['contact'][2]['phone_num'] %>
+        </div>
+        <div class="footer-info__text">
+          <%= @contacts['contact'][2]['address'] %>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copy">
+        <%= @footer['copy'][0]['title'] %>
+      </div>
+      <a class="footer__policy popup-open" href="#popup-policy">
+        <%= @footer['policy'][0]['title'] %>
+      </a>
+      <a class="footer__development" href="https://dsml.ru/" target="_blank">
+        <%= @footer['made'][0]['title'] %>
+        <img src="assets/dsml-logo-white.svg" alt=""/>
+      </a>
+    </div>
+    <div class="footer__text">
+      <%= @footer['slogan'][0]['title'] %>
+    </div>
+  </div>
+</footer>

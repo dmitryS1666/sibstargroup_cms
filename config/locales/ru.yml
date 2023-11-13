@@ -1,0 +1,109 @@
+ru:
+
+  facebook: Facebook
+  vkontakte: ВКонтакте
+  twitter: Twitter
+  odnoklassniki: Одноклассники.ru
+  gplus: Google+
+  mailru: Mail.ru
+
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "&hellip;"
+
+  activerecord:
+    models:
+    attributes:
+
+      menu_item:
+        caption: 'Заголовок'
+        slug: 'Ссылка'
+
+      static_file:
+        file: Файл
+        link: Ссылка
+        created_at: Дата создания
+
+      article:
+        caption: 'Заголовок'
+        slug: 'Ссылка'
+        announce: 'Краткое превью'
+        content: 'Текст'
+        image: 'Изображение'
+        services_tags: 'Связанные услуги'
+        tags_captions: 'Связанные темы'
+        remove_image: 'Удалить изображение'
+        published: 'Опубликовать?'
+        published_at: 'Дата публикации'
+
+      page:
+        caption: 'Заголовок'
+        slug: 'Ссылка'
+        content: 'Содержание'
+        parent_id: 'Родительская страница'
+        photo: 'Изображение для услуг'
+        remove_photo: 'Удалить изображение'
+        description: 'Текст на изображение'
+        published: 'Опубликовать?'
+        specialists: Специалисты
+        image: Изображение
+        citation: Текст цитаты
+        citation_author: Автор цитаты
+      page_image:
+        image: Изображение
+        title: Название
+
+      review:
+        name: 'ФИО'
+        content: 'Текст отзыва'
+        photo: 'Фотография'
+        tags_captions: 'Связанные теги'
+        remove_photo: 'Удалить фотографю'
+        published: 'Опубликовать?'
+        published_at: 'Дата публикации'
+
+      review_tag:
+        caption: 'Название'
+
+      article_tag:
+        caption: 'Название'
+
+      user:
+        name: 'Ф.И.О.'
+        email: 'Эл. почта'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        photo: 'Фотография'
+        phone: 'Телефон'
+        address: 'Почтовый адрес'
+        role: 'Роль'
+        roles:
+          user: 'Пользователь'
+          support: 'Менеджер'
+          admin: 'Администратор'
+
+      page_meta:
+        title: 'Заголовок страницы'
+        description: 'Meta-description'
+        keywords: 'Meta-keywords'
+
+      feedback:
+        created_at: 'Дата'
+        name: 'ФИО'
+        email: 'E-mail'
+        comment: 'Текст сообщения'
+        viewed: 'Просмотрено?'
+
+  enumerize:
+    event:
+      event_type:
+        event:
+          one: "Событие"
+          other: "События"
+        action:
+          one: "Акция"
+          other: "Акции"

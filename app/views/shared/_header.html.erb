@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="container">
+    <div class="header__left">
+      <a class="logo" href="/">
+        <img src='/assets/logo.svg'/>
+      </a>
+      <div class="header-language">
+        <div class="header-language__item" data-locale="ru">
+          <a class="header-language__item" href="/">RU</a>
+        </div>
+        <div class="header-language__item" data-locale="en">
+          <a class="header-language__item" href="/?locale=en">EN</a>
+        </div>
+        <div class="header-language__item" data-locale="zh">
+          <a class="header-language__item" href="/?locale=zh">中文</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-burger" data-test="">
+      <div class="header-burger__text header-burger__text_open">
+        <%= @buttons['btn_menu'][0]['title'] %>
+      </div>
+      <div class="header-burger__text header-burger__text_close">
+        <%= @buttons['btn_menu_close'][0]['title'] %>
+      </div>
+      <div class="header-burger__icon">
+        <span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>

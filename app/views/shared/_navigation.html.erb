@@ -1,0 +1,106 @@
+<div class="navigation">
+  <div class="container">
+    <div class="navigation__left">
+      <div class="navigation-contact">
+        <div class="navigation-contact__title">
+          <%= @contacts['cooperation'][0]['title'] %>
+        </div>
+        <a class="navigation-contact__item" href="tel:<%= @contacts['cooperation'][0]['phone_num'] %>">
+          <%= @contacts['cooperation'][0]['phone_num'] %>
+        </a>
+        <a class="navigation-contact__item navigation-contact__item_underline" href="<%= @contacts['cooperation'][0]['address'] %>">
+          <%= @contacts['cooperation'][0]['address'] %>
+        </a>
+      </div>
+      <div class="navigation-contact">
+        <div class="navigation-contact__title">
+          <%= @contacts['gq'][0]['title'] %>
+        </div>
+        <a class="navigation-contact__item" href="tel:<%= @contacts['gq'][0]['phone_num'] %>">
+          <%= @contacts['gq'][0]['phone_num'] %>
+        </a>
+        <a class="navigation-contact__item navigation-contact__item_underline" href="mailto:<%= @contacts['gq'][0]['address'] %>">
+          <%= @contacts['gq'][0]['address'] %>
+        </a>
+      </div>
+    </div>
+    <nav class="navigation__right">
+      <ul>
+        <li class="navigation__li">
+          <% if @navigation['about'][0]['url'].blank? %>
+            <a class="navigation__link navigation__link_disabled">
+              <div class="navigation__link_text">
+                <%= @navigation['about'][0]['title'] %>
+              </div>
+              <div class="navigation__link_soon">
+                <%= @navigation['soon'][0]['title'] %>
+              </div>
+            </a>
+          <% else %>
+            <a class="navigation__link" href="<%= @navigation['about'][0]['url'] %>">
+              <%= @navigation['about'][0]['title'] %>
+            </a>
+          <% end %>
+        </li>
+        <li class="navigation__li">
+          <% if @navigation['sale_petroleum'][0]['url'].blank? %>
+            <a class="navigation__link navigation__link_disabled">
+              <div class="navigation__link_text">
+                <%= @navigation['sale_petroleum'][0]['title'] %>
+              </div>
+              <div class="navigation__link_soon">
+                <%= @navigation['soon'][0]['title'] %>
+              </div>
+            </a>
+          <% else %>
+            <a class="navigation__link" href="<%= @navigation['sale_petroleum'][0]['url'] %>">
+              <%= @navigation['sale_petroleum'][0]['title'] %>
+            </a>
+          <% end %>
+        </li>
+        <li class="navigation__li">
+          <% if @navigation['agricultural'][0]['url'].blank? %>
+            <a class="navigation__link navigation__link_disabled">
+              <div class="navigation__link_text">
+                <%= @navigation['agricultural'][0]['title'] %>
+              </div>
+              <div class="navigation__link_soon">
+                <%= @navigation['soon'][0]['title'] %>
+              </div>
+            </a>
+          <% else %>
+            <a class="navigation__link" href="<%= @navigation['about'][0]['url'] %>">
+              <%= @navigation['agricultural'][0]['title'] %>
+            </a>
+          <% end %>
+        </li>
+        <li class="navigation__li">
+          <% if @navigation['coal_online'][0]['url'].blank? %>
+            <a class="navigation__link navigation__link_disabled">
+              <div class="navigation__link_text">
+                <%= @navigation['coal_online'][0]['title'] %>
+              </div>
+              <div class="navigation__link_soon">
+                <%= @navigation['soon'][0]['title'] %>
+              </div>
+            </a>
+          <% else %>
+            <a class="navigation__link" href="<%= @navigation['about'][0]['url'] %>">
+              <%= @navigation['coal_online'][0]['title'] %>
+            </a>
+          <% end %>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="#contact">
+            <%= @navigation['contact'][0]['title'] %>
+          </a>
+        </li>
+        <li class="navigation__li">
+          <a class="navigation__link" href="/news.html">
+            <%= @navigation['news'][0]['title'] %>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

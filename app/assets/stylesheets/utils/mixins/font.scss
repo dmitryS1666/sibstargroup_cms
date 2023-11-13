@@ -1,0 +1,21 @@
+@mixin fontdefWoff($fontPath, $fontName, $fontType: 'Regular') {
+  src: url('#{$fontPath}/#{$fontName}/#{$fontName}-#{$fontType}.woff')
+      format('woff'),
+    url('#{$fontPath}/#{$fontName}/#{$fontName}-#{$fontType}.woff2')
+      format('woff2');
+}
+
+@mixin font($fontName, $fontFamilies, $fontWeights, $fontStyles) {
+  $fontIndex: 0;
+
+  @each $font in $fontFamilies {
+    $fontIndex: $fontIndex + 1;
+
+    @font-face {
+      font-family: $fontName;
+      @include fontdefWoff('assets', $fontName, $font);
+      font-weight: nth($fontWeights, $fontIndex);
+      font-style: nth($fontStyles, $fontIndex);
+    }
+  }
+}

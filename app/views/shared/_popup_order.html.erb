@@ -1,0 +1,143 @@
+<div class="popup" id="popup-order">
+  <div class="popup__container">
+    <div class="popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+    <form class="form form-step" id="form-order" action="#">
+      <div class="form-step-navigation"></div>
+      <div class="form-step__item">
+        <div class="h2 popup__h2">Выберите уголь</div>
+        <div class="form-step__content">
+          <div class="form__field">
+            <label class="form__label" for="order__coal-name">Марка угля</label>
+            <select class="form__select" id="order__coal-name" name="coal_name">
+              <option value="ДПК(фр. 50-200)" selected="selected">ДПК(фр. 50-200)</option>
+              <option value="ДО (фр. 25-50)">ДО (фр. 25-50)</option>
+              <option value="ДОМСШ (фр. 0-50)">ДОМСШ (фр. 0-50)</option>
+              <option value="ТОМСШ (фр. 0-50)">ТОМСШ (фр. 0-50)</option>
+              <option value="Г (фр. 0-50)">Г (фр. 0-50)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__field" id="order__basis-supply">
+          <div class="form__label">Базис поставки</div>
+          <div class="form-radio__list">
+            <label class="form-radio">
+              <input class="form-radio__input" type="radio" name="basis_supply" value="FOB (FREE on Board)" checked="checked"/>
+              <div class="form-radio__icon"></div>
+              <div class="form-radio__text">FOB (FREE on Board)</div>
+            </label>
+            <label class="form-radio">
+              <input class="form-radio__input" type="radio" name="basis_supply" value="DAP (Delivery at Point)"/>
+              <div class="form-radio__icon"></div>
+              <div class="form-radio__text">DAP (Delivery at Point)</div>
+            </label>
+            <label class="form-radio">
+              <input class="form-radio__input" type="radio" name="basis_supply" value="CFR (Cost and freight)"/>
+              <div class="form-radio__icon"></div>
+              <div class="form-radio__text">CFR (Cost and freight)</div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-step__item form-step__item_02">
+        <div class="h2 popup__h2">Поставка</div>
+        <div class="form__row">
+          <div class="form__col">
+            <div class="form__field order__delivery-direction">
+              <label class="form__label" for="order__delivery-direction">Направление поставки</label>
+              <select class="form__select" id="order__delivery-direction" name="delivery_direction" required="required">
+                <option value="China" selected="selected">Китай</option>
+                <option value="Turkey">Турция</option>
+              </select>
+              <div class="form__error" data-type="required">Это поле обязательно для заполнения</div>
+            </div>
+          </div>
+          <div class="form__field order__destination-station form__field_hide form__col">
+            <label class="form__label" for="order__destination-station_china">Станция назначения*</label>
+            <select class="form__select" id="order__destination-station_china" name="destination_station_china">
+              <option value="Тунцзянь" selected="selected">Тунцзянь</option>
+              <option value="Суйфэнхэ">Суйфэнхэ</option>
+              <option value="Хунчунь">Хунчунь</option>
+              <option value="Фуюань">Фуюань</option>
+              <option value="Хэйхе">Хэйхе</option>
+            </select>
+            <div class="form__error" data-type="required">Это поле обязательно для заполнения</div>
+          </div>
+          <div class="form__field order__destination-station form__field_hide form__col">
+            <label class="form__label" for="order__destination-station_turkey">Станция назначения*</label>
+            <select class="form__select" id="order__destination-station_turkey" name="destination_station_turkey">
+              <option value="Самсун" selected="selected">Самсун</option>
+              <option value="Мерсин">Мерсин</option>
+              <option value="Искендерун">Искендерун</option>
+              <option value="Трабзон">Трабзон</option>
+            </select>
+            <div class="form__error" data-type="required">Это поле обязательно для заполнения</div>
+          </div>
+          <div class="form__col">
+            <div class="form__field">
+              <label class="form__label" for="order__count">Количество тонн (кратное 70 тоннам = 1 вагон)*</label>
+              <input class="form__input" id="order__count" type="number" placeholder="140" min="70" step="70" name="count" required="required"/>
+              <div class="form__error" data-type="required">Это поле обязательно для заполнения</div>
+              <div class="form__error" data-type="not-valid">Поле заполнено не правильно</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-step__item form-step__item_03">
+        <div class="h2 popup__h2">Контактная информация</div>
+        <div class="form__row">
+          <div class="form__col">
+            <div class="form__field">
+              <label class="form__label" for="order__name">Ваше имя</label>
+              <input class="form__input" id="order__name" type="text" placeholder="Как вас зовут?" name="name"/>
+            </div>
+          </div>
+          <div class="form__col">
+            <div class="form__field">
+              <label class="form__label" for="order__organization">Наименование организации</label>
+              <input class="form__input" id="order__organization" type="text" placeholder="Название вашей организации" name="organization"/>
+            </div>
+          </div>
+          <div class="form__col">
+            <div class="form__field">
+              <label class="form__label" for="order__email">E-mail для обратной связи*</label>
+              <input class="form__input" id="order__email" type="text" placeholder="Ваша почта" name="email" required="required"/>
+              <div class="form__error" data-type="email">Email введен некорректно</div>
+              <div class="form__error" data-type="required">Это поле обязательно для заполнения</div>
+            </div>
+          </div>
+          <div class="form__col">
+            <div class="form__field">
+              <label class="form__label" for="order__price">Желаемая цена (с указанием валюты за тонну)*</label>
+              <input class="form__input" id="order__price" type="text" placeholder="1700000" name="price" required="required"/>
+              <div class="form__error" data-type="required">Это поле обязательно для заполнения</div>
+            </div>
+          </div>
+          <div class="form__col">
+            <div class="form__field">
+              <label class="form__label" for="order__phone">Ваш контактный телефон*</label>
+              <input class="form__input" id="order__phone" type="text" placeholder="+7 999 999 99 99" name="phone" required="required"/>
+              <div class="form__error" data-type="required">Это поле обязательно для заполнения</div>
+            </div>
+          </div>
+          <div class="form__col">
+            <div class="form__field">
+              <label class="form__label" for="order__message">Дополнительная информация</label>
+              <textarea class="form__textarea" id="order__message" placeholder="Ваше обращение" name="message"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-step__buttons">
+        <button class="button button_outline form-step__prev" type="button">Назад</button>
+        <button class="button button_primary form-step__next" type="button">Далее</button>
+        <button class="button button_primary form-step__submit" type="submit">
+          <%= @buttons['btn_order'][0]['title'] %>
+        </button>
+      </div>
+    </form>
+    <div class="form-success">
+      <div class="h2 form-success__h2">Успешно отправлено!</div>
+      <p class="form-success__text">Ваше сообщение было доставлено, в скоре мы свяжемся с Вами.</p>
+    </div>
+  </div>
+</div>

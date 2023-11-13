@@ -1,0 +1,16 @@
+.policy__h1 {
+  font-size: 70px;
+
+  @media (max-width: 1349px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 48px;
+    margin-bottom: 36px;
+  }
+
+  @media (max-height: 480px) {
+    font-size: 40px;
+  }
+}

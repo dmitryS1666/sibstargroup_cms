@@ -1,0 +1,233 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 60px 0;
+  transition: 0.3s ease padding, 0.6s ease transform, 0.3s ease background;
+  will-change: padding, transform, background;
+
+  @media (max-width: 991px) {
+    padding: 30px 0;
+  }
+
+  @media (max-height: 480px) {
+    padding: 15px 0;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-light;
+    @include make-container-breakpoints();
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+
+    @media (max-width: 991px) {
+      width: calc(100% - 40px);
+    }
+
+    .navigation_show & {
+      opacity: 0;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+
+    @media (max-width: 991px) {
+      gap: 40px;
+    }
+  }
+
+  &_fixed {
+    padding: 20px 0;
+    background-color: $color-light;
+
+    .navigation_show & {
+      background-color: transparent;
+    }
+  }
+
+  &_hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.logo {
+  width: 100%;
+  max-width: 180px;
+  height: 70px;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+  display: block;
+  text-decoration: none;
+
+  @media (max-height: 480px) {
+    max-width: 108px;
+    height: 40px;
+  }
+
+  .navigation_show & {
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__fill {
+    fill: $color-white;
+    transition: fill 0.3s ease;
+    will-change: fill;
+
+    .header_fixed & {
+      fill: $color-dark;
+    }
+  }
+}
+
+.header-language {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+
+  .navigation_show & {
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &__item {
+    text-decoration: none;
+    color: $color-light;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+
+    @media (max-height: 480px) {
+      font-size: 14px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .header_fixed & {
+      color: $color-dark;
+    }
+
+    &_active {
+      border-bottom: 1px solid $color-light;
+
+      .header_fixed & {
+        border-bottom-color: $color-dark;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $color-light;
+
+      .header_fixed & {
+        color: $color-dark;
+      }
+    }
+  }
+}
+
+.header-burger {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  cursor: pointer;
+  width: 100px;
+
+  &__text {
+    flex: 1 1 auto;
+    color: $color-light;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    .header_fixed & {
+      color: $color-dark;
+
+      .navigation_show & {
+        color: $color-light;
+      }
+    }
+
+    &_close {
+      display: none;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 80px;
+    position: relative;
+
+    @media (max-height: 480px) {
+      flex: 0 0 50px;
+    }
+
+    span {
+      width: 100%;
+      height: 3px;
+      display: block;
+      background-color: $color-light;
+      position: absolute;
+      transition: top 0.3s ease, bottom 0.3s ease;
+      will-change: top, bottom;
+
+      .header_fixed & {
+        background-color: $color-dark;
+
+        .navigation_show & {
+          background-color: $color-light;
+        }
+      }
+
+      &:nth-child(1) {
+        top: -8px;
+
+        .navigation_show & {
+          top: -1.5px;
+        }
+      }
+
+      &:nth-child(2) {
+        bottom: -8px;
+
+        .navigation_show & {
+          bottom: -1.5px;
+        }
+      }
+    }
+  }
+}

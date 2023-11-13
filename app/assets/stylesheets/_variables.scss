@@ -1,0 +1,29 @@
+$fontPath: '/assets/fonts/Cygre-Regular.ttf' !default;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-primary: #317bde;
+$color-dark: #252739;
+$color-light: #f5f5f5;
+
+$fontName01: 'Cygre' !default;
+$fontFamilies01: Regular, Bold;
+$fontWeights01: 400, 700;
+$fontStyles01: normal, normal;
+
+$Cygre: 'Cygre', sans-serif;
+
+$container-breakpoints-list: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1350px,
+) !default;
+
+$container-max-width-list: (
+  sm: 100%,
+  md: 100%,
+  lg: 920px,
+  xl: 1180px,
+) !default;

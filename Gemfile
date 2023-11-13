@@ -25,7 +25,7 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "cssbundling-rails"
 
-gem 'devise'
+# gem 'devise'
 
 # CMS
 

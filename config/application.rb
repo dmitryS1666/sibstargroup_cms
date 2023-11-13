@@ -46,5 +46,7 @@ module SibstargroupCms
     config.i18n.default_locale = :ru
 
     config.autoloader = :classic
+    config.autoload_paths << "#{config.root}/lib"
+    config.eager_load_paths << "#{config.root}/lib"
   end
 end

@@ -44,5 +44,7 @@ module SibstargroupCms
 
     config.i18n.available_locales = [:zh, :en, :ru]
     config.i18n.default_locale = :ru
+
+    config.autoloader = :classic
   end
 end

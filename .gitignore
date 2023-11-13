@@ -38,6 +38,5 @@
 
 /node_modules
 /vendor
-/app/assets/video/
 /tmp/
 /log/

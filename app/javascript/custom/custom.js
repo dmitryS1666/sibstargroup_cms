@@ -6,7 +6,7 @@ import {
     header,
     navigation,
     navigationPage,
-    news,
+    // news,
     popup,
 } from './components';
 import {
@@ -28,7 +28,7 @@ function init() {
     header.init();
     navigation.init();
     navigationPage.init();
-    news.init();
+    // news.init();
     formEmailUs.init();
     formOrder.init();
     command.init();

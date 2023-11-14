@@ -22,7 +22,7 @@ Title.create!(
     { name: 'coal_sales', title: 'Продажа угля', language: 'ru' },
     { name: 'coal_sales', title: 'Thermal coal', language: 'en' },
     { name: 'coal_sales', title: '煤炭销售', language: 'zh' },
-    { name: 'supply_basic', title: 'Базис поставки', language: 'ru' },
+    { name: 'supply_basic', title: 'Базис доставки', language: 'ru' },
     { name: 'supply_basic', title: 'Delivery bases', language: 'en' },
     { name: 'supply_basic', title: '供货基础', language: 'zh' },
     { name: 'news', title: 'Новости', language: 'ru' },
@@ -231,3 +231,34 @@ News.create!(
     }
   ]
 )
+
+SupplyBasis.destroy_all
+SupplyBasis.create!(
+  [
+    { name: 'khakasia', title: 'Хакассия', language: 'ru' },
+    { name: 'khakasia', title: 'Khakasia', language: 'en' },
+    { name: 'khakasia', title: '库兹巴斯', language: 'zh' },
+    { name: 'kuzbass', title: 'Кузбасс', language: 'ru' },
+    { name: 'kuzbass', title: 'Kuzbass', language: 'en' },
+    { name: 'kuzbass', title: '哈卡斯自治州', language: 'zh' },
+    { name: 'blagoveshchensk', title: 'Благовещенск', language: 'ru' },
+    { name: 'blagoveshchensk', title: 'Blagoveshchensk', language: 'en' },
+    { name: 'blagoveshchensk', title: '布拉戈维申斯克', language: 'zh' },
+    { name: 'semenovskaya', title: 'Михайло-Семёновская', language: 'ru' },
+    { name: 'semenovskaya', title: 'Mikhailo-Semenovskaya', language: 'en' },
+    { name: 'semenovskaya', title: '米哈伊洛-谢苗诺夫斯卡娅', language: 'zh' },
+    { name: 'khabarovsk', title: 'Хабаровск', language: 'ru' },
+    { name: 'khabarovsk', title: 'Khabarovsk', language: 'en' },
+    { name: 'khabarovsk', title: '哈巴罗夫斯克', language: 'zh' },
+    { name: 'grodekovo', title: 'Гродеково', language: 'ru' },
+    { name: 'grodekovo', title: 'Grodekovo', language: 'en' },
+    { name: 'grodekovo', title: '格罗杰科沃', language: 'zh' },
+    { name: 'kamyshovaya', title: 'Камышовая', language: 'ru' },
+    { name: 'kamyshovaya', title: 'Kamyshovaya', language: 'en' },
+    { name: 'kamyshovaya', title: '卡梅绍娃亚', language: 'zh' },
+    { name: 'river_port', title: 'Речной порт', language: 'ru' },
+    { name: 'river_port', title: 'River port', language: 'en' },
+    { name: 'river_port', title: '河口港', language: 'zh' }
+  ]
+)
+

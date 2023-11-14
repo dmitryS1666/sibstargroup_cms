@@ -18450,7 +18450,6 @@
     header.init();
     navigation.init();
     navigationPage.init();
-    news.init();
     formEmailUs.init();
     formOrder.init();
     command.init();

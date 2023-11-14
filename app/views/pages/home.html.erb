@@ -16,7 +16,9 @@
     <div class="home-hero__right">
       <div class="home-hero-counter">
         <div class="home-hero-counter__text"><%= @titles['coal_supplied'][0]['title'] %></div>
-        <div class="home-hero-counter__main">>&nbsp;<span class="home-hero-counter__value" data-counter="1000000" data-speed="500">0</span><span class="home-hero-counter_small">&nbsp;тонн</span>
+        <div class="home-hero-counter__main">>&nbsp;
+          <span class="home-hero-counter__value" data-counter="1000000" data-speed="500">0</span>
+          <span class="home-hero-counter_small">&nbsp;тонн</span>
         </div>
       </div>
     </div>
@@ -99,50 +101,50 @@
       <img src="assets/supply-basis-path-cfr.svg" alt=""/></div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_kuzbas" data-city="kuzbas">
       <div class="home-supply-basis-map-item__dot"></div>
-      <div class="home-supply-basis-map-item__name">Кузбасс</div>
+      <div class="home-supply-basis-map-item__name"><%= @supply_basis['kuzbass'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_hakassia" data-city="hakassia">
       <div class="home-supply-basis-map-item__dot"></div>
-      <div class="home-supply-basis-map-item__name">Хакассия</div>
+      <div class="home-supply-basis-map-item__name"><%= @supply_basis['khakasia'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_blagoveshensk" data-city="blagoveshensk">
       <div class="home-supply-basis-map-item__dot">
         <div class="home-supply-basis-map-item__plus"></div>
       </div>
-      <div class="home-supply-basis-map-item__name">Благовещенск</div>
+      <div class="home-supply-basis-map-item__name"><%= @supply_basis['blagoveshchensk'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_habarovsk" data-city="habarovsk">
       <div class="home-supply-basis-map-item__dot">
         <div class="home-supply-basis-map-item__plus"></div>
       </div>
-      <div class="home-supply-basis-map-item__name">Хабаровск</div>
+      <div class="home-supply-basis-map-item__name"><%= @supply_basis['khabarovsk'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_mihajlo-semenovoskaya" data-city="mihajlo-semenovoskaya">
       <div class="home-supply-basis-map-item__dot">
         <div class="home-supply-basis-map-item__plus"></div>
       </div>
-      <div class="home-supply-basis-map-item__name">Михайло-Семёновская</div>
+      <div class="home-supply-basis-map-item__name"><%= @supply_basis['semenovskaya'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_grodekovo" data-city="grodekovo">
       <div class="home-supply-basis-map-item__dot">
         <div class="home-supply-basis-map-item__plus"></div>
       </div>
-      <div class="home-supply-basis-map-item__name">Гродеково</div>
+      <div class="home-supply-basis-map-item__name"><%= @supply_basis['grodekovo'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_small home-supply-basis-map-item_kamyshovaya" data-city="kamyshovaya">
       <div class="home-supply-basis-map-item__dot">
         <div class="home-supply-basis-map-item__plus"></div>
       </div>
-      <div class="home-supply-basis-map-item__name">Камышовая</div>
+      <div class="home-supply-basis-map-item__name"><%= @supply_basis['kamyshovaya'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_blagoveshensk">
       <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Речной порт</div>
-        <div class="home-supply-basis-map-popup__title">Благовещенск</div>
+        <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
+        <div class="home-supply-basis-map-popup__title"><%= @supply_basis['blagoveshchensk'][0]['title'] %></div>
       </div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__type"><%= @titles['supply_basic'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__link" data-path="fob">FOB</div>
         <div class="home-supply-basis-map-popup__city">Хэйхе</div>
       </div>
@@ -150,11 +152,11 @@
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_habarovsk">
       <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Речной порт</div>
-        <div class="home-supply-basis-map-popup__title">Хабаровск</div>
+        <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
+        <div class="home-supply-basis-map-popup__title"><%= @supply_basis['khabarovsk'][0]['title'] %></div>
       </div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__type"><%= @titles['supply_basic'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__link" data-path="fob">FOB</div>
         <div class="home-supply-basis-map-popup__city">Тунцзян</div>
       </div>
@@ -167,11 +169,11 @@
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_mihajlo-semenovoskaya">
       <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Речной порт</div>
-        <div class="home-supply-basis-map-popup__title">Михайло-Семёновская</div>
+        <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
+        <div class="home-supply-basis-map-popup__title"><%= @supply_basis['semenovskaya'][0]['title'] %></div>
       </div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__type"><%= @titles['supply_basic'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__link" data-path="dap">DAP</div>
         <div class="home-supply-basis-map-popup__city">Тунцзян</div>
       </div>
@@ -179,11 +181,11 @@
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_grodekovo">
       <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Речной порт</div>
-        <div class="home-supply-basis-map-popup__title">Гродеково</div>
+        <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
+        <div class="home-supply-basis-map-popup__title"><%= @supply_basis['grodekovo'][0]['title'] %></div>
       </div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__type"><%= @titles['supply_basic'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__link" data-path="dap">DAP</div>
         <div class="home-supply-basis-map-popup__city">Суйфэнхэ</div>
       </div>
@@ -191,11 +193,11 @@
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_kamyshovaya">
       <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Речной порт</div>
-        <div class="home-supply-basis-map-popup__title">Камышовая</div>
+        <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
+        <div class="home-supply-basis-map-popup__title"><%= @supply_basis['kamyshovaya'][0]['title'] %></div>
       </div>
       <div class="home-supply-basis-map-popup__item">
-        <div class="home-supply-basis-map-popup__type">Базис доставки</div>
+        <div class="home-supply-basis-map-popup__type"><%= @titles['supply_basic'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__link" data-path="dap">DAP</div>
         <div class="home-supply-basis-map-popup__city">Хунчунь</div>
       </div>
@@ -210,8 +212,6 @@
     <h2 class="home-news__h2"><%= @titles['news'][0]['title'] %></h2>
     <div class="news-list">
       <% @news.each do |news| %>
-        <!--        <a class="news-list-item popup-open" href="#popup-news">-->
-<!--        <a class="news-list-item popup-open" href="#popup-news" data-link="<%#= news_path(id: news.id) %>">-->
         <a class="news-list-item" href="<%= news_path(id: news.id) %>">
           <span class="news-list-item__date"><%= news.created_at.strftime('%d-%m-%Y') %></span>
           <span class="news-list-item__title"><%= news.title %></span>

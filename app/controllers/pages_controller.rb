@@ -1,15 +1,9 @@
 class PagesController < ApplicationController
   include ApplicationHelper
+  layout 'application'
 
   def home
-    @navigation = Navigation.items
-    @navigation_page = NavigationPage.items
-    @titles = Title.items
-    @general = General.items
-    @buttons = Button.items
-    @contacts = Contact.items
-    @footer = Footer.items
-    @cookies = CookieElement.find_by(language: I18n.locale)
+    load_data
 
     @news = News.items
 

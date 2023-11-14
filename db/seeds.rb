@@ -1,5 +1,5 @@
-Cookies.destroy_all
-Cookies.create(
+CookieElement.destroy_all
+CookieElement.create(
   [
     { title: 'На сайте используются', btn: 'хорошо', language: 'ru' },
     { title: 'We use', btn: 'ok', language: 'en' },
@@ -34,24 +34,24 @@ Title.create!(
 Button.destroy_all
 Button.create!(
   [
-    { name: 'btn_mail', title: 'Написать нам', language: 'ru' },
-    { name: 'btn_mail', title: 'Write to us', language: 'en' },
-    { name: 'btn_mail', title: '写信给我们', language: 'zh' },
-    { name: 'btn_order', title: 'Оставить заявку', language: 'ru' },
-    { name: 'btn_order', title: 'Submit your application', language: 'en' },
-    { name: 'btn_order', title: '留下申请', language: 'zh' },
-    { name: 'btn_menu', title: 'МЕНЮ', language: 'ru' },
-    { name: 'btn_menu', title: 'MENU', language: 'en' },
-    { name: 'btn_menu', title: '選單', language: 'zh' },
-    { name: 'btn_menu_close', title: 'ЗАКРЫТЬ', language: 'ru' },
-    { name: 'btn_menu_close', title: 'CLOSE', language: 'en' },
-    { name: 'btn_menu_close', title: '关闭', language: 'zh' },
-    { name: 'btn_command', title: 'Наша команда', language: 'ru' },
-    { name: 'btn_command', title: 'Our team', language: 'en' },
-    { name: 'btn_command', title: '我们的团队', language: 'zh' },
-    { name: 'btn_news', title: 'Все новости', language: 'ru' },
-    { name: 'btn_news', title: 'All news', language: 'en' },
-    { name: 'btn_news', title: '全部新闻', language: 'zh' }
+    { name: 'mail', title: 'Написать нам', language: 'ru' },
+    { name: 'mail', title: 'Write to us', language: 'en' },
+    { name: 'mail', title: '写信给我们', language: 'zh' },
+    { name: 'order', title: 'Оставить заявку', language: 'ru' },
+    { name: 'order', title: 'Submit your application', language: 'en' },
+    { name: 'order', title: '留下申请', language: 'zh' },
+    { name: 'menu', title: 'МЕНЮ', language: 'ru' },
+    { name: 'menu', title: 'MENU', language: 'en' },
+    { name: 'menu', title: '選單', language: 'zh' },
+    { name: 'menu_close', title: 'ЗАКРЫТЬ', language: 'ru' },
+    { name: 'menu_close', title: 'CLOSE', language: 'en' },
+    { name: 'menu_close', title: '关闭', language: 'zh' },
+    { name: 'command', title: 'Наша команда', language: 'ru' },
+    { name: 'command', title: 'Our team', language: 'en' },
+    { name: 'command', title: '我们的团队', language: 'zh' },
+    { name: 'news', title: 'Все новости', language: 'ru' },
+    { name: 'news', title: 'All news', language: 'en' },
+    { name: 'news', title: '全部新闻', language: 'zh' }
   ]
 )
 
@@ -150,6 +150,28 @@ General.create!(
     { name: 'footer_q', text: '准备好与我们合作吗？留下申请，您找到了最可靠的合作伙伴', language: 'zh' },
     { name: 'coal_desc', text: 'Группа компаний «СИБСТАР» является крупным поставщиком каменного угля марок «Д», «Г» и «T», который широко используется в качестве топлива для бытовых нужд, незаменим для работы литейных цехов и используется для выработки электроэнергии на тепловых электростанциях.', language: 'ru' },
     { name: 'coal_desc', text: 'SIBSTAR Group is a major supplier of «D», «G», and «T» grades of hard coal. It is widely used as fuel for household needs, completely necessary for foundries operation and is used by thermal power plants for electricity generation.', language: 'en' },
-    { name: 'coal_desc', text: 'SIBSTAR集团是大型D、G、T煤炭供应商，这些煤炭产品作为燃料广泛用于日常需求、铸造车间和热电站。', language: 'zh' },
+    { name: 'coal_desc', text: 'SIBSTAR集团是大型D、G、T煤炭供应商，这些煤炭产品作为燃料广泛用于日常需求、铸造车间和热电站。', language: 'zh' }
+  ]
+)
+
+Slider.destroy_all
+Slider.create!(
+  [
+    { text: 'Мы расширяем не только географию сотрудничества, но и структуру поставляемой продукции.', base_image_url: 'assets/about-01.jpg', language: 'ru' },
+    { text: 'Sibstar group — your reliable partner for the supply of thermal coal since 2019.', base_image_url: 'assets/about-01.jpg', language: 'en' },
+    { text: '"SIBSTAR 集团 "是您可靠的伙伴，从 2019 年起为您供应动力煤。', base_image_url: 'assets/about-01.jpg', language: 'zh' },
+    { text: 'Отгрузки энергоносителей осуществляются в адрес производственных гигантов Юго-восточной Азии и Турции. Наши ключевые партнеры — крупные промышленные предприятия Китая и Турции.', base_image_url: 'assets/about-02.jpg', language: 'ru' },
+    { text: 'Energy shipments are carried out to the largest manufacturing giants. Our key partners are large industrial enterprises of China and Turkey', base_image_url: 'assets/about-02.jpg', language: 'en' },
+    { text: 'SIBSTAR集团为东南亚的大型制造公司提供能源煤炭。集团的主要合作伙伴是中国、印度和土耳其的大型工业企业。', base_image_url: 'assets/about-02.jpg', language: 'zh' },
+    { text: '«СИБСТАР» — ваш надежный партнер для энергетического угля с 2019 года.', base_image_url: 'assets/about-03.jpg', language: 'ru' },
+    { text: 'We expand the geography of cooperation, as well as the structure of supplied products.', base_image_url: 'assets/about-03.jpg', language: 'en' },
+    { text: 'SIBSTAR集团在地理位置、能源品种方面蓬勃发展。', base_image_url: 'assets/about-03.jpg', language: 'zh' }
+  ]
+)
+
+SliderConfig.destroy_all
+SliderConfig.create!(
+  [
+    { name: 'slider_timer', value: 5 },
   ]
 )

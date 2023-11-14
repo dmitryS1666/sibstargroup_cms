@@ -28,6 +28,10 @@ gem "cssbundling-rails"
 # gem 'devise'
 
 # CMS
+gem 'trestle'
+gem 'trestle-tinymce'
+
+gem 'image_processing', '~> 1.2'
 
 group :development, :test do
   gem 'foreman'

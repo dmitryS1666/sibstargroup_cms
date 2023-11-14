@@ -15,11 +15,15 @@ class HomeAboutSlider {
 
     const navigation = document.querySelector('.home-about-slider-navigation');
 
+    // let elem = document.getElementById('home-about-slider');
+    // let speed = elem.dataset.speed;
+    let speed = 3500;
+
     const swiper = new Swiper(slider, {
       slidesPerView: 1,
       loop: true,
       autoplay: {
-        delay: 3500,
+        delay: speed,
       },
       speed: 1000,
       effect: 'fade',

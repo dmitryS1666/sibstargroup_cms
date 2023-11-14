@@ -18200,11 +18200,12 @@
       Swiper.use([Pagination, Autoplay, EffectFade]);
       gsapWithCSS.registerPlugin(ScrollTrigger3);
       const navigation2 = document.querySelector(".home-about-slider-navigation");
+      let speed = 3500;
       const swiper = new Swiper(slider, {
         slidesPerView: 1,
         loop: true,
         autoplay: {
-          delay: 3500
+          delay: speed
         },
         speed: 1e3,
         effect: "fade",

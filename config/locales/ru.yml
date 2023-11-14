@@ -1,12 +1,7 @@
 ru:
-
-  facebook: Facebook
-  vkontakte: ВКонтакте
-  twitter: Twitter
-  odnoklassniki: Одноклассники.ru
-  gplus: Google+
-  mailru: Mail.ru
-
+  time:
+    formats:
+      long: "%Y-%m-%d %H:%M:%S"
   views:
     pagination:
       first: "&laquo;"

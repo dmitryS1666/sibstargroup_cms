@@ -1,14 +1,13 @@
-# README
+# Sibstargroup_CMS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version 3.1.2
+* Rails version 7
+* DB: PG
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-  Site name      :  sibstargroup_cms
-  Active theme   :  default
-  User email     :  admin@mail.ru
-  User password  :  password
+  | Site name     | sibstargroup_cms |
+  |------------------|:-------------:|
+  | CMS           | SpinaCMS         |
+  | Active theme  | default          |
+  | User email    | admin@mail.ru    |
+  | User password | password         |

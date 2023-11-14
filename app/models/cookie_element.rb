@@ -1,0 +1,2 @@
+class CookieElement < ApplicationRecord
+end

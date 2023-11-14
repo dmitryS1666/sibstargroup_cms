@@ -6,10 +6,10 @@
       </h2>
       <div class="footer__buttons">
         <a class="button button_outline button_invert popup-open" href="#popup-email-us">
-          <%= @buttons['btn_mail'][0]['title'] %>
+          <%= @buttons['mail'][0]['title'] %>
         </a>
         <a class="button button_primary popup-open" href="#popup-order">
-          <%= @buttons['btn_order'][0]['title'] %>
+          <%= @buttons['order'][0]['title'] %>
         </a>
       </div>
     </div>
@@ -86,7 +86,7 @@
       </a>
     </div>
     <div class="footer__text">
-      <%= @footer['slogan'][0]['title'] %>
+      <%= @footer['slogan'][0]['title'].html_safe %>
     </div>
   </div>
 </footer>

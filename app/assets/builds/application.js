@@ -12533,17 +12533,6 @@
 
   // app/javascript/custom/components/news.js
   var News = class {
-    init() {
-      const popup2 = document.querySelector("#popup-news");
-      document.querySelectorAll(".news-list-item").forEach((el) => {
-        el.addEventListener("click", () => {
-          const newsContainer = popup2.querySelector(".news__container");
-          newsContainer.innerHTML = "";
-          this.addLoader(newsContainer);
-          this.getContent(el, newsContainer);
-        });
-      });
-    }
     addLoader(newsContainer) {
       const loader = document.createElement("div");
       loader.classList.add("news__loader");

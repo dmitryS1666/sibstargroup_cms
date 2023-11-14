@@ -51,7 +51,10 @@ Button.create!(
     { name: 'command', title: '我们的团队', language: 'zh' },
     { name: 'news', title: 'Все новости', language: 'ru' },
     { name: 'news', title: 'All news', language: 'en' },
-    { name: 'news', title: '全部新闻', language: 'zh' }
+    { name: 'news', title: '全部新闻', language: 'zh' },
+    { name: 'read', title: 'Читать далее', language: 'ru' },
+    { name: 'read', title: 'Read more', language: 'en' },
+    { name: 'read', title: '阅读更多信息', language: 'zh' }
   ]
 )
 
@@ -173,5 +176,58 @@ SliderConfig.destroy_all
 SliderConfig.create!(
   [
     { name: 'slider_timer', value: 5 },
+  ]
+)
+
+News.destroy_all
+News.create!(
+  [
+    {
+      title: 'Участие компании «Сибстартрейд» в международной угольной выставке China coal and mining expo 2023 в Пекине',
+      content: "Группа компаний «Сибстар» принимает участие в международной угольной выставке China coal and mining expo 2023, которая проходит с 25 по 28 октября 2023 года в Пекине. Среди участников – крупные экспортёры угля, логистические и трейдинговые компании со всего мира.\nКомпания впервые принимает участие в мероприятии такого масштаба. Стремление динамически развиваться, расширяя географию бизнеса и категории сырьевых товаров, руководствуясь принципами ведения ответственного бизнеса позволяет компании встать в один ряд с мировыми мэйджорами.",
+      language: 'ru'
+    },
+    {
+      title: 'Participation of the Sibstarttrade company in the international coal exhibition China coal and mining expo 2023 in Beijing',
+      content: "The Sibstar group of companies takes part in the international coal exhibition China coal and mining expo 2023, which takes place from October 25 to October 28, 2023 in Beijing. Among the participants are large coal exporters, logistics and trading companies from all over the world. \nThis is the first time the company has taken part in an event of this scale. The desire to develop dynamically, expanding the geography of business and categories of raw materials, guided by the principles of conducting responsible business, allows the company to rank with the world's majors.",
+      language: 'en'
+    },
+    {
+      title: 'Sibstar 集团参加在北京举办的 China coal and mining expo 2023',
+      content: "Sibstar 集团将参加于 2023 年 10 月 25 日至 28 日在北京举行的 China coal and mining expo 2023。参展商包括来自世界各地的主要煤炭出口商、物流和贸易公司。\n这是该公司首次参加如此大规模的活动。在负责任的经营原则指导下，公司努力实现蓬勃发展，扩大业务地域和商品种类，从而跻身全球大型企业行列。",
+      language: 'zh'
+    },
+
+    {
+      title: 'Открытие филиала в г. Тунцзян',
+      content: "В 2023 году группа компаний Сибстартрейд открыла свое третье подразделение в г.Тунцзян, Китай.\nОсновным видом деятельности подразделения является операционная деятельность по сопровождению сделок, логистике и продвижению бренда компании «Сибстартрейд» на внутрикитайском рынке.",
+      language: 'ru'
+    },
+    {
+      title: 'Opening of a branch in Tongjiang',
+      content: "In 2023, the Sibstarttrade group of companies opened its third division in Tongjiang, China.\nThe main activity of the division is operational activities to support transactions, logistics and promote the Sibstarttrade brand in the domestic Chinese market.",
+      language: 'en'
+    },
+    {
+      title: '在通江开设分公司',
+      content: "2023 年，Sibstartrade 集团在中国通江开设了第三家分公司。\n该分部的主要活动是在中国国内市场提供交易支持、物流和推广 Sibstartrade 品牌。",
+      language: 'zh'
+    },
+
+    {
+      title: 'Открытие филиала в Гонконге',
+      content: "В 2022 году Группа компаний «Сибстартрейд» открыла свое второе подразделение в Гонконге.\nОсновным видом деятельности подразделения является оказание услуг по привлечению клиентов из числа стран Юго-Восточной Азии, заинтересованных в стабильных поставках высококачественного угля из России.",
+      language: 'ru'
+    },
+    {
+      title: 'Opening a branch in Hong Kong',
+      content: "In 2022, the Sibstarttrade Group of Companies opened its second division in Hong Kong.\nThe main activity of the division is to provide services to attract clients from Southeast Asian countries interested in stable supplies of high-quality coal from Russia.",
+      language: 'en'
+    },
+    {
+      title: '在香港开设分公司',
+      content: "2022 年，Sibstartrade 集团在香港开设了第二家分公司。\n该分部的主要活动是提供服务，吸引对稳定供应俄罗斯优质煤炭感兴趣的东南亚客户。",
+      language: 'zh'
+    }
   ]
 )

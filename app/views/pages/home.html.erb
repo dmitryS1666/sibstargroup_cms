@@ -209,10 +209,21 @@
   <div class="container">
     <h2 class="home-news__h2"><%= @titles['news'][0]['title'] %></h2>
     <div class="news-list">
-      <a class="news-list-item popup-open" href="#popup-news" data-link="/assets/html/news-04.html"><span class="news-list-item__date">10.10.2023</span><span class="news-list-item__title">Участие компании «Сибстаргруп» в международной угольной выставке China coal and mining expo 2023 в Пекине</span><span class="news-list-item__more">Читать далее<span class="news-list-item__more_arrow">→</span></span></a><a class="news-list-item popup-open" href="#popup-news" data-link="/assets/html/news-03.html"><span class="news-list-item__date">04.10.2023</span><span class="news-list-item__title">Открытие филиала в г. Тунцзян</span><span class="news-list-item__more">Читать далее<span class="news-list-item__more_arrow">→</span></span></a><a class="news-list-item popup-open" href="#popup-news" data-link="/assets/html/news-02.html"><span class="news-list-item__date">01.10.2023</span><span class="news-list-item__title">Открытие филиала в Гонконге</span><span class="news-list-item__more">Читать далее<span class="news-list-item__more_arrow">→</span></span></a>
+      <% @news.each do |news| %>
+        <!--        <a class="news-list-item popup-open" href="#popup-news">-->
+<!--        <a class="news-list-item popup-open" href="#popup-news" data-link="<%#= news_path(id: news.id) %>">-->
+        <a class="news-list-item" href="<%= news_path(id: news.id) %>">
+          <span class="news-list-item__date"><%= news.created_at.strftime('%d-%m-%Y') %></span>
+          <span class="news-list-item__title"><%= news.title %></span>
+          <span class="news-list-item__more">
+            <%= @buttons['read'][0]['title'] %>
+            <span class="news-list-item__more_arrow">→</span>
+          </span>
+        </a>
+      <% end %>
     </div>
     <div class="home-news__button">
-      <a class="button button_outline button_invert" href="news.html">
+      <a class="button button_outline button_invert" href="/news">
         <%= @buttons['news'][0]['title'] %>
       </a>
     </div>

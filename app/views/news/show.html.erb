@@ -1,0 +1,16 @@
+<div id="popup-news">
+  <div class="popup__container">
+    <div class="popup__close_right">
+      <%= link_to image_tag("/assets/icons/close.svg", alt: ''), :back %>
+    </div>
+    <div class="container news__container">
+      <div class="news__date"><%= @news.created_at.strftime('%d-%m-%Y') %></div>
+      <div class="news__title h1"><%= @news.title %></div>
+      <div class="popup__content-wrapper">
+        <%= @news.image if @news.image.attached? %>
+        <%= @news.content %>
+      </div>
+    </div>
+    <%= render 'shared/popup_footer' %>
+  </div>
+</div>

@@ -7,7 +7,7 @@
 
   | Site name     | sibstargroup_cms |
   |------------------|:-------------:|
-  | CMS           | SpinaCMS         |
+  | CMS           | Trestle AD       |
   | Active theme  | default          |
   | User email    | admin@mail.ru    |
   | User password | password         |

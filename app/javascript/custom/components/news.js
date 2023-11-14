@@ -1,17 +1,17 @@
 import { getHTML } from '../utils';
 
 class News {
-  init() {
-    const popup = document.querySelector('#popup-news');
-    document.querySelectorAll('.news-list-item').forEach((el) => {
-      el.addEventListener('click', () => {
-        const newsContainer = popup.querySelector('.news__container');
-        newsContainer.innerHTML = '';
-        this.addLoader(newsContainer);
-        this.getContent(el, newsContainer);
-      });
-    });
-  }
+  // init() {
+  //   const popup = document.querySelector('#popup-news');
+  //   document.querySelectorAll('.news-list-item').forEach((el) => {
+  //     el.addEventListener('click', () => {
+  //       const newsContainer = popup.querySelector('.news__container');
+  //       newsContainer.innerHTML = '';
+  //       this.addLoader(newsContainer);
+  //       this.getContent(el, newsContainer);
+  //     });
+  //   });
+  // }
 
   /**
    *

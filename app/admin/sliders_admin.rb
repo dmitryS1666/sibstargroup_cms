@@ -1,5 +1,3 @@
-require_relative '../helpers/active_storage_helper'
-
 Trestle.resource(:sliders) do
 
   menu do
@@ -14,7 +12,7 @@ Trestle.resource(:sliders) do
         image_tag main_app.rails_blob_path(slide.image),
                   style: 'max-width: 150px; height: auto;'
       else
-        "No Image Found"
+        'No Image Found'
       end
     end
     column :text
@@ -22,9 +20,10 @@ Trestle.resource(:sliders) do
 
     column :base_image_url do |img|
       if img
-        image_tag img.base_image_url.gsub('assets/', ''), style: "max-width: 150px; height: auto;"
+        image_tag img.base_image_url.gsub('assets/', ''),
+                  style: 'max-width: 150px; height: auto;'
       else
-        "No Image Found"
+        'No Image Found'
       end
     end
 
@@ -32,7 +31,7 @@ Trestle.resource(:sliders) do
     actions
   end
 
-  form do
+  form do |slider|
     row do
       col { editor :text }
       col { file_field :image, as: :file, input_html: { direct_upload: true } }
@@ -44,7 +43,14 @@ Trestle.resource(:sliders) do
     end
 
     row do
-      col { image_tag slider.base_image_url.gsub('assets/', ''), style: "max-width: 350px; height: auto;" }
+      if slider.base_image_url
+        col { image_tag slider.base_image_url.gsub('assets/', ''),
+                        style: 'max-width: 350px; height: auto;' }
+      end
+      if slider.image.attached?
+        col { image_tag main_app.rails_blob_path(slider.image),
+                        style: 'max-width: 150px; height: auto;' }
+      end
       col {}
     end
   end

@@ -2,8 +2,8 @@
 <html lang="en">
 <!--<html lang="<%#= @page.language_code %>">-->
 <head>
-<!--  <title><%#= current_page.seo_title %></title>-->
-<!--  <meta name="description" content="<%#= current_page.description %>"/>-->
+  <!--  <title><%#= current_page.seo_title %></title>-->
+  <!--  <meta name="description" content="<%#= current_page.description %>"/>-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Stylesheets -->
@@ -13,22 +13,10 @@
 </head>
 
 <body>
-<%= render 'shared/header' %>
-<%= render 'shared/navigation' %>
 
 <div class="mx-auto max-w-screen-lg py-4 md:py-20 px-4">
   <%= yield %>
 </div>
-
-<%= render 'shared/footer' %>
-
-<%= render 'shared/popup_order' %>
-<%= render 'shared/popup_email_us' %>
-<%= render 'shared/popup_policy' %>
-<%= render 'shared/popups_qr' %>
-<%= render 'shared/mobile_rotate' %>
-<%= render 'shared/popup_command' %>
-<%= render 'shared/cookies' %>
 
 </body>
 </html>

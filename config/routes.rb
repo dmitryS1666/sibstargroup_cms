@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /zh|en|ru/ do
     root "pages#home"
+    resources :news
   end
 
   mount Trestle::Engine => '/admin', as: 'trestle_admin'
-
-  # namespace :admin do
-  #   get 'main_page/index'
-  #   root 'main_page#index'
-  # end
 end

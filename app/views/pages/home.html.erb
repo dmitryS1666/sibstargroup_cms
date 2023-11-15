@@ -70,11 +70,9 @@
     <p class="home-coal-sales__start-text">
       <%= @general['coal_desc'][0]['text'] %>
     </p>
-    <%= render 'shared/home_coal_sales_accordion/dpk' %>
-    <%= render 'shared/home_coal_sales_accordion/do' %>
-    <%= render 'shared/home_coal_sales_accordion/domssh' %>
-    <%= render 'shared/home_coal_sales_accordion/g' %>
-    <%= render 'shared/home_coal_sales_accordion/tomssh' %>
+    <% @coal_grades.each do |grade| %>
+      <%= render 'shared/home_coal_sales_accordion/info', grade: grade %>
+    <% end %>
   </div>
 </div>
 <div class="home-supply-basis home-section" id="supply-basis">

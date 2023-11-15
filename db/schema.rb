@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_14_214242) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_15_134735) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,6 +45,30 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_14_214242) do
   create_table "buttons", force: :cascade do |t|
     t.string "name"
     t.string "title"
+    t.string "language"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "coal_grade_items", force: :cascade do |t|
+    t.string "name"
+    t.string "value"
+    t.bigint "coal_grade_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["coal_grade_id"], name: "index_coal_grade_items_on_coal_grade_id"
+  end
+
+  create_table "coal_grades", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "commands", force: :cascade do |t|
+    t.string "person"
+    t.string "desc"
+    t.string "base_image_url"
     t.string "language"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -157,4 +181,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_14_214242) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "coal_grade_items", "coal_grades"
 end

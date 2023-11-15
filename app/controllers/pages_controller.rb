@@ -6,7 +6,6 @@ class PagesController < ApplicationController
     load_data
 
     @news = News.items
-
     @slides = Slider.items
     @timer = SliderConfig.find_by(name: 'slider_timer')['value']
   end

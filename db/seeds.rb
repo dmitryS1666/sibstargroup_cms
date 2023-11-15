@@ -54,7 +54,13 @@ Button.create!(
     { name: 'news', title: '全部新闻', language: 'zh' },
     { name: 'read', title: 'Читать далее', language: 'ru' },
     { name: 'read', title: 'Read more', language: 'en' },
-    { name: 'read', title: '阅读更多信息', language: 'zh' }
+    { name: 'read', title: '阅读更多信息', language: 'zh' },
+    { name: 'back', title: 'Назад', language: 'ru' },
+    { name: 'back', title: 'Back', language: 'en' },
+    { name: 'back', title: '向后', language: 'zh' },
+    { name: 'next', title: 'Далее', language: 'ru' },
+    { name: 'next', title: 'Next', language: 'en' },
+    { name: 'next', title: '往下', language: 'zh' }
   ]
 )
 
@@ -180,7 +186,10 @@ General.create!(
     { name: 'info_hint', text: '您的申请', language: 'zh' },
     { name: 'required', text: 'Это поле обязательно для заполнения', language: 'ru' },
     { name: 'required', text: 'This field is required', language: 'en' },
-    { name: 'required', text: '此欄位是必需的', language: 'zh' }
+    { name: 'required', text: '此欄位是必需的', language: 'zh' },
+    { name: 'supply', text: 'Поставка', language: 'ru' },
+    { name: 'supply', text: 'Supply', language: 'en' },
+    { name: 'supply', text: '供應', language: 'zh' }
   ]
 )
 
@@ -288,3 +297,96 @@ SupplyBasis.create!(
     { name: 'river_port', title: '河口港', language: 'zh' }
   ]
 )
+
+CoalGrade.destroy_all
+CoalGrade.create!(
+  [
+    { name: "DPK" },
+    { name: "DO" },
+    { name: "DOMSSH" },
+    { name: "LOW VOL PCI" },
+    { name: "TOMSSH" }
+  ]
+)
+
+CoalGradeItem.destroy_all
+CoalGradeItem.create!(
+  [
+    { name: "Ash, dry basis, max, %", value: "10,0", coal_grade: CoalGrade.find(1) },
+    { name: "Moisture as received, typical, max %", value: "17,5", coal_grade: CoalGrade.find(1) },
+    { name: "Sulphur, dry basis, max, %", value: "0,6", coal_grade: CoalGrade.find(1) },
+    { name: "Volatiles, daf, max, %", value: "44,0", coal_grade: CoalGrade.find(1) },
+    { name: "Net calorific value as received, min, kcal/kg", value: "5700", coal_grade: CoalGrade.find(1) },
+    { name: "Size, mm", value: "50-200", coal_grade: CoalGrade.find(1) },
+
+    { name: "Ash, dry basis, max, %", value: "10,0", coal_grade: CoalGrade.find(2) },
+    { name: "Moisture as received, typical, max %", value: "17,5", coal_grade: CoalGrade.find(2) },
+    { name: "Sulphur, dry basis, max, %", value: "0,6", coal_grade: CoalGrade.find(2) },
+    { name: "Volatiles, daf, max, %", value: "44,0", coal_grade: CoalGrade.find(2) },
+    { name: "Net calorific value as received, min, kcal/kg", value: "5600", coal_grade: CoalGrade.find(2) },
+    { name: "Size, mm", value: "25-50", coal_grade: CoalGrade.find(2) },
+
+    { name: "Ash, dry basis, max, %", value: "12,0", coal_grade: CoalGrade.find(3) },
+    { name: "Moisture as received, typical, max %", value: "17,5", coal_grade: CoalGrade.find(3) },
+    { name: "Sulphur, dry basis, max, %", value: "0,6", coal_grade: CoalGrade.find(3) },
+    { name: "Volatiles, daf, max, %", value: "44,0", coal_grade: CoalGrade.find(3) },
+    { name: "Net calorific value as received, min, kcal/kg", value: "5500", coal_grade: CoalGrade.find(3) },
+    { name: "Size, mm", value: "0-50", coal_grade: CoalGrade.find(3) },
+
+    { name: "Ash, dry basis, max, %", value: "12,0", coal_grade: CoalGrade.find(4) },
+    { name: "Moisture as received, typical, max %", value: "12,0", coal_grade: CoalGrade.find(4) },
+    { name: "Sulphur, dry basis, max, %", value: "0,5", coal_grade: CoalGrade.find(4) },
+    { name: "Volatiles, daf, max, %", value: "12,0", coal_grade: CoalGrade.find(4) },
+    { name: "Net calorific value as received, min, kcal/kg", value: "6800", coal_grade: CoalGrade.find(4) },
+    { name: "Size, mm", value: "0-50", coal_grade: CoalGrade.find(4) },
+
+    { name: "Ash, dry basis, max, %", value: "15,0", coal_grade: CoalGrade.find(5) },
+    { name: "Moisture as received, typical, max %", value: "12,0", coal_grade: CoalGrade.find(5) },
+    { name: "Sulphur, dry basis, max, %", value: "0,5", coal_grade: CoalGrade.find(5) },
+    { name: "Volatiles, daf, max, %", value: "15,0", coal_grade: CoalGrade.find(5) },
+    { name: "Net calorific value as received, min, kcal/kg", value: "6200", coal_grade: CoalGrade.find(5) },
+    { name: "Size, mm", value: "0-50", coal_grade: CoalGrade.find(5) }
+  ]
+)
+
+Command.destroy_all
+Command.create!(
+  [
+    { person: 'Ван Лин', desc: 'Директор, Гонконг', base_image_url: 'assets/command-01.jpg', language: 'ru' },
+    { person: 'Wang Lin', desc: 'CEO, Hong Kong', base_image_url: 'assets/command-01.jpg', language: 'en' },
+    { person: '王健', desc: '公司经理，香港', base_image_url: 'assets/command-01.jpg', language: 'zh' },
+
+    { person: 'Баркалов Дмитрий', desc: 'Директор, Россия', base_image_url: 'assets/command-02.jpg', language: 'ru' },
+    { person: 'Dmitry Barkalov', desc: 'Head of coal sales, Russia', base_image_url: 'assets/command-02.jpg', language: 'en' },
+    { person: '巴尔卡洛夫·德米特里, 俄罗斯', desc: '公司经理', base_image_url: 'assets/command-02.jpg', language: 'zh' },
+
+    { person: 'Ван Тзян', desc: 'Директор, Китай', base_image_url: 'assets/command-09.jpg', language: 'ru' },
+    { person: 'Van Jiang', desc: 'Director, China', base_image_url: 'assets/command-09.jpg', language: 'en' },
+    { person: '王江', desc: '公司经理，中国', base_image_url: 'assets/command-09.jpg', language: 'zh' },
+
+    { person: 'Меньшов Александр', desc: 'Руководитель отела продаж, Россия', base_image_url: 'assets/placeholder.png', language: 'ru' },
+    { person: 'Aleksandr Menshov', desc: 'Head of sales, Russia', base_image_url: 'assets/placeholder.png', language: 'en' },
+    { person: '亚历山大·门舒夫', desc: '销售部经理, 俄罗斯', base_image_url: 'assets/placeholder.png', language: 'zh' },
+
+    { person: 'Зверева Влада', desc: 'Руководитель отдела по сопровождению клиентов', base_image_url: 'assets/command-03.jpg', language: 'ru' },
+    { person: 'Vlada Zvereva', desc: 'Head of Customer Support Department', base_image_url: 'assets/command-03.jpg', language: 'en' },
+    { person: '兹韦列娃·弗拉达', desc: '客户服务部主任', base_image_url: 'assets/command-03.jpg', language: 'zh' },
+
+    { person: 'Иванов Алексей', desc: 'Руководитель финансового отдела', base_image_url: 'assets/command-04.jpg', language: 'ru' },
+    { person: 'Aleksey Ivanov', desc: 'Head of finance Department', base_image_url: 'assets/command-04.jpg', language: 'en' },
+    { person: '伊万诺夫·阿列克谢', desc: '财务部主任', base_image_url: 'assets/command-04.jpg', language: 'zh' },
+
+    { person: 'Мухина Галина', desc: 'Заместитель руководителя финансового отдела', base_image_url: 'assets/command-05.jpg', language: 'ru' },
+    { person: 'Galina Mukhina', desc: 'Deputy Head of finance Department', base_image_url: 'assets/command-05.jpg', language: 'en' },
+    { person: '穆希娜·加林娜', desc: '财务部副主任', base_image_url: 'assets/command-05.jpg', language: 'zh' },
+
+    { person: 'Калёнов Андрей', desc: 'Ведущий Юрисконсульт', base_image_url: 'assets/command-06.jpg', language: 'ru' },
+    { person: 'Andrei Kalenov', desc: 'Senior lawyer', base_image_url: 'assets/command-06.jpg', language: 'en' },
+    { person: '卡廖诺夫·安德烈', desc: '高级法律咨询家', base_image_url: 'assets/command-06.jpg', language: 'zh' },
+
+    { person: 'Артёменко Винера', desc: 'Руководитель отдела маркетинга и PR', base_image_url: 'assets/command-08.jpg', language: 'ru' },
+    { person: 'Vinera Artemenko', desc: 'Head of Marketing and PR Department', base_image_url: 'assets/command-08.jpg', language: 'en' },
+    { person: '阿尔乔缅科·维涅拉', desc: '营销和PR部主任', base_image_url: 'assets/command-08.jpg', language: 'zh' }
+  ]
+)
+

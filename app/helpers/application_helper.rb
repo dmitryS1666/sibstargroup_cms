@@ -9,5 +9,9 @@ module ApplicationHelper
     @footer = Footer.items
     @cookies = CookieElement.find_by(language: I18n.locale)
     @supply_basis = SupplyBasis.items
+
+    @coal_grades = CoalGrade.all
+    @coal_grade_items = CoalGradeItem.all
+    @command = Command.items
   end
 end

@@ -1,0 +1,21 @@
+<% items = @coal_grade_items.where(coal_grade_id: grade.id) %>
+<div class="home-coal-sales-accordion">
+  <div class="home-coal-sales-accordion__head">
+    <div class="home-coal-sales-accordion__title"><%= grade.name %></div>
+    <div class="home-coal-sales-accordion__icon"></div>
+  </div>
+  <div class="home-coal-sales-accordion__body">
+    <table class="home-coal-sales-table">
+      <% items.each do |item| %>
+        <tr>
+          <td><%= item.name %></td>
+          <td><%= item.value %></td>
+        </tr>
+      <% end %>
+    </table>
+    <div class="home-coal-sales__buttons">
+      <a class="button button_outline button_invert" href="/pdf/SGS ДОМСШ.pdf" target="_blank">Скачать SGS</a>
+      <a class="button button_primary button_invert popup-open" href="#popup-order">Купить уголь</a>
+    </div>
+  </div>
+</div>

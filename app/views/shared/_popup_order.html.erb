@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="form-step__item form-step__item_02">
-        <div class="h2 popup__h2">Поставка</div>
+        <div class="h2 popup__h2"><%= @general['supply'][0]['title'] %></div>
         <div class="form__row">
           <div class="form__col">
             <div class="form__field order__delivery-direction">
@@ -121,15 +121,15 @@
           </div>
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__message">Дополнительная информация</label>
+              <label class="form__label" for="order__message"><%= @general['info'][0]['text'] %></label>
               <textarea class="form__textarea" id="order__message" placeholder="Ваше обращение" name="message"></textarea>
             </div>
           </div>
         </div>
       </div>
       <div class="form-step__buttons">
-        <button class="button button_outline form-step__prev" type="button">Назад</button>
-        <button class="button button_primary form-step__next" type="button">Далее</button>
+        <button class="button button_outline form-step__prev" type="button"><%= @buttons['back'][0]['title'] %></button>
+        <button class="button button_primary form-step__next" type="button"><%= @buttons['next'][0]['title'] %></button>
         <button class="button button_primary form-step__submit" type="submit">
           <%= @buttons['order'][0]['title'] %>
         </button>

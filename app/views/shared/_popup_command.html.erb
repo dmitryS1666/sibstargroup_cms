@@ -2,69 +2,21 @@
   <div class="popup__container">
     <div class="popup__close"><img src="assets/icons/close-white.svg" alt=""/></div>
     <div class="command">
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-01.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Ван Лин</div>
-          <div class="command__post">Директор, Гонконг</div>
+      <% @command.each do |item| %>
+        <div class="command__item">
+          <div class="command__image">
+            <% if item.image.attached? %>
+              <img src="<%= url_for(item.image) %>" alt=""/>
+            <% else %>
+              <img src="<%= item['base_image_url'] %>" alt=""/>
+            <% end %>
+          </div>
+          <div class="command__caption">
+            <div class="command__name"><%= item.person %></div>
+            <div class="command__post"><%= item.desc %></div>
+          </div>
         </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-02.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Баркалов Дмитрий</div>
-          <div class="command__post">Директор, Россия</div>
-        </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-09.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Ван Тзян</div>
-          <div class="command__post">Директор, Китай</div>
-        </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/placeholder.png" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Меньшов Александр</div>
-          <div class="command__post">Руководитель отела продаж, Россия</div>
-        </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-03.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Зверева Влада</div>
-          <div class="command__post">Руководитель отдела по сопровождению клиентов</div>
-        </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-04.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Иванов Алексей</div>
-          <div class="command__post">Руководитель финансового отдела</div>
-        </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-05.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Мухина Галина</div>
-          <div class="command__post">Заместитель руководителя финансового отдела</div>
-        </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-06.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Калёнов Андрей</div>
-          <div class="command__post">Ведущий Юрисконсульт</div>
-        </div>
-      </div>
-      <div class="command__item">
-        <div class="command__image"><img src="assets/command-08.jpg" alt=""/></div>
-        <div class="command__caption">
-          <div class="command__name">Артёменко Винера</div>
-          <div class="command__post">Руководитель отдела маркетинга и PR</div>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

@@ -264,4 +264,3 @@ SupplyBasis.create!(
     { name: 'river_port', title: '河口港', language: 'zh' }
   ]
 )
-

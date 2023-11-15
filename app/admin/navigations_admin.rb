@@ -1,6 +1,6 @@
 Trestle.resource(:navigations) do
   menu do
-    item :navigations, icon: 'fa fa-globe', group: :general_information
+    item :navigations, icon: 'fa fa-globe', group: :general_configuration
   end
 
   scope :all, default: true

@@ -1,6 +1,6 @@
 Trestle.resource(:footers) do
   menu do
-    item :footers, icon: "fa fa-star"
+    item :footers, icon: "fa fa-star", group: :general_configuration
   end
 
   # Customize the table columns shown on the index view.

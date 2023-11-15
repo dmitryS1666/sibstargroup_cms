@@ -1,6 +1,6 @@
 Trestle.resource(:cookie_elements) do
   menu do
-    item :cookie_elements, icon: "fa fa-cog", group: :general_information
+    item :cookie_elements, icon: "fa fa-cog", group: :general_configuration
   end
 
   table do

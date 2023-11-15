@@ -1,6 +1,6 @@
 Trestle.resource(:contacts) do
   menu do
-    item :contacts, icon: "fa fa-phone", group: :general_information
+    item :contacts, icon: "fa fa-phone"
   end
 
   scope :all, default: true

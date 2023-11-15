@@ -6,7 +6,7 @@ class NewsController < ApplicationController
   # GET /news
   def index
     load_data
-    @news = News.all
+    @news = News.items_by_locale
   end
 
   # GET /news/1

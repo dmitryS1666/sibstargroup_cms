@@ -1,6 +1,6 @@
 Trestle.resource(:generals) do
   menu do
-    item :generals, icon: "fa fa-star"
+    item :generals, icon: "fa fa-star", group: :general_configuration
   end
 
   table do

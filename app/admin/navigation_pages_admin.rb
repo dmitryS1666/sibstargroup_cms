@@ -1,6 +1,6 @@
 Trestle.resource(:navigation_pages) do
   menu do
-    item :navigation_pages, icon: 'fa fa-map-marker', group: :general_information
+    item :navigation_pages, icon: 'fa fa-map-marker', group: :general_configuration
   end
 
   table do

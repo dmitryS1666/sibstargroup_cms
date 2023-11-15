@@ -60,7 +60,7 @@ Button.create!(
     { name: 'back', title: '向后', language: 'zh' },
     { name: 'next', title: 'Далее', language: 'ru' },
     { name: 'next', title: 'Next', language: 'en' },
-    { name: 'next', title: '往下', language: 'zh' }
+    { name: 'next', title: '往下', language: 'zh' },
   ]
 )
 

@@ -1,6 +1,6 @@
 Trestle.resource(:titles) do
   menu do
-    item :titles, icon: "fa fa-star"
+    item :titles, icon: "fa fa-star", group: :general_configuration
   end
 
   scope :all, default: true

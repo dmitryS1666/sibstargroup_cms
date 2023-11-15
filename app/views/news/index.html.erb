@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>News</h1>
-
-<div id="news">
-  <% @news.each do |news| %>
-    <%= render news %>
-    <p>
-      <%= link_to "Show this news", news %>
-    </p>
-  <% end %>
+<div class="home-news home-section" id="news">
+  <div class="container">
+    <h2 class="home-news__h2"><%= @titles['news'][0]['title'] %></h2>
+    <div class="news-list">
+      <% @news.each do |news| %>
+        <a class="news-list-item" href="<%= news_path(id: news.id) %>">
+          <span class="news-list-item__date"><%= news.created_at.strftime('%d-%m-%Y') %></span>
+          <span class="news-list-item__title"><%= news.title %></span>
+          <span class="news-list-item__more">
+            <%= @buttons['read'][0]['title'] %>
+            <span class="news-list-item__more_arrow">→</span>
+          </span>
+        </a>
+      <% end %>
+    </div>
+    <%= render 'shared/popup_footer' %>
+    <div class="home-news__button">
+      <a class="button button_outline button_invert" href="/">
+        <%= @buttons['back'][0]['title'] %>
+      </a>
+    </div>
+  </div>
 </div>
-
-<%= link_to "New news", new_news_path %>

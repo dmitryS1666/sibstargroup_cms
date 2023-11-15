@@ -1,5 +1,5 @@
 Trestle.resource(:buttons) do
-  menu :buttons, icon: "fa fa-keyboard-o", group: :general_information
+  menu :buttons, icon: "fa fa-keyboard-o", group: :general_configuration
 
   scope :all, default: true
 

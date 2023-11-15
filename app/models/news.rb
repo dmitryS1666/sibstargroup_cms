@@ -6,4 +6,8 @@ class News < ApplicationRecord
   def self.items
     where(language: I18n.locale).limit(3)
   end
+
+  def self.items_by_locale
+    where(language: I18n.locale)
+  end
 end

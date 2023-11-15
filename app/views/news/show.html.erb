@@ -6,9 +6,13 @@
     <div class="container news__container">
       <div class="news__date"><%= @news.created_at.strftime('%d-%m-%Y') %></div>
       <div class="news__title h1"><%= @news.title %></div>
+      <% if @news.image.attached? %>
+        <div class="popup__content-wrapper">
+           <img src="<%= url_for(@news.image) %>" alt="" style="max-width: 95%; height: auto;"/>
+        </div>
+      <% end %>
       <div class="popup__content-wrapper">
-        <%= @news.image if @news.image.attached? %>
-        <%= @news.content %>
+        <%= @news.content.html_safe %>
       </div>
     </div>
     <%= render 'shared/popup_footer' %>

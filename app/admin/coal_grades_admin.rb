@@ -1,6 +1,6 @@
 Trestle.resource(:coal_grades) do
   menu do
-    item :coal_grades, icon: "fa fa-rocket", group: :general_information
+    item :coal_grades, icon: "fa fa-rocket"
   end
 
   table do

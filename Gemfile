@@ -30,6 +30,7 @@ gem "cssbundling-rails"
 # CMS
 gem 'trestle'
 gem 'trestle-tinymce'
+gem 'trestle-auth'
 
 gem 'image_processing', '~> 1.2'
 

@@ -9,5 +9,5 @@
   |------------------|:-------------:|
   | CMS           | Trestle AD       |
   | Active theme  | default          |
-  | User email    | admin@mail.ru    |
+  | User email    | admin@example.com    |
   | User password | password         |

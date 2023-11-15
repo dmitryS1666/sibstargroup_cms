@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     resources :news
   end
 
-  mount Trestle::Engine => '/admin', as: 'trestle_admin'
+  mount Trestle::Engine => '/admin', as: 'trestle'
 end

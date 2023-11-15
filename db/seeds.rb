@@ -1,5 +1,8 @@
+User.destroy_all
+User.create!(email: "admin@example.com", password: "password", first_name: "Admin", last_name: "User")
+
 CookieElement.destroy_all
-CookieElement.create(
+CookieElement.create!(
   [
     { title: 'На сайте используются', btn: 'хорошо', language: 'ru' },
     { title: 'We use', btn: 'ok', language: 'en' },

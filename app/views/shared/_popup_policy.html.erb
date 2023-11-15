@@ -1,8 +1,9 @@
-<div class="popup">
+<div class="popup" id="popup-policy">
   <div class="popup__container">
     <div class="popup__close"><img src="assets/icons/close.svg" alt=""/></div>
     <div class="container">
-      <%= @general['privacy_policy'][0]['text'] %>
+      <%= @general['privacy_policy'][0]['text'].html_safe %>
     </div>
+    <%= render 'shared/popup_footer' %>
   </div>
 </div>

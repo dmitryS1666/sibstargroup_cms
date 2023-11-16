@@ -18,7 +18,10 @@ Trestle.resource(:news) do
     end
 
     column :language
-    actions
+    actions header: 'Actions' do |a|
+      a.edit
+      a.delete
+    end
   end
 
   form do |news|

@@ -64,6 +64,34 @@ Button.create!(
     { name: 'next', title: 'Далее', language: 'ru' },
     { name: 'next', title: 'Next', language: 'en' },
     { name: 'next', title: '往下', language: 'zh' },
+
+    { name: 'coal_select', title: 'Выберите уголь', language: 'ru' },
+    { name: 'coal_select', title: 'Next', language: 'en' },
+    { name: 'coal_select', title: '往下', language: 'zh' },
+
+    { name: 'coal_type', title: 'Марка угля', language: 'ru' },
+    { name: 'coal_type', title: 'Next', language: 'en' },
+    { name: 'coal_type', title: '往下', language: 'zh' },
+
+    { name: 'delivery_direction', title: 'Направление поставки', language: 'ru' },
+    { name: 'delivery_direction', title: 'Next', language: 'en' },
+    { name: 'delivery_direction', title: '往下', language: 'zh' },
+
+    { name: 'china', title: 'Китай', language: 'ru' },
+    { name: 'china', title: 'China', language: 'en' },
+    { name: 'china', title: '往下', language: 'zh' },
+
+    { name: 'turkey', title: 'Турция', language: 'ru' },
+    { name: 'turkey', title: 'Turkey', language: 'en' },
+    { name: 'turkey', title: '往下', language: 'zh' },
+
+    { name: 'station', title: 'Станция назначения', language: 'ru' },
+    { name: 'station', title: 'Destination station', language: 'en' },
+    { name: 'station', title: '目的地站', language: 'zh' },
+
+    { name: 'order_count', title: 'Количество тонн (кратное 70 тоннам = 1 вагон)', language: 'ru' },
+    { name: 'order_count', title: 'Number of tons (multiple of 70 tons = 1 wagon)', language: 'en' },
+    { name: 'order_count', title: '噸數（70噸的倍數=1車皮）', language: 'zh' },
   ]
 )
 
@@ -181,6 +209,21 @@ General.create!(
     { name: 'email_hint', text: 'Почта', language: 'ru' },
     { name: 'email_hint', text: 'Email', language: 'en' },
     { name: 'email_hint', text: 'E-mail', language: 'zh' },
+    { name: 'phone', text: 'Ваш контактный телефон', language: 'ru' },
+    { name: 'phone', text: 'Your contact phone number', language: 'en' },
+    { name: 'phone', text: '您的聯絡電話', language: 'zh' },
+    { name: 'phone_hint', text: '+7 999 999 99 99', language: 'ru' },
+    { name: 'phone_hint', text: '+7 999 999 99 99', language: 'en' },
+    { name: 'phone_hint', text: '+7 999 999 99 99', language: 'zh' },
+    { name: 'org', text: 'Наименование организации', language: 'ru' },
+    { name: 'org', text: 'Name of company', language: 'en' },
+    { name: 'org', text: '公司名稱', language: 'zh' },
+    { name: 'dream', text: 'Желаемая цена (с указанием валюты за тонну)', language: 'ru' },
+    { name: 'dream', text: 'Desired price (indicating currency per ton)', language: 'en' },
+    { name: 'dream', text: '期望價格（表示貨幣每噸）', language: 'zh' },
+    { name: 'org_hint', text: 'Название вашей организации', language: 'ru' },
+    { name: 'org_hint', text: 'Name of your organization', language: 'en' },
+    { name: 'org_hint', text: '您的組織名稱', language: 'zh' },
     { name: 'info', text: 'Дополнительная информация', language: 'ru' },
     { name: 'info', text: 'Additional Information', language: 'en' },
     { name: 'info', text: '更多信息', language: 'zh' },
@@ -192,7 +235,10 @@ General.create!(
     { name: 'required', text: '此欄位是必需的', language: 'zh' },
     { name: 'supply', text: 'Поставка', language: 'ru' },
     { name: 'supply', text: 'Supply', language: 'en' },
-    { name: 'supply', text: '供應', language: 'zh' }
+    { name: 'supply', text: '供應', language: 'zh' },
+    { name: 'contact_info', text: 'Контактная информация', language: 'ru' },
+    { name: 'contact_info', text: 'Contact Information', language: 'en' },
+    { name: 'contact_info', text: '聯絡資訊', language: 'zh' }
   ]
 )
 

@@ -25,13 +25,17 @@ gem "bootsnap", require: false
 # Use Sass to process CSS
 gem "cssbundling-rails"
 
-# gem 'devise'
-
 # CMS
 gem 'trestle'
 gem 'trestle-tinymce'
 gem 'trestle-auth'
 
+# gem 'trestle-mobility'
+
+# i18n
+gem 'mobility'
+
+# active storage
 gem 'image_processing', '~> 1.2'
 
 group :development, :test do
@@ -40,4 +44,5 @@ end
 
 group :development do
   gem "web-console"
+  gem "letter_opener"
 end

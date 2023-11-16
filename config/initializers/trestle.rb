@@ -277,4 +277,14 @@ Trestle.configure do |config|
   # config.auth.remember.cookie = ->(user) {
   #   { value: user.remember_token, expires: user.remember_token_expires_at }
   # }
+
+  # == Mobility Options
+  #
+  # Specify the default selected locale
+
+  # config.mobility.selected = -> { I18n.locale }
+
+  # Specify your DeepL Pro API key to easily translate values
+  #
+  # config.mobility.deepl_api_key = "YOUR-API-KEY"
 end

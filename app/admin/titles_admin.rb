@@ -3,6 +3,13 @@ Trestle.resource(:titles) do
     item :titles, icon: "fa fa-star", group: :general_configuration
   end
 
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { Title.where(language: "ru") }
+    scope :en, -> { Title.where(language: "en") }
+    scope :zh, -> { Title.where(language: "zh") }
+  end
+
   scope :all, default: true
 
   table do

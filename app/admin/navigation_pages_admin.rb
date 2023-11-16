@@ -3,6 +3,13 @@ Trestle.resource(:navigation_pages) do
     item :navigation_pages, icon: 'fa fa-map-marker', group: :general_configuration
   end
 
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { NavigationPage.where(language: "ru") }
+    scope :en, -> { NavigationPage.where(language: "en") }
+    scope :zh, -> { NavigationPage.where(language: "zh") }
+  end
+
   table do
     column :name
     column :title

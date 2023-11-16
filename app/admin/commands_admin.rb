@@ -3,7 +3,12 @@ Trestle.resource(:commands) do
     item :commands, icon: "fa fa-users"
   end
 
-  scope :all, default: true
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { Command.where(language: "ru") }
+    scope :en, -> { Command.where(language: "en") }
+    scope :zh, -> { Command.where(language: "zh") }
+  end
 
   table do
     column :image do |command|

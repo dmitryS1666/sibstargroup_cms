@@ -4,6 +4,13 @@ Trestle.resource(:sliders) do
     item :sliders, icon: "fa fa-picture-o", group: :general_configuration
   end
 
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { Slider.where(language: "ru") }
+    scope :en, -> { Slider.where(language: "en") }
+    scope :zh, -> { Slider.where(language: "zh") }
+  end
+
   scope :all, default: true
 
   table do

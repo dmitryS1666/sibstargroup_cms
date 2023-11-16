@@ -1,7 +1,12 @@
 Trestle.resource(:buttons) do
   menu :buttons, icon: "fa fa-keyboard-o", group: :general_configuration
 
-  scope :all, default: true
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { Button.where(language: "ru") }
+    scope :en, -> { Button.where(language: "en") }
+    scope :zh, -> { Button.where(language: "zh") }
+  end
 
   table do
     column :name

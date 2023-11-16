@@ -3,7 +3,12 @@ Trestle.resource(:contacts) do
     item :contacts, icon: "fa fa-phone"
   end
 
-  scope :all, default: true
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { Contact.where(language: "ru") }
+    scope :en, -> { Contact.where(language: "en") }
+    scope :zh, -> { Contact.where(language: "zh") }
+  end
 
   table do
     column :name

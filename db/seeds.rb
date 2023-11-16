@@ -257,10 +257,11 @@ Slider.create!(
   ]
 )
 
-SliderConfig.destroy_all
-SliderConfig.create!(
+Config.destroy_all
+Config.create!(
   [
     { name: 'slider_timer', value: 5 },
+    { name: 'coal_count', value: 1000000 }
   ]
 )
 

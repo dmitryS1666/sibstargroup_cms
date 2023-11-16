@@ -3,7 +3,12 @@ Trestle.resource(:news) do
     item :news, icon: "fa fa-newspaper-o"
   end
 
-  scope :all, default: true
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { News.where(language: "ru") }
+    scope :en, -> { News.where(language: "en") }
+    scope :zh, -> { News.where(language: "zh") }
+  end
 
   table do
     column :title

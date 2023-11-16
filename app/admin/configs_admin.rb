@@ -1,6 +1,6 @@
-Trestle.resource(:slider_configs) do
+Trestle.resource(:configs) do
   menu do
-    item :slider_configs, icon: "fa fa-cog", group: :general_configuration
+    item :configs, icon: "fa fa-cog", group: :general_configuration
   end
 
   table do

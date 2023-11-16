@@ -3,6 +3,13 @@ Trestle.resource(:generals) do
     item :generals, icon: "fa fa-star", group: :general_configuration
   end
 
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { General.where(language: "ru") }
+    scope :en, -> { General.where(language: "en") }
+    scope :zh, -> { General.where(language: "zh") }
+  end
+
   table do
     column :name
     column :text

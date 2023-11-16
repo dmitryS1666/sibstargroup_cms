@@ -3,7 +3,12 @@ Trestle.resource(:navigations) do
     item :navigations, icon: 'fa fa-globe', group: :general_configuration
   end
 
-  scope :all, default: true
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { Navigation.where(language: "ru") }
+    scope :en, -> { Navigation.where(language: "en") }
+    scope :zh, -> { Navigation.where(language: "zh") }
+  end
 
   table do
     column :name

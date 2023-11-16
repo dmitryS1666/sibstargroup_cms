@@ -1,2 +1,0 @@
-class SliderConfig < ApplicationRecord
-end

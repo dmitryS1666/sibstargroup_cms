@@ -3,6 +3,10 @@ Trestle.resource(:coal_grades) do
     item :coal_grades, icon: "fa fa-rocket"
   end
 
+  scopes do
+    scope :all, default: true
+  end
+
   table do
     column :name
     actions

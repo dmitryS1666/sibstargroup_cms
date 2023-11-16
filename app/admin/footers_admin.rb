@@ -3,6 +3,13 @@ Trestle.resource(:footers) do
     item :footers, icon: "fa fa-star", group: :general_configuration
   end
 
+  scopes do
+    scope :all, default: true
+    scope :ru, -> { Footer.where(language: "ru") }
+    scope :en, -> { Footer.where(language: "en") }
+    scope :zh, -> { Footer.where(language: "zh") }
+  end
+
   # Customize the table columns shown on the index view.
   table do
     column :name

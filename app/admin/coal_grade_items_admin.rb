@@ -3,6 +3,15 @@ Trestle.resource(:coal_grade_items) do
     item :coal_grade_items, icon: "fa fa-sitemap"
   end
 
+  scopes do
+    scope :all, default: true
+    scope :dpk, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'DPK').first.id) }
+    scope :do, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'DO').first.id) }
+    scope :domssh, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'DOMSSH').first.id) }
+    scope :low_vol_pci, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'LOW VOL PCI').first.id) }
+    scope :tomssh, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'TOMSSH').first.id) }
+  end
+
   table do
     # sortable false
 

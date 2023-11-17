@@ -1,3 +1,6 @@
+let last_known_scroll_position = 0;
+let ticking = false;
+
 import {
     command,
     cookies,
@@ -18,7 +21,6 @@ import {
 } from './pages/home';
 
 window.addEventListener('DOMContentLoaded', () => {
-// document.addEventListener("turbolinks:load", function () {
     init();
 });
 
@@ -41,3 +43,26 @@ function init() {
     homeCoalSales.init();
     homeSupplyBasis.init();
 }
+
+function reverseLogo() {
+    let logo = document.getElementById('logo');
+    let img = logo.children[0];
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        img.src = '/assets/logo.svg';
+    } else {
+        img.src = '/assets/logo_white.svg';
+    }
+}
+
+window.addEventListener("scroll", function (e) {
+    last_known_scroll_position = window.scrollY;
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            reverseLogo();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+

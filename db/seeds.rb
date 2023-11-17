@@ -34,8 +34,8 @@ Title.create!(
   ]
 )
 
-Button.destroy_all
-Button.create!(
+TxtButton.destroy_all
+TxtButton.create!(
   [
     { name: 'mail', title: 'Написать нам', language: 'ru' },
     { name: 'mail', title: 'Write to us', language: 'en' },
@@ -140,15 +140,15 @@ Navigation.create!(
     { name: 'about', title: 'О нас', url: '#about', language: 'ru' },
     { name: 'about', title: 'About Us', url: '#about', language: 'en' },
     { name: 'about', title: '关于我们', url: '#about', language: 'zh' },
-    { name: 'sale_petroleum', title: 'Продажа нефтепродуктов', url: '', language: 'ru' },
-    { name: 'sale_petroleum', title: 'PETROLEUM PRODUCTS', url: '', language: 'en' },
-    { name: 'sale_petroleum', title: '石油产品销售', url: '', language: 'zh' },
-    { name: 'agricultural', title: 'Продажа сельхозпродукции', url: '', language: 'ru' },
-    { name: 'agricultural', title: 'AGRICULTURAL PRODUCTS', url: '', language: 'en' },
-    { name: 'agricultural', title: '农产品销售', url: '', language: 'zh' },
-    { name: 'coal_online', title: 'Продажа угля', url: '', language: 'ru' },
-    { name: 'coal_online', title: 'PURCHASE ONLINE', url: '', language: 'en' },
-    { name: 'coal_online', title: '煤炭销售', url: '', language: 'zh' },
+    { name: 'sale_petroleum', title: 'Продажа нефтепродуктов', url: '#', language: 'ru' },
+    { name: 'sale_petroleum', title: 'PETROLEUM PRODUCTS', url: '#', language: 'en' },
+    { name: 'sale_petroleum', title: '石油产品销售', url: '#', language: 'zh' },
+    { name: 'agricultural', title: 'Продажа сельхозпродукции', url: '#', language: 'ru' },
+    { name: 'agricultural', title: 'AGRICULTURAL PRODUCTS', url: '#', language: 'en' },
+    { name: 'agricultural', title: '农产品销售', url: '#', language: 'zh' },
+    { name: 'coal_online', title: 'Продажа угля', url: '#', language: 'ru' },
+    { name: 'coal_online', title: 'PURCHASE ONLINE', url: '#', language: 'en' },
+    { name: 'coal_online', title: '煤炭销售', url: '#', language: 'zh' },
     { name: 'news', title: 'Новости', language: 'ru', url: '#news' },
     { name: 'news', title: 'News', language: 'en', url: '#news' },
     { name: 'news', title: '消息', language: 'zh', url: '#news' },
@@ -362,40 +362,36 @@ CoalGrade.create!(
 CoalGradeItem.destroy_all
 CoalGradeItem.create!(
   [
-    { name: "Ash, dry basis, max, %", value: "10,0", coal_grade: CoalGrade.find(1) },
-    { name: "Moisture as received, typical, max %", value: "17,5", coal_grade: CoalGrade.find(1) },
-    { name: "Sulphur, dry basis, max, %", value: "0,6", coal_grade: CoalGrade.find(1) },
-    { name: "Volatiles, daf, max, %", value: "44,0", coal_grade: CoalGrade.find(1) },
-    { name: "Net calorific value as received, min, kcal/kg", value: "5700", coal_grade: CoalGrade.find(1) },
-    { name: "Size, mm", value: "50-200", coal_grade: CoalGrade.find(1) },
-
-    { name: "Ash, dry basis, max, %", value: "10,0", coal_grade: CoalGrade.find(2) },
-    { name: "Moisture as received, typical, max %", value: "17,5", coal_grade: CoalGrade.find(2) },
-    { name: "Sulphur, dry basis, max, %", value: "0,6", coal_grade: CoalGrade.find(2) },
-    { name: "Volatiles, daf, max, %", value: "44,0", coal_grade: CoalGrade.find(2) },
-    { name: "Net calorific value as received, min, kcal/kg", value: "5600", coal_grade: CoalGrade.find(2) },
-    { name: "Size, mm", value: "25-50", coal_grade: CoalGrade.find(2) },
-
-    { name: "Ash, dry basis, max, %", value: "12,0", coal_grade: CoalGrade.find(3) },
-    { name: "Moisture as received, typical, max %", value: "17,5", coal_grade: CoalGrade.find(3) },
-    { name: "Sulphur, dry basis, max, %", value: "0,6", coal_grade: CoalGrade.find(3) },
-    { name: "Volatiles, daf, max, %", value: "44,0", coal_grade: CoalGrade.find(3) },
-    { name: "Net calorific value as received, min, kcal/kg", value: "5500", coal_grade: CoalGrade.find(3) },
-    { name: "Size, mm", value: "0-50", coal_grade: CoalGrade.find(3) },
-
-    { name: "Ash, dry basis, max, %", value: "12,0", coal_grade: CoalGrade.find(4) },
-    { name: "Moisture as received, typical, max %", value: "12,0", coal_grade: CoalGrade.find(4) },
-    { name: "Sulphur, dry basis, max, %", value: "0,5", coal_grade: CoalGrade.find(4) },
-    { name: "Volatiles, daf, max, %", value: "12,0", coal_grade: CoalGrade.find(4) },
-    { name: "Net calorific value as received, min, kcal/kg", value: "6800", coal_grade: CoalGrade.find(4) },
-    { name: "Size, mm", value: "0-50", coal_grade: CoalGrade.find(4) },
-
-    { name: "Ash, dry basis, max, %", value: "15,0", coal_grade: CoalGrade.find(5) },
-    { name: "Moisture as received, typical, max %", value: "12,0", coal_grade: CoalGrade.find(5) },
-    { name: "Sulphur, dry basis, max, %", value: "0,5", coal_grade: CoalGrade.find(5) },
-    { name: "Volatiles, daf, max, %", value: "15,0", coal_grade: CoalGrade.find(5) },
-    { name: "Net calorific value as received, min, kcal/kg", value: "6200", coal_grade: CoalGrade.find(5) },
-    { name: "Size, mm", value: "0-50", coal_grade: CoalGrade.find(5) }
+    { name: "Ash, dry basis, max, %", value: "10.0", coal_grade_id: CoalGrade.find(1).id },
+    { name: "Moisture as received, typical, max %", value: "17.5", coal_grade_id: CoalGrade.find(1).id },
+    { name: "Sulphur, dry basis, max, %", value: "0.6", coal_grade_id: CoalGrade.find(1).id },
+    { name: "Volatiles, daf, max, %", value: "44.0", coal_grade_id: CoalGrade.find(1).id },
+    { name: "Net calorific value as received, min, kcal/kg", value: "5700", coal_grade_id: CoalGrade.find(1).id },
+    { name: "Size, mm", value: "50-200", coal_grade_id: CoalGrade.find(1).id },
+    { name: "Ash, dry basis, max, %", value: "10.0", coal_grade_id: CoalGrade.find(2).id },
+    { name: "Moisture as received, typical, max %", value: "17.5", coal_grade_id: CoalGrade.find(2).id },
+    { name: "Sulphur, dry basis, max, %", value: "0.6", coal_grade_id: CoalGrade.find(2).id },
+    { name: "Volatiles, daf, max, %", value: "44.0", coal_grade_id: CoalGrade.find(2).id },
+    { name: "Net calorific value as received, min, kcal/kg", value: "5600", coal_grade_id: CoalGrade.find(2).id },
+    { name: "Size, mm", value: "25-50", coal_grade_id: CoalGrade.find(2).id },
+    { name: "Ash, dry basis, max, %", value: "12.0", coal_grade_id: CoalGrade.find(3).id },
+    { name: "Moisture as received, typical, max %", value: "17.5", coal_grade_id: CoalGrade.find(3).id },
+    { name: "Sulphur, dry basis, max, %", value: "0.6", coal_grade_id: CoalGrade.find(3).id },
+    { name: "Volatiles, daf, max, %", value: "44.0", coal_grade_id: CoalGrade.find(3).id },
+    { name: "Net calorific value as received, min, kcal/kg", value: "5500", coal_grade_id: CoalGrade.find(3).id },
+    { name: "Size, mm", value: "0-50", coal_grade_id: CoalGrade.find(3).id },
+    { name: "Ash, dry basis, max, %", value: "12.0", coal_grade_id: CoalGrade.find(4).id },
+    { name: "Moisture as received, typical, max %", value: "12.0", coal_grade_id: CoalGrade.find(4).id },
+    { name: "Sulphur, dry basis, max, %", value: "0.5", coal_grade_id: CoalGrade.find(4).id },
+    { name: "Volatiles, daf, max, %", value: "12.0", coal_grade_id: CoalGrade.find(4).id },
+    { name: "Net calorific value as received, min, kcal/kg", value: "6800", coal_grade_id: CoalGrade.find(4).id },
+    { name: "Size, mm", value: "0-50", coal_grade_id: CoalGrade.find(4).id },
+    { name: "Ash, dry basis, max, %", value: "15.0", coal_grade_id: CoalGrade.find(5).id },
+    { name: "Moisture as received, typical, max %", value: "12.0", coal_grade_id: CoalGrade.find(5).id },
+    { name: "Sulphur, dry basis, max, %", value: "0.5", coal_grade_id: CoalGrade.find(5).id },
+    { name: "Volatiles, daf, max, %", value: "15.0", coal_grade_id: CoalGrade.find(5).id },
+    { name: "Net calorific value as received, min, kcal/kg", value: "6200", coal_grade_id: CoalGrade.find(5).id },
+    { name: "Size, mm", value: "0-50", coal_grade_id: CoalGrade.find(5).id }
   ]
 )
 

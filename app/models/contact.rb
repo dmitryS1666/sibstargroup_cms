@@ -1,4 +1,9 @@
 class Contact < ApplicationRecord
+  validates :name, presence: { message: 'can\'t be empty' }
+  validates :title, presence: { message: 'can\'t be empty' }
+  validates :address, presence: { message: 'can\'t be empty' }
+  validates :phone_num, presence: { message: 'can\'t be empty' }
+  validates :language, presence: { message: 'should be selected' }
 
   private
 

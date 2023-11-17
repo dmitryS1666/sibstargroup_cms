@@ -18,14 +18,18 @@ Trestle.resource(:navigation_pages) do
     actions
   end
 
-  form do
+  form do |el|
     row do
-      col { text_field :name }
-      col { text_field :title }
+      if el&.name
+        col(sm: 3) { text_field :name, disabled: true }
+      else
+        col(sm: 3) { text_field :name }
+      end
+      col(sm: 3) { text_field :title }
     end
     row do
-      col { text_field :anchor }
-      col { select :language, %w[ru zh en] }
+      col(sm: 3) { text_field :anchor }
+      col(sm: 3) { select :language, %w[ru zh en] }
     end
   end
 

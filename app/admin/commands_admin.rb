@@ -37,30 +37,28 @@ Trestle.resource(:commands) do
 
   form do |command|
     row do
-      col { text_field :person }
-      col { text_field :desc }
+      col(sm: 6) { text_field :person }
+      col(sm: 6) { text_field :desc }
     end
 
     row do
-      col { file_field :image, as: :file, input_html: { direct_upload: true } }
-      col { text_field :base_image_url, disabled: true }
+      col(sm: 6) { file_field :image, as: :file, input_html: { direct_upload: true } }
+      col(sm: 6) { text_field :base_image_url, disabled: true }
     end
 
     row do
-      col { select :language, %w[ru zh en] }
-      col {}
+      col(sm: 6) { select :language, %w[ru zh en] }
     end
 
     row do
       if command.base_image_url
-        col { image_tag command.base_image_url.gsub('assets/', ''),
+        col(sm: 6) { image_tag command.base_image_url.gsub('assets/', ''),
                         style: 'max-width: 350px; height: auto;' }
       end
       if command.image.attached?
-        col { image_tag main_app.rails_blob_path(command.image),
+        col(sm: 6) { image_tag main_app.rails_blob_path(command.image),
                         style: 'max-width: 150px; height: auto;' }
       end
-      col {}
     end
   end
 

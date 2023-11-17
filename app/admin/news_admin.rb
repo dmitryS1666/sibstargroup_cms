@@ -31,31 +31,23 @@ Trestle.resource(:news) do
 
   form do |news|
     row do
-      col { text_field :title }
+      col(sm: 3) { text_field :title }
     end
     row do
-      col { editor :content }
+      col(sm: 6) { editor :content }
     end
 
-    col { file_field :image, as: :file, input_html: { direct_upload: true } }
+    col(sm: 6) { file_field :image, as: :file, input_html: { direct_upload: true } }
+    col(sm: 6) { file_field :image, as: :file, input_html: { onchange: "displaySelectedFile(this);" } }
 
     row do
       if news.image.attached?
-        col { image_tag main_app.rails_blob_path(news.image),
-                        style: 'max-width: 150px; height: auto;' }
+        col(sm: 3) {
+          image_tag main_app.rails_blob_path(news.image),
+                    style: 'max-width: 150px; height: auto;'
+        }
       end
-      col {}
     end
   end
-
-  # By default, all parameters passed to the update and create actions will be
-  # permitted. If you do not have full trust in your users, you should explicitly
-  # define the list of permitted parameters.
-  #
-  # For further information, see the Rails documentation on Strong Parameters:
-  #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
-  #
-  # params do |params|
-  #   params.require(:news).permit(:name, ...)
-  # end
 end
+

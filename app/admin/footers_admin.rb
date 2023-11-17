@@ -10,7 +10,6 @@ Trestle.resource(:footers) do
     scope :zh, -> { Footer.where(language: "zh") }
   end
 
-  # Customize the table columns shown on the index view.
   table do
     column :name
     column :title
@@ -18,28 +17,17 @@ Trestle.resource(:footers) do
     actions
   end
 
-  form do
+  form do |el|
     row do
-      col { text_field :name }
-      col {}
-      col {}
+      if el&.name
+        col(sm: 3) { text_field :name, disabled: true }
+      else
+        col(sm: 3) { text_field :name }
+      end
+      col(sm: 3) { select :language, %w[ru zh en] }
     end
-    editor :title
-
     row do
-      col { select :language, %w[ru zh en] }
-      col {}
+      col(sm: 9) { editor :title }
     end
   end
-
-  # By default, all parameters passed to the update and create actions will be
-  # permitted. If you do not have full trust in your users, you should explicitly
-  # define the list of permitted parameters.
-  #
-  # For further information, see the Rails documentation on Strong Parameters:
-  #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
-  #
-  # params do |params|
-  #   params.require(:footer).permit(:name, ...)
-  # end
 end

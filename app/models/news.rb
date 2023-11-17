@@ -1,5 +1,8 @@
 class News < ApplicationRecord
   has_one_attached :image
+  validates :title, presence: { message: 'can\'t be empty' }
+  validates :content, presence: { message: 'can\'t be empty' }
+  validates :language, presence: { message: 'should be selected' }
 
   private
 

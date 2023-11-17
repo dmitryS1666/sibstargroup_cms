@@ -5,40 +5,28 @@ Trestle.resource(:coal_grade_items) do
 
   scopes do
     scope :all, default: true
-    scope :dpk, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'DPK').first.id) }
-    scope :do, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'DO').first.id) }
-    scope :domssh, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'DOMSSH').first.id) }
-    scope :low_vol_pci, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'LOW VOL PCI').first.id) }
-    scope :tomssh, -> { CoalGradeItem.where(coal_grade_id: CoalGrade.where(name: 'TOMSSH').first.id) }
+    CoalGrade.distinct.pluck(:id, :name).each do |coal|
+      scope coal[1], -> { CoalGradeItem.where(coal_grade_id: coal[0]) }
+    end
   end
 
-  table do
-    # sortable false
-
+  table do |item|
     column :name
     column :value
-    column :coal_grade
+    column :coal_grade_id, ->(item) { CoalGrade.find(item.coal_grade_id).name }
     actions
   end
 
-  form do |coal_grade_item|
+  form do |item|
     row do
-      col { text_field :name }
-      col { text_field :value }
+      col(sm: 3) { text_field :name }
+      col(sm: 3) { text_field :value }
     end
     row do
-      col { text_field :coal_grade }
-      col {  }
+      col(sm: 3) { select :coal_grade_id, CoalGrade.all.map { |coal| [coal.name, coal.id, { selected: (coal.id == item.coal_grade_id) }] } }
     end
   end
 
-  # By default, all parameters passed to the update and create actions will be
-  # permitted. If you do not have full trust in your users, you should explicitly
-  # define the list of permitted parameters.
-  #
-  # For further information, see the Rails documentation on Strong Parameters:
-  #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
-  #
   # params do |params|
   #   params.require(:coal_grade_item).permit(:name, ...)
   # end

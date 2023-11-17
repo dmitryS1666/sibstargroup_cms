@@ -40,25 +40,24 @@ Trestle.resource(:sliders) do
 
   form do |slider|
     row do
-      col { editor :text }
-      col { file_field :image, as: :file, input_html: { direct_upload: true } }
+      col(sm: 6) { editor :text }
+      col(sm: 6) { file_field :image, as: :file, input_html: { direct_upload: true } }
     end
 
     row do
-      col { text_field :base_image_url, disabled: true }
-      col { select :language, %w[ru zh en] }
+      col(sm: 6) { text_field :base_image_url, disabled: true }
+      col(sm: 6) { select :language, %w[ru zh en] }
     end
 
     row do
       if slider.base_image_url
-        col { image_tag slider.base_image_url.gsub('assets/', ''),
+        col(sm: 6) { image_tag slider.base_image_url.gsub('assets/', ''),
                         style: 'max-width: 350px; height: auto;' }
       end
       if slider.image.attached?
-        col { image_tag main_app.rails_blob_path(slider.image),
+        col(sm: 6) { image_tag main_app.rails_blob_path(slider.image),
                         style: 'max-width: 150px; height: auto;' }
       end
-      col {}
     end
   end
 

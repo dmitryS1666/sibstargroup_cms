@@ -1,4 +1,8 @@
 class General < ApplicationRecord
+  validates :name, presence: { message: 'can\'t be empty' }
+  validates :text, presence: { message: 'can\'t be empty' }
+  validates :language, presence: { message: 'should be selected' }
+
   private
 
   def self.items

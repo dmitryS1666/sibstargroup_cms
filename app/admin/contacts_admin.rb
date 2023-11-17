@@ -20,31 +20,24 @@ Trestle.resource(:contacts) do
     actions
   end
 
-  form do
+  form do |el|
     row do
-      col { text_field :name }
-      col { text_field :title }
+      if el&.name
+        col(sm: 3) { text_field :name, disabled: true }
+      else
+        col(sm: 3) { text_field :name }
+      end
+      col(sm: 3) { text_field :title }
     end
 
     row do
-      col { text_field :phone_num }
-      col { text_field :address }
+      col(sm: 3) { text_field :phone_num }
+      col(sm: 3) { text_field :address }
     end
 
     row do
-      col { text_field :person }
-      col { select :language, %w[ru zh en] }
+      col(sm: 3) { text_field :person }
+      col(sm: 3) { select :language, %w[ru zh en] }
     end
   end
-
-  # By default, all parameters passed to the update and create actions will be
-  # permitted. If you do not have full trust in your users, you should explicitly
-  # define the list of permitted parameters.
-  #
-  # For further information, see the Rails documentation on Strong Parameters:
-  #   http://guides.rubyonrails.org/action_controller_overview.html#strong-parameters
-  #
-  # params do |params|
-  #   params.require(:contact).permit(:name, ...)
-  # end
 end

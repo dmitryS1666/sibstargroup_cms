@@ -17,10 +17,14 @@ Trestle.resource(:generals) do
     actions
   end
 
-  form do
+  form do |el|
     row do
-      col { text_field :name }
-      col { select :language, %w[ru zh en] }
+      if el&.name
+        col(sm: 3) { text_field :name, disabled: true }
+      else
+        col(sm: 3) { text_field :name }
+      end
+      col(sm: 3) { select :language, %w[ru zh en] }
     end
     row do
       col { editor :text }

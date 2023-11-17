@@ -42,14 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_070251) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "buttons", force: :cascade do |t|
-    t.string "name"
-    t.string "title"
-    t.string "language"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "coal_grade_items", force: :cascade do |t|
     t.string "name"
     t.string "value"
@@ -192,6 +184,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_16_070251) do
   end
 
   create_table "titles", force: :cascade do |t|
+    t.string "name"
+    t.string "title"
+    t.string "language"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "txt_buttons", force: :cascade do |t|
     t.string "name"
     t.string "title"
     t.string "language"

@@ -111,7 +111,7 @@
           </div>
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__phone"><%= @general['phone'][0]['title'] %>*</label>
+              <label class="form__label" for="order__phone"><%= @general['phone'][0]['text'] %>*</label>
               <input class="form__input" id="order__phone" type="text" placeholder="<%= @general['phone_hint'][0]['text'] %>" name="phone" required="required"/>
             </div>
           </div>
@@ -132,8 +132,8 @@
       </div>
     </form>
     <div class="form-success">
-      <div class="h2 form-success__h2">Успешно отправлено!</div>
-      <p class="form-success__text">Ваше сообщение было доставлено, в скоре мы свяжемся с Вами.</p>
+      <div class="h2 form-success__h2"><%= @general['success'][0]['text'] %></div>
+      <p class="form-success__text"><%= @general['success_desc'][0]['text'] %></p>
     </div>
   </div>
 </div>

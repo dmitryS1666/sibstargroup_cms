@@ -238,7 +238,13 @@ General.create!(
     { name: 'supply', text: '供應', language: 'zh' },
     { name: 'contact_info', text: 'Контактная информация', language: 'ru' },
     { name: 'contact_info', text: 'Contact Information', language: 'en' },
-    { name: 'contact_info', text: '聯絡資訊', language: 'zh' }
+    { name: 'contact_info', text: '聯絡資訊', language: 'zh' },
+    { name: 'success', text: 'Успешно отправлено!', language: 'ru' },
+    { name: 'success', text: 'Successfully sent!', language: 'en' },
+    { name: 'success', text: '發送成功！', language: 'zh' },
+    { name: 'success_desc', text: 'Ваше сообщение было доставлено, в скоре мы свяжемся с Вами.', language: 'ru' },
+    { name: 'success_desc', text: 'Your message has been delivered, we will contact you shortly.', language: 'en' },
+    { name: 'success_desc', text: '您的留言已送達，我們將盡快與您聯絡。', language: 'zh' }
   ]
 )
 

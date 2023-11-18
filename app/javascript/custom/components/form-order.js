@@ -224,16 +224,14 @@ class FormOrder {
       el.classList.remove('form__error_show');
     });
 
-    const url =
-      '//sibstar-forms-mailer.dsml.ru/api/v1/order?' +
-      new URLSearchParams(formData).toString();
+    const url = '/orders?' + new URLSearchParams(formData).toString();
 
     this.form.classList.add('form_hide');
     this.addLoader(this.form);
     this.error?.remove();
 
     formPOST(url, (status, response) => {
-      if (status === 200) {
+      if (status === 200 || status === 302) {
         this.loader.remove();
         this.form.reset();
         this.form

@@ -22,6 +22,21 @@ import {
 
 window.addEventListener('DOMContentLoaded', () => {
     init();
+//     tinymce.init({
+//         selector: '.tinymce',
+//         // Other TinyMCE configuration options...
+//     });
+});
+
+window.addEventListener("scroll", function (e) {
+    last_known_scroll_position = window.scrollY;
+    if (!ticking) {
+        window.requestAnimationFrame(function () {
+            reverseLogo();
+            ticking = false;
+        });
+        ticking = true;
+    }
 });
 
 function init() {
@@ -55,14 +70,4 @@ function reverseLogo() {
     }
 }
 
-window.addEventListener("scroll", function (e) {
-    last_known_scroll_position = window.scrollY;
-    if (!ticking) {
-        window.requestAnimationFrame(function () {
-            reverseLogo();
-            ticking = false;
-        });
-        ticking = true;
-    }
-});
 

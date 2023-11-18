@@ -1,7 +1,10 @@
+<%# coal_names = [ 'ДПК(фр. 50-200)', 'ДО (фр. 25-50)', 'ДОМСШ (фр. 0-50)', 'ТОМСШ (фр. 0-50)', 'Г (фр. 0-50)' ] %>
+
 <div class="popup" id="popup-order">
   <div class="popup__container">
     <div class="popup__close"><img src="assets/icons/close.svg" alt=""/></div>
     <form class="form form-step" id="form-order" action="#">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
       <div class="form-step-navigation"></div>
       <div class="form-step__item">
         <div class="h2 popup__h2"><%= @buttons['coal_select'][0]['title'] %></div>
@@ -51,7 +54,8 @@
             </div>
           </div>
           <div class="form__field order__destination-station form__field_hide form__col">
-            <label class="form__label" for="order__destination-station_china"><%= @buttons['station'][0]['title'] %>*</label>
+            <label class="form__label" for="order__destination-station_china"><%= @buttons['station'][0]['title'] %>
+              *</label>
             <select class="form__select" id="order__destination-station_china" name="destination_station_china">
               <option value="Тунцзянь" selected="selected">Тунцзянь</option>
               <option value="Суйфэнхэ">Суйфэнхэ</option>
@@ -61,7 +65,8 @@
             </select>
           </div>
           <div class="form__field order__destination-station form__field_hide form__col">
-            <label class="form__label" for="order__destination-station_turkey"><%= @buttons['station'][0]['title'] %>*</label>
+            <label class="form__label" for="order__destination-station_turkey"><%= @buttons['station'][0]['title'] %>
+              *</label>
             <select class="form__select" id="order__destination-station_turkey" name="destination_station_turkey">
               <option value="Самсун" selected="selected">Самсун</option>
               <option value="Мерсин">Мерсин</option>
@@ -126,9 +131,9 @@
         </button>
       </div>
     </form>
-<!--    <div class="form-success">-->
-<!--      <div class="h2 form-success__h2">Успешно отправлено!</div>-->
-<!--      <p class="form-success__text">Ваше сообщение было доставлено, в скоре мы свяжемся с Вами.</p>-->
-<!--    </div>-->
+    <div class="form-success">
+      <div class="h2 form-success__h2">Успешно отправлено!</div>
+      <p class="form-success__text">Ваше сообщение было доставлено, в скоре мы свяжемся с Вами.</p>
+    </div>
   </div>
 </div>

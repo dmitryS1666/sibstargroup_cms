@@ -52,16 +52,14 @@ class FormEmailUs {
       el.classList.remove('form__error_show');
     });
 
-    const url =
-      '//sibstar-forms-mailer.dsml.ru/api/v1/email_us?' +
-      new URLSearchParams(formData).toString();
+    const url = '/feedbacks?' + new URLSearchParams(formData).toString();
 
     form.classList.add('form_hide');
     this.addLoader(form);
     this.error?.remove();
 
     formPOST(url, (status, response) => {
-      if (status === 200) {
+      if (status === 200 || status === 302) {
         this.loader.remove();
         form.reset();
         form

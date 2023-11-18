@@ -27,7 +27,7 @@ export const getHTML = (url, callback) => {
   xhr.responseType = 'text';
   xhr.onload = () => {
     const status = xhr.status;
-    console.log(xhr);
+    // console.log(xhr);
     callback(status, xhr.response);
     if (xhr.status !== 200) {
       console.error('Ошибка при получении новости...');
@@ -48,7 +48,7 @@ export const formPOST = (url, callback) => {
   xhr.responseType = 'json';
   xhr.onload = () => {
     const status = xhr.status;
-    console.log(xhr);
+    // console.log(xhr);
     callback(status, xhr.response);
     if (xhr.status !== 200) {
       console.error('error');

@@ -27,8 +27,9 @@ gem "cssbundling-rails"
 
 # CMS
 gem 'trestle'
-gem 'trestle-tinymce'
+# gem 'trestle-tinymce'
 gem 'trestle-auth'
+gem 'tinymce-rails'
 
 # gem 'trestle-mobility'
 

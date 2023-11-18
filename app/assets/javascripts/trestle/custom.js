@@ -6,17 +6,17 @@
 //
 //  e.g. //= require "trestle/custom/my_custom_js"
 
-window.addEventListener('DOMContentLoaded', () => {
-
-    function displaySelectedFile(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                var preview = document.querySelector('.img-preview');
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//
+//     function displaySelectedFile(input) {
+//         if (input.files && input.files[0]) {
+//             var reader = new FileReader();
+//             reader.onload = function (e) {
+//                 var preview = document.querySelector('.img-preview');
+//                 preview.src = e.target.result;
+//                 preview.style.display = 'block';
+//             }
+//             reader.readAsDataURL(input.files[0]);
+//         }
+//     }
+// });

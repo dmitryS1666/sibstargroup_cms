@@ -34,7 +34,8 @@ Trestle.resource(:news) do
       col(sm: 3) { text_field :title }
     end
     row do
-      col(sm: 6) { editor :content }
+      # col(sm: 6) { editor :content }
+      col(sm: 6) { text_field :content, class: 'tinymce', rows: 10, cols: 120 }
     end
 
     col(sm: 6) { file_field :image, as: :file, input_html: { direct_upload: true } }

@@ -5,31 +5,31 @@ Trestle.configure do |config|
   #
   config.site_title = "Sibstargroup Cms"
 
-  # config.tinymce.default.configure do |c|
-  #   c.skin = "trestle"
-  #   c.selector = "textarea.tinymce"
-  #   c.branding = false
-  #   c.elementpath = false
-  #   c.menubar = false
-  #   c.statusbar = false
-  #   c.plugins = [
-  #     :lists,
-  #     :link,
-  #     :image,
-  #     :charmap,
-  #     :table,
-  #     :code,
-  #     :hr,
-  #     :paste,
-  #     :textcolor
-  #   ]
-  #   c.toolbar = [
-  #     "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify",
-  #     "bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code | forecolor backcolor"
-  #   ]
-  #   c.link_context_toolbar = true
-  #   c.convert_urls = false
-  # end
+  config.tinymce.default.configure do |c|
+    c.skin = "trestle"
+    c.selector = "textarea.tinymce"
+    c.branding = false
+    c.elementpath = false
+    c.menubar = false
+    c.statusbar = false
+    c.plugins = [
+      :lists,
+      :link,
+      :image,
+      :charmap,
+      :table,
+      :code,
+      :hr,
+      :paste,
+      :textcolor
+    ]
+    c.toolbar = [
+      "styleselect | bold italic underline strikethrough | subscript superscript hr | alignleft aligncenter alignright alignjustify",
+      "bullist numlist | indent outdent | undo redo | link unlink | image charmap table | code | forecolor backcolor"
+    ]
+    c.link_context_toolbar = true
+    c.convert_urls = false
+  end
 
   # Specify a custom image to be used in place of the site title for mobile and
   # expanded/desktop navigation. These images should be placed within your
@@ -86,7 +86,7 @@ Trestle.configure do |config|
   # Add an explicit menu block to be added to the admin navigation.
 
   config.menu do
-    # item :main_page, icon: "fa fa-star", priority: :first
+    # item :hone_page, icon: "fa fa-star", priority: :first
   end
 
   # == Extension Options

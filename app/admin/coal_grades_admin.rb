@@ -12,9 +12,20 @@ Trestle.resource(:coal_grades) do
     actions
   end
 
-  form do
+  form do |coal|
     row do
       col(sm: 6) { text_field :name }
+    end
+    row do
+      col(sm: 6) { file_field :pdf_file, as: :file, input_html: { direct_upload: true } }
+    end
+    row do
+      if coal.pdf_file.attached?
+        col(sm: 3) {
+          link_to :pdf_file, main_app.rails_blob_path(coal.pdf_file),
+                    style: 'max-width: 150px; height: auto;'
+        }
+      end
     end
   end
 end

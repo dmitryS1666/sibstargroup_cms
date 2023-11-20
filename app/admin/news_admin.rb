@@ -34,12 +34,27 @@ Trestle.resource(:news) do
       col(sm: 3) { text_field :title }
     end
     row do
-      # col(sm: 6) { editor :content }
-      col(sm: 6) { text_field :content, class: 'tinymce', rows: 10, cols: 120 }
+      col(sm: 9) { editor :content }
+      # col(sm: 6) { text_field :content, class: 'tinymce', rows: 10, cols: 120 }
     end
 
     col(sm: 6) { file_field :image, as: :file, input_html: { direct_upload: true } }
-    col(sm: 6) { file_field :image, as: :file, input_html: { onchange: "displaySelectedFile(this);" } }
+
+    # col(sm: 3) {
+    #   image_tag main_app.rails_blob_path(news.image),
+    #             style: 'max-width: 150px; height: auto;'
+    # }
+
+    # if news.image.attached?
+    #   panel 'Image' do
+    #     para 'Current Image:'
+    #     para image_tag(image_tag main_app.rails_blob_path(news.image),
+    #                              style: 'max-width: 150px; height: auto;') # Display the image
+    #
+    #     check_box :remove_image # Add a checkbox to remove the image
+    #     label :remove_image, 'Remove Image'
+    #   end
+    # end
 
     row do
       if news.image.attached?
@@ -51,4 +66,3 @@ Trestle.resource(:news) do
     end
   end
 end
-

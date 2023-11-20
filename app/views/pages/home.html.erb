@@ -68,7 +68,7 @@
   <div class="container">
     <h2 class="home-coal-sales__h2"><%= @titles['coal_sales'][0]['title'] %></h2>
     <p class="home-coal-sales__start-text">
-      <%= @general['coal_desc'][0]['text'] %>
+      <%= @general['coal_desc'][0]['text'].html_safe %>
     </p>
     <% @coal_grades.each do |grade| %>
       <%= render 'shared/home_coal_sales_accordion/info', grade: grade %>

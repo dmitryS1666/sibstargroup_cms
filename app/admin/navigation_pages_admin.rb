@@ -15,7 +15,6 @@ Trestle.resource(:navigation_pages) do
     column :title
     column :anchor
     column :language
-    actions
   end
 
   form do |el|

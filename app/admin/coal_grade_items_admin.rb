@@ -1,7 +1,11 @@
 Trestle.resource(:coal_grade_items) do
   menu do
+    # item 'Dashboard', '/admin/home/index', icon: 'fa fa-home', priority: :first # Замените '/admin/dashboard' на путь к вашей кастомной странице
     item :coal_grade_items, icon: "fa fa-sitemap"
   end
+
+  # menu do
+  # end
 
   scopes do
     scope :all, default: true

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer__head">
       <h2 class="footer__h2">
-        <%= @general['footer_q'][0]['text'] %>
+        <%= @general['footer_q'][0]['text'].html_safe %>
       </h2>
       <div class="footer__buttons">
         <a class="button button_outline button_invert popup-open" href="#popup-email-us">
@@ -75,13 +75,13 @@
     </div>
     <div class="footer__bottom">
       <div class="footer__copy">
-        <%= @footer['copy'][0]['title'] %>
+        <%= @footer['copy'][0]['title'].html_safe %>
       </div>
       <a class="footer__policy popup-open" href="#popup-policy">
-        <%= @footer['policy'][0]['title'] %>
+        <%= @footer['policy'][0]['title'].html_safe %>
       </a>
       <a class="footer__development" href="https://dsml.ru/" target="_blank">
-        <%= @footer['made'][0]['title'] %>
+        <%= @footer['made'][0]['title'].html_safe %>
         <img src="assets/dsml-logo-white.svg" alt=""/>
       </a>
     </div>

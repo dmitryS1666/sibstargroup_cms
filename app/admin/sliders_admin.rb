@@ -1,7 +1,7 @@
 Trestle.resource(:sliders) do
 
   menu do
-    item :sliders, icon: "fa fa-picture-o", group: :general_configuration
+    item :sliders, icon: "fa fa-picture-o"
   end
 
   scopes do

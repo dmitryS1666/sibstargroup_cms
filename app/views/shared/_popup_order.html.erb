@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="form-step__item form-step__item_02">
-        <div class="h2 popup__h2"><%= @general['supply'][0]['title'] %></div>
+        <div class="h2 popup__h2"><%= @general['supply'][0]['text'].html_safe %></div>
         <div class="form__row">
           <div class="form__col">
             <div class="form__field order__delivery-direction">
@@ -83,42 +83,42 @@
         </div>
       </div>
       <div class="form-step__item form-step__item_03">
-        <div class="h2 popup__h2"><%= @general['contact_info'][0]['text'] %></div>
+        <div class="h2 popup__h2"><%= @general['contact_info'][0]['text'].html_safe %></div>
         <div class="form__row">
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__name"><%= @general['you_name'][0]['text'] %></label>
-              <input class="form__input" id="order__name" type="text" placeholder="<%= @general['you_name_hint'][0]['text'] %>" name="name"/>
+              <label class="form__label" for="order__name"><%= @general['you_name'][0]['text'].html_safe %></label>
+              <input class="form__input" id="order__name" type="text" placeholder="<%= @general['you_name_hint'][0]['text'].html_safe %>" name="name"/>
             </div>
           </div>
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__organization"><%= @general['org'][0]['text'] %></label>
-              <input class="form__input" id="order__organization" type="text" placeholder="<%= @general['org_hint'][0]['text'] %>" name="organization"/>
+              <label class="form__label" for="order__organization"><%= @general['org'][0]['text'].html_safe %></label>
+              <input class="form__input" id="order__organization" type="text" placeholder="<%= @general['org_hint'][0]['text'].html_safe %>" name="organization"/>
             </div>
           </div>
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__email"><%= @general['email'][0]['text'] %>*</label>
-              <input class="form__input" id="order__email" type="text" placeholder="<%= @general['email_hint'][0]['text'] %>" name="email" required="required"/>
+              <label class="form__label" for="order__email"><%= @general['email'][0]['text'].html_safe %>*</label>
+              <input class="form__input" id="order__email" type="text" placeholder="<%= @general['email_hint'][0]['text'].html_safe %>" name="email" required="required"/>
             </div>
           </div>
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__price"><%= @general['dream'][0]['text'] %>*</label>
+              <label class="form__label" for="order__price"><%= @general['dream'][0]['text'].html_safe %>*</label>
               <input class="form__input" id="order__price" type="text" placeholder="1700000" name="price" required="required"/>
             </div>
           </div>
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__phone"><%= @general['phone'][0]['text'] %>*</label>
-              <input class="form__input" id="order__phone" type="text" placeholder="<%= @general['phone_hint'][0]['text'] %>" name="phone" required="required"/>
+              <label class="form__label" for="order__phone"><%= @general['phone'][0]['text'].html_safe %>*</label>
+              <input class="form__input" id="order__phone" type="text" placeholder="<%= @general['phone_hint'][0]['text'].html_safe %>" name="phone" required="required"/>
             </div>
           </div>
           <div class="form__col">
             <div class="form__field">
-              <label class="form__label" for="order__message"><%= @general['info'][0]['text'] %></label>
-              <textarea class="form__textarea" id="order__message" placeholder="<%= @general['info_hint'][0]['text'] %>" name="message"></textarea>
+              <label class="form__label" for="order__message"><%= @general['info'][0]['text'].html_safe %></label>
+              <textarea class="form__textarea" id="order__message" placeholder="<%= @general['info_hint'][0]['text'].html_safe %>" name="message"></textarea>
             </div>
           </div>
         </div>
@@ -132,8 +132,8 @@
       </div>
     </form>
     <div class="form-success">
-      <div class="h2 form-success__h2"><%= @general['success'][0]['text'] %></div>
-      <p class="form-success__text"><%= @general['success_desc'][0]['text'] %></p>
+      <div class="h2 form-success__h2"><%= @general['success'][0]['text'].html_safe %></div>
+      <p class="form-success__text"><%= @general['success_desc'][0]['text'].html_safe %></p>
     </div>
   </div>
 </div>

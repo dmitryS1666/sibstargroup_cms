@@ -14,7 +14,9 @@
       <% end %>
     </table>
     <div class="home-coal-sales__buttons">
-      <a class="button button_outline button_invert" href="/pdf/SGS ДОМСШ.pdf" target="_blank">Скачать SGS</a>
+      <% if grade.pdf_file.attached? %>
+        <a class="button button_outline button_invert" href="<%= main_app.rails_blob_path(grade.pdf_file) %>" target="_blank">Скачать <%= grade.name %></a>
+      <% end %>
       <a class="button button_primary button_invert popup-open" href="#popup-order">Купить уголь</a>
     </div>
   </div>

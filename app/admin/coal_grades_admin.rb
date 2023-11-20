@@ -22,9 +22,14 @@ Trestle.resource(:coal_grades) do
     row do
       if coal.pdf_file.attached?
         col(sm: 3) {
-          link_to :pdf_file, main_app.rails_blob_path(coal.pdf_file),
-                    style: 'max-width: 150px; height: auto;'
+          link_to "#{coal.name}.pdf", main_app.rails_blob_path(coal.pdf_file),
+                  style: 'max-width: 150px; height: auto;'
         }
+      end
+    end
+    row do
+      if coal.pdf_file.attached?
+        col(sm: 3) { check_box :delete_file }
       end
     end
   end

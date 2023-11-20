@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   include ApplicationHelper
-  before_action :set_news, only: %i[ show ]
+  before_action :set_news, only: %i[ show, destroy_attach ]
   layout 'news_popup_layout'
 
   # GET /news

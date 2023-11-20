@@ -1,3 +1,5 @@
-<%= form.fields_for :content do |body_form| %>
-  <%= body_form.text_area :content, class: "tinymce" %>
+<%= form.fields_for :content do |f| %>
+  <%= f.text_field :title, :required => true %>
+  <%= f.select :language, %w[ru zh en], :required => true %>
+  <%= f.text_area :content, class: "tinymce" %>
 <% end %>

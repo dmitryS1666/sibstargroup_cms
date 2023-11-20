@@ -7,8 +7,10 @@
           <div class="command__image">
             <% if item.image.attached? %>
               <img src="<%= url_for(item.image) %>" alt=""/>
+            <% elsif !item.base_image_url.blank? %>
+              <img src="<%= url_for(item.base_image_url) %>" alt=""/>
             <% else %>
-              <img src="<%= item['base_image_url'] %>" alt=""/>
+              <img src="assets/placeholder.png" alt=""/>
             <% end %>
           </div>
           <div class="command__caption">

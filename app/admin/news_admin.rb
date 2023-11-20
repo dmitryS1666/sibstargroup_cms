@@ -32,37 +32,27 @@ Trestle.resource(:news) do
   form do |news|
     row do
       col(sm: 3) { text_field :title }
+      col(sm: 3) { select :language, %w[ru zh en] }
     end
     row do
-      col(sm: 9) { editor :content }
-      # col(sm: 6) { text_field :content, class: 'tinymce', rows: 10, cols: 120 }
-    end
-
-    col(sm: 6) { file_field :image, as: :file, input_html: { direct_upload: true } }
-
-    # col(sm: 3) {
-    #   image_tag main_app.rails_blob_path(news.image),
-    #             style: 'max-width: 150px; height: auto;'
-    # }
-
-    # if news.image.attached?
-    #   panel 'Image' do
-    #     para 'Current Image:'
-    #     para image_tag(image_tag main_app.rails_blob_path(news.image),
-    #                              style: 'max-width: 150px; height: auto;') # Display the image
-    #
-    #     check_box :remove_image # Add a checkbox to remove the image
-    #     label :remove_image, 'Remove Image'
-    #   end
-    # end
-
-    row do
+      col(sm: 3) { file_field :image, as: :file, input_html: { direct_upload: true } }
       if news.image.attached?
         col(sm: 3) {
           image_tag main_app.rails_blob_path(news.image),
-                    style: 'max-width: 150px; height: auto;'
+                    style: 'max-width: 100%; height: auto;'
         }
       end
+    end
+    row do
+      col(sm: 3) {}
+      if news.image.attached?
+        # col(sm: 3) { select :delete_file, %w[true false] }
+        col(sm: 3) { check_box :delete_file }
+      end
+    end
+
+    row do
+      col(sm: 9) { editor :content }
     end
   end
 end

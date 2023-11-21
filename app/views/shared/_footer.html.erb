@@ -75,13 +75,13 @@
     </div>
     <div class="footer__bottom">
       <div class="footer__copy">
-        <%= @footer['copy'][0]['title'].html_safe %>
+        <%= @titles['copy'][0]['title'] %>
       </div>
       <a class="footer__policy popup-open" href="#popup-policy">
-        <%= @footer['policy'][0]['title'].html_safe %>
+        <%= @titles['policy'][0]['title'] %>
       </a>
       <a class="footer__development" href="https://dsml.ru/" target="_blank">
-        <%= @footer['made'][0]['title'].html_safe %>
+        <%= @titles['made'][0]['title'] %>
         <img src="assets/dsml-logo-white.svg" alt=""/>
       </a>
     </div>

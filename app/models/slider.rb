@@ -3,7 +3,7 @@ class Slider < ApplicationRecord
   before_save :remove_attach_img_by_flag
 
   validates :text, presence: { message: 'can\'t be empty' }
-  validates :image, presence: { message: 'can\'t be empty' }
+  # validates :image, presence: { message: 'can\'t be empty' }
 
   private
 

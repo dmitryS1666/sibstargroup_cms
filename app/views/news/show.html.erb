@@ -4,7 +4,7 @@
       <%= link_to image_tag("/assets/icons/close.svg", alt: ''), :back %>
     </div>
     <div class="container news__container">
-      <div class="news__date"><%= @news.created_at.strftime('%d-%m-%Y') %></div>
+      <div class="news__date"><%= @news.created_at.strftime('%d-%m-%Y') if @news.created_at %></div>
       <div class="news__title h1"><%= @news.title %></div>
       <% if @news.image.attached? %>
         <div class="popup__content-wrapper">

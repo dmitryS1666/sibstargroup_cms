@@ -1,6 +1,6 @@
 class NewsController < ApplicationController
   include ApplicationHelper
-  before_action :set_news, only: %i[ show, destroy_attach ]
+  before_action :set_news, only: %i[ show ]
   layout 'news_popup_layout'
 
   # GET /news
@@ -15,7 +15,8 @@ class NewsController < ApplicationController
   end
 
   private
-    def set_news
-      @news = News.find(params[:id])
-    end
+
+  def set_news
+    @news = News.find(params[:id])
+  end
 end

@@ -23,6 +23,10 @@ module SibstargroupCms
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.exceptions_app = ->(env) {
+      ErrorsController.action(:show).call(env)
+    }
+
     config.assets.precompile += %w( gsap swiper choices.js )
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     # config.assets.js_compressor = :esbuild

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<html lang="<%#= @page.language_code %>">-->
+<head>
+  <!--  <title><%#= current_page.seo_title %></title>-->
+  <!--  <meta name="description" content="<%#= current_page.description %>"/>-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheets -->
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <!-- JavaScripts -->
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
+
+<body>
+
+<div class="mx-auto max-w-screen-lg py-4 md:py-20 px-4">
+  <%= yield %>
+</div>
+
+<%= render 'shared/popup_footer' %>
+
+</body>
+</html>

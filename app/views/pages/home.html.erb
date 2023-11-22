@@ -40,14 +40,14 @@
           <div class="swiper-slide home-about-slider__slide">
             <div class="home-about-slider__content">
               <div class="home-about-slider__text">
-                <%= slide['text'] %>
+                <%= slide['text'].html_safe %>
               </div>
             </div>
             <div class="home-about-slider__image">
               <% if slide.image.attached? %>
-                <img src="<%= url_for(slide.image) %>" alt=""/>
+                <img src="<%= url_for(slide.image) %>" alt="" style="height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover;"/>
               <% else %>
-                <img src="<%= slide['base_image_url'] %>" alt=""/>
+                <img src="<%= slide['base_image_url'] %>" alt="" style="height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover;"/>
               <% end %>
             </div>
           </div>

@@ -35,19 +35,10 @@ Trestle.resource(:news) do
       col(sm: 3) { select :language, %w[ru zh en] }
     end
     row do
-      col(sm: 3) { file_field :image, as: :file, input_html: { direct_upload: true } }
       if news.image.attached?
-        col(sm: 3) {
-          image_tag main_app.rails_blob_path(news.image),
-                    style: 'max-width: 100%; height: auto;'
+        col(sm: 6) {
+          render 'admin/news/image_field', news: news
         }
-      end
-    end
-    row do
-      col(sm: 3) {}
-      if news.image.attached?
-        # col(sm: 3) { select :delete_file, %w[true false] }
-        col(sm: 3) { check_box :delete_file }
       end
     end
 

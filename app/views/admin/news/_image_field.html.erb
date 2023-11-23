@@ -1,0 +1,23 @@
+<!-- app/views/admin/newss/_image_field.html.erb -->
+<script>
+    function previewImage(input) {
+        var preview = document.querySelector('.preview-image');
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+<div class="container">
+  <div class="raw mb-5 ml-0"><label><b>Image</b></label>
+    <%= image_tag main_app.rails_blob_path(news.image), class: 'preview-image', style: 'max-width: 100%; height: auto;' %>
+    <%#= link_to 'Remove Image', remove_image_admin_news_path(news), method: :patch, data: { confirm: 'Are you sure?' }, class: 'remove-image-button' %>
+    <%= file_field :news, :image, class: 'image-upload-field', onchange: "previewImage(this);" %>
+  </div>
+</div>

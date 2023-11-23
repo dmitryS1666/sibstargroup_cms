@@ -45,9 +45,9 @@
             </div>
             <div class="home-about-slider__image">
               <% if slide.image.attached? %>
-                <img src="<%= url_for(slide.image) %>" alt="" style="height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover;"/>
+                <img src="<%= url_for(slide.image) %>" alt="" style="height: 360px;-o-object-fit: cover;object-fit: cover;">/>
               <% else %>
-                <img src="<%= slide['base_image_url'] %>" alt="" style="height: 100%; width: 100%; -o-object-fit: cover; object-fit: cover;"/>
+                <img src="<%= slide['base_image_url'] %>" alt="" style="height: 360px;-o-object-fit: cover;object-fit: cover;"/>
               <% end %>
             </div>
           </div>

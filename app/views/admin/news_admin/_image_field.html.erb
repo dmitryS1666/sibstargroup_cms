@@ -1,0 +1,105 @@
+<style>
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+    }
+
+    /* Создание стилей для кастомного чекбокса (крестика) */
+    .custom-checkbox {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        float: right;
+    }
+
+    /* Оформление крестика (левая галочка) */
+    .custom-checkbox::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 2px;
+        background-color: black;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    /* Оформление крестика (правая галочка) */
+    .custom-checkbox::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 2px;
+        background-color: black;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .preview-image {
+        max-width: 100%;
+        height: auto;
+        float: right;
+        display: none;
+    }
+</style>
+<script>
+    function previewImg(input) {
+        show_hide_block(false);
+        let preview = document.querySelector('.preview-image');
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function deleteImg(checkbox) {
+        show_hide_block(checkbox.checked);
+    }
+
+    function show_hide_block(status) {
+        let image_preview = document.querySelector('.preview-image');
+        let hiddenFieldValue = document.getElementById('hidden-field-id');
+        let checkbox = document.getElementById('remove_image');
+        let checkbox_label = document.getElementById('remove_image_label');
+        if (status) {
+            image_preview[0].style.display = 'none';
+            checkbox.style.display = 'none';
+            checkbox_label.style.display = 'none';
+            hiddenFieldValue.value = true;
+        } else {
+            image_preview[0].style.display = 'block';
+            checkbox.style.display = 'block';
+            checkbox.checked = false;
+            checkbox_label.style.display = 'block';
+            hiddenFieldValue.value = false;
+        }
+    }
+</script>
+
+<div class="container">
+  <div class="raw ml-2">
+    <input type="checkbox" id="remove_image" onchange="deleteImg(this)">
+    <label for="remove_image" class="custom-checkbox" id="remove_image_label"></label>
+  </div>
+  <div class="raw mb-5 ml-0 mt-2">
+    <label>
+      <b>Image</b>
+    </label>
+    <%= file_field :news, :image, class: 'image-upload-field', onchange: "previewImg(this);" %>
+    <% if news.image.attached? %>
+      <%= image_tag main_app.rails_blob_path(news.image), class: 'preview-image' %>
+    <% else %>
+      <%= image_tag '/assets/icons/close.svg', class: 'preview-image' %>
+    <% end %>
+    <%= hidden_field :news, :delete_file, value: 'false', id: 'hidden-field-id' %>
+    <%#= hidden_field :authenticity_token, value: form_authenticity_token %>
+  </div>
+</div>

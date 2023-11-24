@@ -221,7 +221,7 @@
       <% end %>
     </div>
     <div class="home-news__button">
-      <a class="button button_outline button_invert" href="/news">
+      <a class="button button_outline button_invert" href="/news?<%= request.original_url.split('?').last %>">
         <%= @buttons['news'][0]['title'] %>
       </a>
     </div>

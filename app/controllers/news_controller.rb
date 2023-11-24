@@ -7,6 +7,7 @@ class NewsController < ApplicationController
   def index
     Rails.logger.warn params
     Rails.logger.warn I18n.locale
+    Rails.logger.warn request.original_url
     Rails.logger.warn '******************************'
 
     load_data

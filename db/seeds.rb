@@ -91,7 +91,10 @@ Title.create!(
     { name: 'policy', title: '隐私政策', language: 'zh' },
     { name: 'made', title: 'Сделано в', language: 'ru' },
     { name: 'made', title: 'Made by', language: 'en' },
-    { name: 'made', title: '在完成', language: 'zh' }
+    { name: 'made', title: '在完成', language: 'zh' },
+    { name: 'coal_count_el', title: 'тонн', language: 'ru' },
+    { name: 'coal_count_el', title: 'tons', language: 'en' },
+    { name: 'coal_count_el', title: '噸', language: 'zh' }
   ]
 )
 

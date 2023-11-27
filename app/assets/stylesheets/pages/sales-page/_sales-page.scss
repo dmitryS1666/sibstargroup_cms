@@ -1,0 +1,48 @@
+.sales-page {
+  &__content {
+    padding-bottom: 190px;
+
+    @media (max-width: 1199px) {
+      padding-bottom: 140px;
+    }
+
+    @media (max-height: 480px) {
+      padding-bottom: 60px;
+    }
+  }
+
+  .footer {
+    padding-top: 190px;
+
+    @media (max-width: 1199px) {
+      padding-top: 140px;
+    }
+
+    @media (max-height: 480px) {
+      padding-top: 60px;
+    }
+  }
+
+  .home-about-slider {
+    margin-bottom: 192px;
+
+    @media (max-width: 1199px) {
+      margin-bottom: 100px;
+    }
+
+    @media (max-height: 480px) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .header-language__item, .header-burger__text {
+    color: #252739;
+  }
+
+  .header:after, .header-burger__icon span {
+    background-color: #252739;
+  }
+}
+
+@import 'sales-page-head';
+@import 'sales-info-block';

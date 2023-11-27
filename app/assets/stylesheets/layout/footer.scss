@@ -3,6 +3,10 @@
   color: $color-white;
   background-color: $color-dark;
 
+  .light-page & {
+    padding-top: 40px;
+  }
+
   @media (max-width: 991px) {
     overflow: hidden;
     padding-bottom: 35px;

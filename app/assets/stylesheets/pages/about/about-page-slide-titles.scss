@@ -1,0 +1,23 @@
+.about-page-slide-titles {
+  width: 100%;
+
+  &__item {
+    color: $color-dark;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 1;
+    width: 100%;
+
+    @media (max-width: 991px) {
+      font-size: 90px;
+    }
+
+    @media (max-height: 480px) {
+      font-size: 70px;
+    }
+
+    &:nth-child(even) {
+      text-align: right;
+    }
+  }
+}

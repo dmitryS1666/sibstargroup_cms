@@ -37,7 +37,7 @@
               </div>
             </a>
           <% else %>
-            <a class="navigation__link" href="<%= @navigation['about'][0]['url'] %>">
+            <a class="navigation__link" href="/about?<%= request.original_url.split('?').last %>">
               <%= @navigation['about'][0]['title'] %>
             </a>
           <% end %>
@@ -53,7 +53,7 @@
               </div>
             </a>
           <% else %>
-            <a class="navigation__link" href="<%= @navigation['sale_petroleum'][0]['url'] %>">
+            <a class="navigation__link" href="/sale_petroleum?<%= request.original_url.split('?').last %>">
               <%= @navigation['sale_petroleum'][0]['title'] %>
             </a>
           <% end %>
@@ -69,7 +69,7 @@
               </div>
             </a>
           <% else %>
-            <a class="navigation__link" href="<%= @navigation['about'][0]['url'] %>">
+            <a class="navigation__link" href="<%= @navigation['agricultural'][0]['url'] %>">
               <%= @navigation['agricultural'][0]['title'] %>
             </a>
           <% end %>
@@ -85,7 +85,7 @@
               </div>
             </a>
           <% else %>
-            <a class="navigation__link" href="<%= @navigation['about'][0]['url'] %>">
+            <a class="navigation__link" href="<%= @navigation['coal_online'][0]['url'] %>">
               <%= @navigation['coal_online'][0]['title'] %>
             </a>
           <% end %>
@@ -96,7 +96,7 @@
           </a>
         </li>
         <li class="navigation__li">
-          <a class="navigation__link" href="/news.html">
+          <a class="navigation__link" href="/news?<%= request.original_url.split('?').last %>">
             <%= @navigation['news'][0]['title'] %>
           </a>
         </li>

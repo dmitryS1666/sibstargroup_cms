@@ -1,0 +1,42 @@
+.about-page-section {
+  position: relative;
+  z-index: 10;
+
+  &__title {
+    padding-top: 90px;
+    padding-bottom: 150px;
+
+    @media (max-width: 991px) {
+      padding-bottom: 100px;
+    }
+
+    @media (max-height: 480px) {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__slide-titles {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__slide-titles,
+  &__mission,
+  &__text,
+  &__info,
+  &__image,
+  &__command {
+    padding: 150px 0;
+
+    @media (max-width: 991px) {
+      padding: 120px 0;
+    }
+
+    @media (max-height: 480px) {
+      padding: 60px 0;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.page-404 {
+  &__content {
+    padding-bottom: 110px;
+  }
+
+  &__title {
+    color: $color-dark;
+    font-size: 152px;
+    font-weight: 700;
+    line-height: 97.5%;
+    margin-bottom: 40px;
+
+    @media (max-width: 1349px) {
+      font-size: 120px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 82px;
+    }
+  }
+
+  &__text {
+    color: $color-dark;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    margin-bottom: 40px;
+    max-width: 762px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 580px;
+
+    @media (max-width: 767px) {
+      max-width: initial;
+    }
+  }
+}

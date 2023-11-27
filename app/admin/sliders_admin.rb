@@ -54,7 +54,6 @@ Trestle.resource(:sliders) do
         col(sm: 3) { check_box :delete_file, class: 'dangerous-area' }
       end
     end
-
   end
 
   params do |params|

@@ -17,15 +17,12 @@ import {
     homeAnimations,
     homeCoalSales,
     homeHeroCounter,
-    homeSupplyBasis,
+    homeSupplyBasis
 } from './pages/home';
+import { sales } from './pages/sales';
 
 window.addEventListener('DOMContentLoaded', () => {
     init();
-//     tinymce.init({
-//         selector: '.tinymce',
-//         // Other TinyMCE configuration options...
-//     });
 });
 
 window.addEventListener("scroll", function (e) {
@@ -55,6 +52,8 @@ function init() {
     homeHeroCounter.init();
     homeAnimations.init();
     homeAboutSlider.init();
+    // home.init();
+    sales.init();
     homeCoalSales.init();
     homeSupplyBasis.init();
 }
@@ -63,7 +62,11 @@ function reverseLogo() {
     let logo = document.getElementById('logo');
     let img = logo.children[0];
 
+    const currentUrl = window.location.href;
+
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        img.src = '/assets/logo.svg';
+    } else if (currentUrl.includes('?')) {
         img.src = '/assets/logo.svg';
     } else {
         img.src = '/assets/logo_white.svg';

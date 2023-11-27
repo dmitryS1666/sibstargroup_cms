@@ -1,0 +1,21 @@
+.about-page {
+  &.inner-page {
+    padding-top: 0;
+  }
+
+  .footer {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@import 'about-page-head';
+@import 'about-page-background';
+@import 'about-page-section';
+@import 'about-page-title';
+@import 'about-page-mission';
+@import 'about-page-slide-titles';
+@import 'about-page-text';
+@import 'about-page-image';
+@import 'about-page-command';
+@import 'about-page-command-item';

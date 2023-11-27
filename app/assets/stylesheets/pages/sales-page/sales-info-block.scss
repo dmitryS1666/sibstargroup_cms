@@ -1,0 +1,12 @@
+.sales-info-block {
+  .info-block__image {
+    transform: translateY(200px);
+
+    @media (max-width: 991px) {
+      transform: translateY(0);
+    }
+    img {
+      transform: scale(2);
+    }
+  }
+}

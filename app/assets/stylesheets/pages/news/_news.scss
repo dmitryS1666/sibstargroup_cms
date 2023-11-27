@@ -1,10 +1,8 @@
 .news-page {
   background-color: $color-dark;
-  padding-top: 248px;
   padding-bottom: 95px;
 
   @media (max-width: 991px) {
     padding-bottom: 60px;
-    padding-top: 140px;
   }
 }

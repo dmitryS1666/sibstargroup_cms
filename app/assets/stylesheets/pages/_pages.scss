@@ -1,2 +1,16 @@
+.inner-page {
+  padding-top: 248px;
+
+  @media (max-width: 991px) {
+    padding-top: 140px;
+  }
+
+  @media (max-height: 480px) {
+    padding-top: 90px;
+  }
+}
+
 @import 'home/home';
 @import 'news/news';
+@import '404/404';
+@import 'sales-page/sales-page';

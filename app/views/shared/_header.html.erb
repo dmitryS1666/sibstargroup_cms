@@ -2,7 +2,11 @@
   <div class="container">
     <div class="header__left">
       <a class="logo" id="logo" href="/">
-        <img src='/assets/logo_white.svg'/>
+        <% if request.original_fullpath.include? '?' %>
+          <img src='/assets/logo.svg'/>
+        <% else %>
+          <img src='/assets/logo_white.svg'/>
+        <% end %>
       </a>
       <div class="header-language">
         <div class="header-language__item" data-locale="ru">

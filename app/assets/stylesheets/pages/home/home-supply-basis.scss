@@ -271,17 +271,17 @@
 
     .home-supply-basis-map-video_dap & {
       //clip-path: url('#mask-dap');
-      mask-image: url('/assets/img/mask-dap.svg');
+      mask-image: url('/assets/mask-dap.svg');
     }
 
     .home-supply-basis-map-video_fob & {
       //clip-path: url('#mask-fob');
-      mask-image: url('/assets/img/mask-fob.svg');
+      mask-image: url('/assets/mask-fob.svg');
     }
 
     .home-supply-basis-map-video_cfr & {
       //clip-path: url('#mask-cfr');
-      mask-image: url('/assets/img/mask-cfr.svg');
+      mask-image: url('/assets/mask-cfr.svg');
     }
 
     &_show {
@@ -500,7 +500,7 @@
 
   &__item {
     padding: 30px 25px;
-    background: url('/assets/img/supply-basis-border.svg') 0 100% repeat-x;
+    background: url('/assets/supply-basis-border.svg') 0 100% repeat-x;
 
     @media (max-width: 991px) {
       padding: 15px;

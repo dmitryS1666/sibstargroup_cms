@@ -1,0 +1,17 @@
+.about-page-head {
+  padding-bottom: 96px;
+  position: relative;
+  z-index: 10;
+  padding-top: 248px;
+  background-color: $color-light;
+
+  @media (max-width: 991px) {
+    padding-top: 198px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-height: 480px) {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+}

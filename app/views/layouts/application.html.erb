@@ -2,8 +2,8 @@
 <html lang="en">
 <!--<html lang="<%#= @page.language_code %>">-->
 <head>
-<!--  <title><%#= current_page.seo_title %></title>-->
-<!--  <meta name="description" content="<%#= current_page.description %>"/>-->
+  <!--  <title><%#= current_page.seo_title %></title>-->
+  <!--  <meta name="description" content="<%#= current_page.description %>"/>-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Stylesheets -->
@@ -13,12 +13,17 @@
 </head>
 
 <body>
+<% if request.original_fullpath.include? '?' %>
+  <div class="inner-page light-page sales-page">
+<% else %>
+  <div>
+<% end %>
 <%= render 'shared/header' %>
 <%= render 'shared/navigation' %>
 
-<div class="mx-auto max-w-screen-lg py-4 md:py-20 px-4">
-  <%= yield %>
-</div>
+<!--  <div class="mx-auto max-w-screen-lg py-4 md:py-20 px-4">-->
+<%= yield %>
+<!--  </div>-->
 
 <%= render 'shared/footer' %>
 
@@ -29,6 +34,6 @@
 <%= render 'shared/mobile_rotate' %>
 <%= render 'shared/popup_command' %>
 <%= render 'shared/cookies' %>
-
+</div>
 </body>
 </html>

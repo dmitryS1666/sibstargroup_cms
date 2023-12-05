@@ -365,15 +365,32 @@ News.create!(
 Slider.destroy_all
 Slider.create!(
   [
-    { text: 'Мы расширяем не только географию сотрудничества, но и структуру поставляемой продукции.', base_image_url: 'assets/about-01.jpg', language: 'ru' },
-    { text: 'Sibstar group — your reliable partner for the supply of thermal coal since 2019.', base_image_url: 'assets/about-01.jpg', language: 'en' },
-    { text: '"SIBSTAR 集团 "是您可靠的伙伴，从 2019 年起为您供应动力煤。', base_image_url: 'assets/about-01.jpg', language: 'zh' },
-    { text: 'Отгрузки энергоносителей осуществляются в адрес производственных гигантов Юго-восточной Азии и Турции. Наши ключевые партнеры — крупные промышленные предприятия Китая и Турции.', base_image_url: 'assets/about-02.jpg', language: 'ru' },
-    { text: 'Energy shipments are carried out to the largest manufacturing giants. Our key partners are large industrial enterprises of China and Turkey', base_image_url: 'assets/about-02.jpg', language: 'en' },
-    { text: 'SIBSTAR集团为东南亚的大型制造公司提供能源煤炭。集团的主要合作伙伴是中国、印度和土耳其的大型工业企业。', base_image_url: 'assets/about-02.jpg', language: 'zh' },
-    { text: '«СИБСТАР» — ваш надежный партнер для энергетического угля с 2019 года.', base_image_url: 'assets/about-03.jpg', language: 'ru' },
-    { text: 'We expand the geography of cooperation, as well as the structure of supplied products.', base_image_url: 'assets/about-03.jpg', language: 'en' },
-    { text: 'SIBSTAR集团在地理位置、能源品种方面蓬勃发展。', base_image_url: 'assets/about-03.jpg', language: 'zh' }
+    { text: 'Мы расширяем не только географию сотрудничества, но и структуру поставляемой продукции.', base_image_url: '/assets/about-01.jpg', language: 'ru' },
+    { text: 'Sibstar group — your reliable partner for the supply of thermal coal since 2019.', base_image_url: '/assets/about-01.jpg', language: 'en' },
+    { text: '"SIBSTAR 集团 "是您可靠的伙伴，从 2019 年起为您供应动力煤。', base_image_url: '/assets/about-01.jpg', language: 'zh' },
+    { text: 'Отгрузки энергоносителей осуществляются в адрес производственных гигантов Юго-восточной Азии и Турции. Наши ключевые партнеры — крупные промышленные предприятия Китая и Турции.', base_image_url: '/assets/about-02.jpg', language: 'ru' },
+    { text: 'Energy shipments are carried out to the largest manufacturing giants. Our key partners are large industrial enterprises of China and Turkey', base_image_url: '/assets/about-02.jpg', language: 'en' },
+    { text: 'SIBSTAR集团为东南亚的大型制造公司提供能源煤炭。集团的主要合作伙伴是中国、印度和土耳其的大型工业企业。', base_image_url: '/assets/about-02.jpg', language: 'zh' },
+    { text: '«СИБСТАР» — ваш надежный партнер для энергетического угля с 2019 года.', base_image_url: '/assets/about-03.jpg', language: 'ru' },
+    { text: 'We expand the geography of cooperation, as well as the structure of supplied products.', base_image_url: '/assets/about-03.jpg', language: 'en' },
+    { text: 'SIBSTAR集团在地理位置、能源品种方面蓬勃发展。', base_image_url: '/assets/about-03.jpg', language: 'zh' }
+  ]
+)
+
+SliderSale.destroy_all
+SliderSale.create!(
+  [
+    { text: '«СИБСТАР» — динамично развивающаяся компания. Мы расширяем не только географию сотрудничества, но и структуру поставляемой продукции.', base_image_url: '/assets/sales/image-01.jpg', language: 'ru' },
+    { text: '"SIBSTAR" is a dynamically developing company. We expand the geography of cooperation, as well as the structure of supplied products.', base_image_url: '/assets/sales/image-01.jpg', language: 'en' },
+    { text: 'SIBSTAR集团在地理位置、能源品种方面蓬勃发展。', base_image_url: '/assets/sales/image-01.jpg', language: 'zh' },
+
+    { text: 'Наша цель - обеспечить стабильные поставки для поддержания ваших производственных процессов в рабочем состоянии.', base_image_url: '/assets/sales/image-02.jpg', language: 'ru' },
+    { text: 'Our goal is to provide stable supplies to keep your production processes running.', base_image_url: '/assets/sales/image-02.jpg', language: 'en' },
+    { text: '我集团宗旨为保证稳定供应，以便支持贵方生产链的正常运行。', base_image_url: '/assets/sales/image-02.jpg', language: 'zh' },
+
+    { text: 'Мы активно развиваем такое направление, как поставки нефтепродуктов.', base_image_url: '/assets/sales/image-03.jpg', language: 'ru' },
+    { text: 'We are in a process of development petroleum products supply.', base_image_url: '/assets/sales/image-03.jpg', language: 'en' },
+    { text: '我集团宗旨为保证稳定供应，以便支持贵方生产链的正常运行。', base_image_url: '/assets/sales/image-03.jpg', language: 'zh' }
   ]
 )
 

@@ -13,6 +13,6 @@ class PagesController < ApplicationController
   def about; end
 
   def sale_petroleum
-    @slides = Slider.items
+    @slides_sales = SliderSale.items
   end
 end

@@ -1,4 +1,4 @@
-class Slider < ApplicationRecord
+class SliderSale < ApplicationRecord
   has_one_attached :image
   before_save :remove_attach_img_by_flag
 

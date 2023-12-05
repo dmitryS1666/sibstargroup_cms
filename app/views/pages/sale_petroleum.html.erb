@@ -6,7 +6,7 @@
     </div>
     <div class="home-about-slider swiper" data-speed="<%= @timer %>">
       <div class="swiper-wrapper">
-        <% @slides.each do |slide| %>
+        <% @slides_sales.each do |slide| %>
           <div class="swiper-slide home-about-slider__slide">
             <div class="home-about-slider__content">
               <div class="home-about-slider__text">
@@ -15,9 +15,9 @@
             </div>
             <div class="home-about-slider__image">
               <% if slide.image.attached? %>
-                <img src="/<%= assets_path(slide.image) %>" alt="" style="height: 360px;-o-object-fit: cover;object-fit: cover;">/>
+                <img src="<%= assets_path(slide.image) %>" alt="" style="height: 360px;-o-object-fit: cover;object-fit: cover;">/>
               <% else %>
-                <img src="/<%= slide['base_image_url'] %>" alt="" style="height: 360px;-o-object-fit: cover;object-fit: cover;"/>
+                <img src="<%= slide['base_image_url'] %>" alt="" style="height: 360px;-o-object-fit: cover;object-fit: cover;"/>
               <% end %>
             </div>
           </div>

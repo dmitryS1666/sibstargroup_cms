@@ -1,14 +1,14 @@
-Trestle.resource(:sliders) do
+Trestle.resource(:slider_sales) do
 
   menu do
-    item :sliders, icon: "fa fa-picture-o"
+    item :slider_sales, icon: "fa fa-picture-o"
   end
 
   scopes do
     scope :all, default: true
-    scope :ru, -> { Slider.where(language: "ru") }
-    scope :en, -> { Slider.where(language: "en") }
-    scope :zh, -> { Slider.where(language: "zh") }
+    scope :ru, -> { SliderSale.where(language: "ru") }
+    scope :en, -> { SliderSale.where(language: "en") }
+    scope :zh, -> { SliderSale.where(language: "zh") }
   end
 
   scope :all, default: true
@@ -57,6 +57,6 @@ Trestle.resource(:sliders) do
   end
 
   params do |params|
-    params.require(:slider).permit(:text, :image, :base_image_url, :language, :delete_file)
+    params.require(:slider_sale).permit(:text, :image, :base_image_url, :language, :delete_file)
   end
 end

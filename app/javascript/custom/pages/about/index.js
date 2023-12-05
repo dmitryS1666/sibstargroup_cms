@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { isTabletWidth } from '../../utils';
+import { isMobileWidth, isTabletWidth } from '../../utils';
 
 class About {
   init() {
@@ -15,6 +15,8 @@ class About {
     this.animateInfo();
     this.animateImage();
     this.animateCommand();
+
+    this.animateElements();
 
     window.addEventListener('resize', () => {
       ScrollTrigger.getAll().forEach((trigger) => {
@@ -57,32 +59,107 @@ class About {
     });
   }
 
-  animateTitles() {
-    const videoBackground = document.querySelector('.about-page-background');
+  animateElements() {
+    let offset = 150;
+
+    if (isMobileWidth()) {
+      offset = 70;
+    }
 
     document
-      .querySelectorAll('.about-page-slide-titles__item')
-      .forEach((el, index) => {
-        const direction = index % 2 === 0 ? 1 : -1;
-        const percent = `${10 + 5 * index}%`;
-
+      .querySelectorAll(
+        // '.about-page-title, .about-page-mission, .about-page-text, .about-page-command__title, .info-block__divider, .info-block__title, .info-block__text, .footer__head'
+        '.about-page-title'
+      )
+      .forEach((el) => {
         gsap.fromTo(
           el,
           {
-            xPercent: -(100 * direction),
+            opacity: 0,
+            scale: 0.3,
           },
           {
-            xPercent: 100 * direction,
             scrollTrigger: {
-              trigger: '.about-page-section__slide-titles',
-              start: `${percent} 50%`,
-              end: '100%+150px top',
+              trigger: el,
+              start: 'top bottom',
+              end: `bottom+=${offset}px bottom`,
               scrub: true,
               markers: false,
+              invalidateOnResize: true,
             },
+            opacity: 1,
+            scale: 1,
           }
         );
       });
+
+    const aboutOuter = document.querySelector('.about-page-command__outer');
+    gsap.fromTo(
+      aboutOuter,
+      { opacity: 0, scale: 0.3 },
+      {
+        scrollTrigger: {
+          trigger: '.about-page-command',
+          start: `top+=100px bottom`,
+          end: `bottom bottom`,
+          scrub: true,
+          markers: false,
+        },
+        opacity: 1,
+        scale: 1,
+      }
+    );
+  }
+
+  animateTitles() {
+    const videoBackground = document.querySelector('.about-page-background');
+    let offset = 150;
+
+    if (isMobileWidth()) {
+      offset = 70;
+    }
+
+    document
+      .querySelectorAll('.about-page-slide-titles__item')
+      .forEach((el) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, scale: 0.3 },
+          {
+            scrollTrigger: {
+              trigger: el,
+              start: 'top bottom',
+              end: `bottom+=${offset}px bottom`,
+              scrub: true,
+              markers: false,
+            },
+            opacity: 1,
+            scale: 1,
+          }
+        );
+      });
+
+    gsap.to('.about-page-slide-titles__item', {
+      scrollTrigger: {
+        trigger: '.about-page-section__slide-titles',
+        start: 'top 40%',
+        end: 'center 50%',
+        scrub: true,
+        markers: false,
+      },
+      color: '#252739',
+    });
+
+    gsap.to('.about-page-slide-titles__item', {
+      scrollTrigger: {
+        trigger: '.about-page-section__slide-titles',
+        start: 'top 40%',
+        end: 'center 50%',
+        scrub: true,
+        markers: false,
+      },
+      color: '#252739',
+    });
 
     gsap.to(videoBackground, {
       scrollTrigger: {
@@ -97,50 +174,52 @@ class About {
   }
 
   animateInfo() {
-    const info = document.querySelector('.about-page-info-block');
-    const image = info.querySelector('.info-block__image');
-    const imageImg = image.querySelector('img');
-    const caption = info.querySelector('.info-block__caption');
+    const sectionInfo = document.querySelector('.about-page-section__info');
+    const imageWrapper = sectionInfo.querySelector(
+      '.info-block__image-wrapper'
+    );
+    const image = sectionInfo.querySelector('.info-block__image');
+    const imageImg = imageWrapper.querySelector('img');
+    const caption = sectionInfo.querySelector('.info-block__caption');
+    const infoBlock01 = document.querySelector('.about-page-info-block_01');
 
     if (!isTabletWidth()) {
-      gsap.set(info, {
-        height: info.clientHeight,
-      });
+      gsap.fromTo(
+        imageImg,
+        {
+          scale: 2,
+        },
+        {
+          scrollTrigger: {
+            trigger: imageWrapper,
+            start: 'top bottom',
+            end: `bottom+=${
+              infoBlock01.clientHeight + caption.clientHeight
+            }px bottom`,
+            scrub: true,
+            markers: false,
+          },
+          scale: 1,
+        }
+      );
+    } else {
+      gsap.fromTo(
+        imageImg,
+        {
+          scale: 2,
+        },
+        {
+          scrollTrigger: {
+            trigger: imageWrapper,
+            start: 'top bottom',
+            end: `bottom 50%`,
+            scrub: true,
+            markers: false,
+          },
+          scale: 1,
+        }
+      );
     }
-
-    gsap.fromTo(
-      image,
-      {
-        y: 200,
-      },
-      {
-        scrollTrigger: {
-          trigger: '.about-page-info-block',
-          start: '200 bottom',
-          end: 'center 50%',
-          scrub: true,
-          markers: false,
-        },
-        y: 0,
-      }
-    );
-
-    gsap.fromTo(
-      imageImg,
-      {
-        scale: 2,
-      },
-      {
-        scrollTrigger: {
-          trigger: '.about-page-info-block',
-          start: '200 bottom',
-          end: 'bottom 50%',
-          scrub: true,
-          markers: false,
-        },
-        scale: 1,
-      }
-    );
 
     if (isTabletWidth()) {
       return;
@@ -154,8 +233,10 @@ class About {
       {
         scrollTrigger: {
           trigger: '.about-page-info-block',
-          start: 'bottom center',
-          end: 'bottom top',
+          start: `top+=${infoBlock01.clientHeight + caption.clientHeight} top`,
+          end: `bottom+=${
+            infoBlock01.clientHeight + caption.clientHeight + 300
+          }px top`,
           scrub: true,
           markers: false,
         },
@@ -163,22 +244,17 @@ class About {
       }
     );
 
-    gsap.fromTo(
-      caption,
-      {
-        yPercent: 100,
-      },
-      {
-        scrollTrigger: {
-          trigger: '.about-page-info-block',
-          start: 'top 50%',
-          end: 'bottom 50%',
-          scrub: true,
-          markers: false,
-        },
-        yPercent: -100,
-      }
-    );
+    ScrollTrigger.create({
+      trigger: infoBlock01,
+      start: `top top`,
+      end: `bottom+=${
+        infoBlock01.clientHeight + caption.clientHeight
+      }px bottom`,
+      pin: true,
+      pinSpacing: false,
+      scrub: true,
+      markers: false,
+    });
   }
 
   animateImage() {

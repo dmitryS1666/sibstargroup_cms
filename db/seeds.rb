@@ -94,7 +94,56 @@ Title.create!(
     { name: 'made', title: '在完成', language: 'zh' },
     { name: 'coal_count_el', title: 'тонн', language: 'ru' },
     { name: 'coal_count_el', title: 'tons', language: 'en' },
-    { name: 'coal_count_el', title: '噸', language: 'zh' }
+    { name: 'coal_count_el', title: '噸', language: 'zh' },
+
+    { name: 'sales_desc', title: 'Продажа нефтепродуктов', language: 'ru' },
+    { name: 'sales_desc', title: 'Sale of petroleum products', language: 'en' },
+    { name: 'sales_desc', title: '石油产品销售', language: 'zh' },
+    { name: 'sales_title', title: 'Надежность', language: 'ru' },
+    { name: 'sales_title', title: 'Reliability', language: 'en' },
+    { name: 'sales_title', title: '可靠性', language: 'zh' },
+    { name: 'sales_title_d', title: "Группа компаний «СИБСТАР» поставляет энергетические ресурсы по всему миру.\nБлагодаря нашим надежным партнерским отношениям и разветвленной логистической сети мы можем гарантировать\nсвоевременную и безопасную доставку нашей продукции, куда бы вы ее ни заказали.", language: 'ru' },
+    { name: 'sales_title_d', title: 'SIBSTAR Group supplies energy resources all over the world. Thanks to our reliable partnerships and extensive logistics network, we guarantee on-time and safe delivery of our products anywhere in the world.', language: 'en' },
+    { name: 'sales_title_d', title: 'SIBSTAR集团向世界各地供应能源煤炭。由于与合伙单位建立的可靠关系和发达物流网络，我集团保证及时安全送货至任何地方。', language: 'zh' },
+
+    { name: 'about_desc', title: "За все время своей деятельности мы поставили более 1 000 000 тонн угля.", language: 'ru' },
+    { name: 'about_desc', title: 'Over the entire period of our activity, we have supplied more than 1 000 000 tons of coal.', language: 'en' },
+    { name: 'about_desc', title: '集团建立以来总计供应了百万吨煤炭。', language: 'zh' },
+    { name: 'mission', title: "Наша миссия", language: 'ru' },
+    { name: 'mission', title: 'Our mission', language: 'en' },
+    { name: 'mission', title: '我们的使命', language: 'zh' },
+
+    { name: 'quality', title: "Качественно", language: 'ru' },
+    { name: 'quality', title: 'Quality', language: 'en' },
+    { name: 'quality', title: '高质量的产品', language: 'zh' },
+
+    { name: 'fast', title: "Оперативно", language: 'ru' },
+    { name: 'fast', title: 'Fast', language: 'en' },
+    { name: 'fast', title: '高质量的产品', language: 'zh' },
+
+    { name: 'in_touch', title: "Всегда на связи", language: 'ru' },
+    { name: 'in_touch', title: 'Always in touch', language: 'en' },
+    { name: 'in_touch', title: '随时保持联系', language: 'zh' },
+
+    { name: 'advantages', title: "Преимущества", language: 'ru' },
+    { name: 'advantages', title: 'Advantages', language: 'en' },
+    { name: 'advantages', title: '优势', language: 'zh' },
+
+    { name: 'command_title', title: "Команда SibstarGroup", language: 'ru' },
+    { name: 'command_title', title: 'SibstarGroup team', language: 'en' },
+    { name: 'command_title', title: 'SibstarGroup团队', language: 'zh' },
+
+    { name: 'advantages_desc', title: "Благодаря выгодному расположению и совершенной логистики с российских угольных\n разрезов на Кузбассе, в Сибири и на Дальнем Востоке, мы обеспечиваем удобный доступ к международным рынкам.\n Отгрузки энергоносителей осуществляются в адрес производственных гигантов. Наши ключевые партнеры — крупные промышленные предприятия Китая, Индии и Турции.", language: 'ru' },
+    { name: 'advantages_desc', title: "Thanks to the advantageous location and perfect logistics from Russian coal mines in Kuzbass, Siberia and the Far East, we provide convenient access to international markets.\n Energy shipments are carried out to the largest manufacturing giants. Our key partners are large industrial enterprises of China, India and Türkiye.", language: 'en' },
+    { name: 'advantages_desc', title: "由于俄罗斯库兹巴斯、西伯利亚、远东地区煤矿的有利位置和完善物流，我集团提供进入中国市场和国际市场的便利通道。\n SIBSTAR集团为东南亚的大型制造公司提供能源煤炭。集团的主要合作伙伴是中国、印度和土耳其的大型工业企业。", language: 'zh' },
+
+    { name: 'about_text', title: "Основным направлением деятельности группы компаний «СИБСТАР» является поставка\n высококачественного каменного и коксующегося угля с угледобывающих предприятий Российской Федерации.", language: 'ru' },
+    { name: 'about_text', title: 'SIBSTAR Group offers a wide range of high-quality energy and metallurgical products based in Russian Federation.', language: 'en' },
+    { name: 'about_text', title: 'SIBSTAR集团主要业务是供应来自俄罗斯的优质石煤和焦煤。', language: 'zh' },
+
+    { name: 'mission_desc', title: "Мы целенаправлены на поддержку мировой промышленности путем обеспечения\n стабильных поставок высококачественной продукции. Стремимся к долгосрочным и взаимовыгодным отношениям с\n нашими клиентами и партнерами, предоставляя наилучший сервис и оптимальные решения.", language: 'ru' },
+    { name: 'mission_desc', title: 'We are focused on supporting the global industry by ensuring stable supplies of high-quality products. We strive for long-term and mutually beneficial relationships with our clients and partners, providing the best service and optimal solutions.', language: 'en' },
+    { name: 'mission_desc', title: '我们致力于通过确保稳定供应高质量产品来支持全球工业。我们追求与客户和合作伙伴建立长期而互惠互利的关系，提供最佳服务和最优解决方案。', language: 'zh' }
   ]
 )
 

@@ -69,6 +69,13 @@ class Navigation {
       duration: 0.3,
       display: 'block',
       opacity: 1,
+      color: '#ffffff'
+    });
+    this.headerBurgerTimeline.to('.header-burger__icon span', {
+      duration: 0.3,
+      display: 'block',
+      opacity: 1,
+      backgroundColor: '#ffffff'
     });
   }
 

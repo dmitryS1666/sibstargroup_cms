@@ -1,23 +1,57 @@
 .about-page-slide-titles {
   width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+
+  @media (max-width: 1199px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 767px) or (max-height: 480px) {
+    max-width: 500px;
+  }
 
   &__item {
-    color: $color-dark;
+    color: $color-light;
     font-size: 120px;
     font-weight: 400;
     line-height: 1;
     width: 100%;
 
+    @media (max-width: 1199px) {
+      font-size: 100px;
+    }
+
     @media (max-width: 991px) {
-      font-size: 90px;
+      font-size: 80px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 44px;
     }
 
     @media (max-height: 480px) {
-      font-size: 70px;
+      font-size: 40px;
     }
 
     &:nth-child(even) {
       text-align: right;
+    }
+
+    &:last-child {
+      padding-left: 127px;
+
+      @media (max-width: 1199px) {
+        padding-left: 90px;
+      }
+
+      @media (max-width: 991px) {
+        padding-left: 70px;
+      }
+
+      @media (max-width: 767px) {
+        padding-left: 50px;
+      }
     }
   }
 }

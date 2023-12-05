@@ -12,5 +12,7 @@ class PagesController < ApplicationController
 
   def about; end
 
-  def sale_petroleum; end
+  def sale_petroleum
+    @slides = Slider.items
+  end
 end

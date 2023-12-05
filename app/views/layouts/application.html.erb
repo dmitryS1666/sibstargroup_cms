@@ -13,7 +13,9 @@
 </head>
 
 <body>
-<% if request.original_fullpath.include? '?' %>
+<% if request.original_fullpath.match? /about/ %>
+  <div class="inner-page light-page about-page">
+<% elsif request.original_fullpath.match? /sale_petroleum/ %>
   <div class="inner-page light-page sales-page">
 <% else %>
   <div>

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header__left">
       <a class="logo" id="logo" href="/">
-        <% if request.original_fullpath.include? '?' %>
+        <% if request.original_fullpath.match? /about|sale_petroleum/ %>
           <img src='/assets/logo.svg'/>
         <% else %>
           <img src='/assets/logo_white.svg'/>
@@ -10,13 +10,13 @@
       </a>
       <div class="header-language">
         <div class="header-language__item" data-locale="ru">
-          <a class="header-language__item" href="/">RU</a>
+          <%= link_to 'RU', url_for( :locale => 'ru' ), class: "header-language__item" %>
         </div>
         <div class="header-language__item" data-locale="en">
-          <a class="header-language__item" href="/?locale=en">EN</a>
+          <%= link_to 'EN', url_for( :locale => 'en' ), class: "header-language__item" %>
         </div>
         <div class="header-language__item" data-locale="zh">
-          <a class="header-language__item" href="/?locale=zh">中文</a>
+          <%= link_to '中文', url_for( :locale => 'zh' ), class: "header-language__item" %>
         </div>
       </div>
     </div>

@@ -20,6 +20,7 @@ import {
     homeSupplyBasis
 } from './pages/home';
 import { sales } from './pages/sales';
+import { about } from './pages/about';
 
 window.addEventListener('DOMContentLoaded', () => {
     init();
@@ -56,6 +57,7 @@ function init() {
     sales.init();
     homeCoalSales.init();
     homeSupplyBasis.init();
+    about.init();
 }
 
 function reverseLogo() {
@@ -66,7 +68,7 @@ function reverseLogo() {
 
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         img.src = '/assets/logo.svg';
-    } else if (currentUrl.includes('?')) {
+    } else if (currentUrl.includes('about') || currentUrl.includes('sale_petroleum')) {
         img.src = '/assets/logo.svg';
     } else {
         img.src = '/assets/logo_white.svg';

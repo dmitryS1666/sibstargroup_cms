@@ -1,7 +1,7 @@
 <div class="home-hero">
   <video class="home-hero__background" autoplay="true" muted="muted" loop="true" playsinline="playsinline">
-    <source src="assets/video/hero.mp4" type="video/mp4"/>
-    <source src="assets/video/hero.webm" type="video/webm"/>
+    <source src="/assets/video/hero.mp4" type="video/mp4"/>
+    <source src="/assets/video/hero.webm" type="video/webm"/>
   </video>
 
   <div class="container">
@@ -16,14 +16,14 @@
     <div class="home-hero__right">
       <div class="home-hero-counter">
         <div class="home-hero-counter__text"><%= @titles['coal_supplied'][0]['title'] %></div>
-        <div class="home-hero-counter__main">>&nbsp;
+        <div class="home-hero-counter__main">
           <span class="home-hero-counter__value" data-counter='<%= @coal_count %>' data-speed="500">0</span>
           <span class="home-hero-counter_small">&nbsp;<%= @titles['coal_count_el'][0]['title'] %></span>
         </div>
       </div>
     </div>
   </div>
-  <div class="home-hero__scroll"><img src="assets/icons/angle-down.svg" alt=""/></div>
+  <div class="home-hero__scroll"><img src="/assets/icons/angle-down.svg" alt=""/></div>
 </div>
 
 <div class="home-about home-section" id="about">
@@ -44,6 +44,8 @@
               </div>
             </div>
             <div class="home-about-slider__image">
+              <%= slide.image %>
+
               <% if slide.image.attached? %>
                 <img src="<%= url_for(slide.image) %>" alt="" style="height: 360px;-o-object-fit: cover;object-fit: cover;">/>
               <% else %>
@@ -82,21 +84,21 @@
       <button class="button button_outline" data-path="dap" data-cities="mihajlo-semenovoskaya,grodekovo,kamyshovaya">DAP</button>
       <button class="button button_outline" data-path="fob" data-cities="blagoveshensk,habarovsk">FOB</button>
       <button class="button button_outline" data-path="cfr" data-cities="habarovsk">CFR</button>
-      <button class="button home-supply-basis__button-close"><img src="assets/icons/close.svg" alt=""/></button>
+      <button class="button home-supply-basis__button-close"><img src="/assets/icons/close.svg" alt=""/></button>
     </div>
   </div>
   <div class="home-supply-basis-map">
     <div class="home-supply-basis-map__background">
-      <img src="assets/supply-basis-map.jpg" alt="" srcset="assets/supply-basis-map.jpg 1x, assets/supply-basis-map@2x.jpg 2x, assets/supply-basis-map@3x.jpg 3x"/>
+      <img src="/assets/supply-basis-map.jpg" alt="" srcset="/assets/supply-basis-map.jpg 1x, assets/supply-basis-map@2x.jpg 2x, assets/supply-basis-map@3x.jpg 3x"/>
     </div>
     <div class="home-supply-basis-map__path home-supply-basis-map__path_default">
-      <img src="assets/supply-basis-path-default.svg" alt=""/></div>
+      <img src="/assets/supply-basis-path-default.svg" alt=""/></div>
     <div class="home-supply-basis-map__path home-supply-basis-map__path_dap">
-      <img src="assets/supply-basis-path-dap.svg" alt=""/></div>
+      <img src="/assets/supply-basis-path-dap.svg" alt=""/></div>
     <div class="home-supply-basis-map__path home-supply-basis-map__path_fob">
-      <img src="assets/supply-basis-path-fob.svg" alt=""/></div>
+      <img src="/assets/supply-basis-path-fob.svg" alt=""/></div>
     <div class="home-supply-basis-map__path home-supply-basis-map__path_cfr">
-      <img src="assets/supply-basis-path-cfr.svg" alt=""/></div>
+      <img src="/assets/supply-basis-path-cfr.svg" alt=""/></div>
     <div class="home-supply-basis-map-item home-supply-basis-map-item_kuzbas" data-city="kuzbas">
       <div class="home-supply-basis-map-item__dot"></div>
       <div class="home-supply-basis-map-item__name"><%= @supply_basis['kuzbass'][0]['title'] %></div>
@@ -136,7 +138,7 @@
       <div class="home-supply-basis-map-item__name"><%= @supply_basis['kamyshovaya'][0]['title'] %></div>
     </div>
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_blagoveshensk">
-      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__close"><img src="/assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
         <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__title"><%= @supply_basis['blagoveshchensk'][0]['title'] %></div>
@@ -148,7 +150,7 @@
       </div>
     </div>
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_habarovsk">
-      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__close"><img src="/assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
         <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__title"><%= @supply_basis['khabarovsk'][0]['title'] %></div>
@@ -165,7 +167,7 @@
       </div>
     </div>
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_mihajlo-semenovoskaya">
-      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__close"><img src="/assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
         <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__title"><%= @supply_basis['semenovskaya'][0]['title'] %></div>
@@ -177,7 +179,7 @@
       </div>
     </div>
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_grodekovo">
-      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__close"><img src="/assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
         <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__title"><%= @supply_basis['grodekovo'][0]['title'] %></div>
@@ -189,7 +191,7 @@
       </div>
     </div>
     <div class="home-supply-basis-map-popup home-supply-basis-map-popup_kamyshovaya">
-      <div class="home-supply-basis-map-popup__close"><img src="assets/icons/close.svg" alt=""/></div>
+      <div class="home-supply-basis-map-popup__close"><img src="/assets/icons/close.svg" alt=""/></div>
       <div class="home-supply-basis-map-popup__item">
         <div class="home-supply-basis-map-popup__type"><%= @supply_basis['river_port'][0]['title'] %></div>
         <div class="home-supply-basis-map-popup__title"><%= @supply_basis['kamyshovaya'][0]['title'] %></div>

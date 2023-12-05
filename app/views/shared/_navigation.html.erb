@@ -37,9 +37,7 @@
               </div>
             </a>
           <% else %>
-            <a class="navigation__link" href="/about?<%= request.original_url.split('?').last %>">
-              <%= @navigation['about'][0]['title'] %>
-            </a>
+            <%= link_to "#{@navigation['about'][0]['title']}", about_path(:locale => "#{I18n.locale}"), class: "navigation__link" %>
           <% end %>
         </li>
         <li class="navigation__li">
@@ -53,9 +51,7 @@
               </div>
             </a>
           <% else %>
-            <a class="navigation__link" href="/sale_petroleum?<%= request.original_url.split('?').last %>">
-              <%= @navigation['sale_petroleum'][0]['title'] %>
-            </a>
+            <%= link_to "#{@navigation['sale_petroleum'][0]['title']}", sale_petroleum_path(:locale => "#{I18n.locale}"), class: "navigation__link" %>
           <% end %>
         </li>
         <li class="navigation__li">

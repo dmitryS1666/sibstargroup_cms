@@ -1,74 +1,117 @@
 <div class="about-page-head">
   <div class="container">
-    <div class="h2">О компании</div>
+    <div class="h2"><%= @titles['about_company'][0]['title'] %></div>
   </div>
 </div>
 <div class="about-page-background">
   <div class="about-page-background__wrapper">
-    <video class="about-page-background__video" autoplay="true" muted="muted" loop="true" playsinline="playsinline">
-      <source src="assets/video/hero.mp4" type="video/mp4"/>
-      <source src="assets/video/hero.webm" type="video/webm"/>
+    <video class="home-hero__background" autoplay="true" muted="muted" loop="true" playsinline="playsinline">
+      <source src="/assets/video/about.mp4" type="video/mp4"/>
+      <source src="/assets/video/about.webm" type="video/webm"/>
     </video>
   </div>
 </div>
 <div class="about-page-section about-page-section__title">
   <div class="container">
-    <div class="about-page-title">За все время своей деятельности мы поставили более 1 000 000 тонн угля.</div>
+    <div class="about-page-title"><%= @titles['about_desc'][0]['title'] %></div>
   </div>
 </div>
 <div class="about-page-section about-page-section__mission">
   <div class="container">
     <div class="about-page-mission">
-      <div class="about-page-mission__left">Наша миссия</div>
-      <div class="about-page-mission__right">Мы целенаправлены на поддержку мировой промышленности путем обеспечения
-        стабильных поставок высококачественной продукции. Стремимся к долгосрочным и взаимовыгодным отношениям с нашими
-        клиентами и партнерами, предоставляя наилучший сервис и оптимальные решения.
+      <div class="about-page-mission__left">
+        <%= @titles['mission'][0]['title'] %>
+      </div>
+      <div class="about-page-mission__right">
+        <%= @titles['mission_desc'][0]['title'] %>
       </div>
     </div>
   </div>
 </div>
 <div class="about-page-section about-page-section__slide-titles">
   <div class="about-page-slide-titles">
-    <div class="about-page-slide-titles__item about-page-slide-titles__item_01">Качественно</div>
-    <div class="about-page-slide-titles__item about-page-slide-titles__item_02">Оперативно</div>
-    <div class="about-page-slide-titles__item about-page-slide-titles__item_03">Всегда на связи</div>
+    <div class="about-page-slide-titles__item about-page-slide-titles__item_01"><%= @titles['quality'][0]['title'] %></div>
+    <div class="about-page-slide-titles__item about-page-slide-titles__item_02"><%= @titles['fast'][0]['title'] %></div>
+    <div class="about-page-slide-titles__item about-page-slide-titles__item_03"><%= @titles['in_touch'][0]['title'] %></div>
   </div>
 </div>
 <div class="about-page-section about-page-section__text">
   <div class="container">
-    <div class="about-page-text">Основным направлением деятельности группы компаний «СИБСТАР» является поставка
-      высококачественного каменного и коксующегося угля с угледобывающих предприятий Российской Федерации.
+    <div class="about-page-text">
+      <%= @titles['about_text'][0]['title'] %>
     </div>
   </div>
 </div>
 <div class="about-page-section about-page-section__info">
   <div class="container">
-    <div class="info-block about-page-info-block">
-      <div class="info-block__image">
-        <img src="assets/about/image-01.jpg" alt="" srcset="assets/about/image-01.jpg 1x, assets/about/image-01@2x.jpg 2x"/>
+    <div class="info-block about-page-info-block about-page-info-block_01">
+      <div class="info-block__image-wrapper">
+        <div class="info-block__image">
+          <img src="/assets/about/image-01.jpg" alt="" srcset="/assets/about/image-01.jpg 1x, /assets/about/image-01@2x.jpg 2x"/>
+        </div>
       </div>
+    </div>
+    <div class="info-block about-page-info-block about-page-info-block_02">
       <div class="info-block__caption">
-        <div class="info-block__title">Преимущества</div>
-        <div class="info-block__text">Благодаря выгодному расположению и совершенной логистики с российских угольных
-          разрезов на Кузбассе, в Сибири и на Дальнем Востоке, мы обеспечиваем удобный доступ к международным рынкам.
+        <div class="info-block__divider"></div>
+        <div class="info-block__title"><%= @titles['advantages'][0]['title'] %></div>
+        <div class="info-block__text">
+          <%= @titles['advantages_desc'][0]['title'] %>
         </div>
-        <div class="info-block__text">Отгрузки энергоносителей осуществляются в адрес производственных гигантов. Наши
-          ключевые партнеры — крупные промышленные предприятия Китая, Индии и Турции.
-        </div>
+        <!--        <div class="info-block__text">Отгрузки энергоносителей осуществляются в адрес производственных гигантов.-->
+        <!--          Наши-->
+        <!--          ключевые партнеры — крупные промышленные предприятия Китая, Индии и Турции.-->
+        <!--        </div>-->
       </div>
     </div>
   </div>
 </div>
 <div class="about-page-section about-page-section__image">
   <div class="about-page-image">
-    <img src="assets/about/image-02.jpg" alt="" srcset="assets/about/image-02.jpg 1x, assets/about/image-02@2x.jpg 2x"/>
+    <img src="/assets/about/image-02.jpg" alt="" srcset="/assets/about/image-02.jpg 1x, /assets/about/image-02@2x.jpg 2x"/>
   </div>
 </div>
 <div class="about-page-section about-page-section__command">
   <div class="about-page-command">
     <div class="container">
-      <div class="about-page-command__title">Команда SibstarGroup</div>
+      <div class="about-page-command__title">
+        <%= @titles['command_title'][0]['title'] %>
+      </div>
     </div>
-    <div class="about-page-command__outer"></div>
+
+    <div class="about-page-command__outer">
+      <% @command.each do |item| %>
+        <div class="about-page-command-item">
+          <div class="about-page-command-item__caption">
+            <div class="about-page-command-item__name"><%= item.person %></div>
+            <div class="about-page-command-item__post"><%= item.desc %></div>
+          </div>
+          <div class="about-page-command-item__image">
+            <% if item.image.attached? %>
+              <img src="/<%= assets_path(item.image) %>" alt=""/>
+            <% elsif !item.base_image_url.blank? %>
+              <img src="/<%= url_for(item.base_image_url) %>" alt=""/>
+            <% else %>
+              <img src="/assets/placeholder.png" alt=""/>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+
+      <!--                <div class="aboutPageCommandItem" command-01="command-01" Ван Лин="Ван Лин" Директор, Гонконг="Директор, Гонконг"></div>-->
+      <!--                <div class="aboutPageCommandItem" command-02="command-02" Баркалов Дмитрий="Баркалов Дмитрий" Директор, Россия="Директор, Россия"></div>-->
+      <!--                <div class="aboutPageCommandItem" command-09="command-09" Ван Тзян="Ван Тзян" Директор, Китай="Директор, Китай"></div>-->
+      <!--                <div class="aboutPageCommandItem" placeholder="placeholder" Меньшов Александр="Меньшов Александр" Руководитель отдела продаж, Россия="Руководитель отдела продаж, Россия"></div>-->
+      <!--                <div class="aboutPageCommandItem" command-03="command-03" Зверева Влада="Зверева Влада" Руководитель отдела-->
+      <!--                <br> по сопровождению клиентов="Руководитель отдела <br> по сопровождению клиентов">-->
+      <!--      </div>-->
+      <!--              <div class="aboutPageCommandItem" command-04="command-04" Иванов Алексей="Иванов Алексей" Руководитель финансового отдела="Руководитель финансового отдела"></div>-->
+      <!--              <div class="aboutPageCommandItem" command-05="command-05" Мухина Галина="Мухина Галина" Заместитель руководителя-->
+      <!--              <br> финансового отдела="Заместитель руководителя <br> финансового отдела">-->
+      <!--    </div>-->
+      <!--    <div class="aboutPageCommandItem" command-06="command-06" Калёнов Андрей="Калёнов Андрей" Ведущий Юрисконсульт="Ведущий Юрисконсульт"></div>-->
+      <!--    <div class="aboutPageCommandItem" command-08="command-08" Артёменко Винера="Артёменко Винера" Руководитель отдела маркетинга и PR="Руководитель отдела маркетинга и PR"></div>-->
+    </div>
   </div>
 </div>

@@ -7,6 +7,14 @@
     position: relative;
     z-index: 10;
   }
+
+  .header-language__item, .header-burger__text {
+    color: #252739;
+  }
+
+  .header:after, .header-burger__icon span {
+    background-color: #252739;
+  }
 }
 
 @import 'about-page-head';
@@ -19,3 +27,4 @@
 @import 'about-page-image';
 @import 'about-page-command';
 @import 'about-page-command-item';
+@import 'about-page-info-block';

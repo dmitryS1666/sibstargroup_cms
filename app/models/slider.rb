@@ -8,6 +8,10 @@ class Slider < ApplicationRecord
   private
 
   def self.items
+    Rails.logger.warn 'I18n.locale'
+    Rails.logger.warn I18n.locale
+    Rails.logger.warn '****************************************'
+
     where(language: I18n.locale)
   end
 

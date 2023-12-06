@@ -22,6 +22,7 @@ Trestle.resource(:titles) do
     column :name
     column :title
     column :language
+    column :page
     actions
   end
 
@@ -36,6 +37,11 @@ Trestle.resource(:titles) do
     end
     row do
       col(sm: 3) { select :language, %w[ru zh en] }
+      if el&.page
+        col(sm: 3) { text_field :page, disabled: true }
+      else
+        col(sm: 3) { text_field :page }
+      end
     end
   end
 end

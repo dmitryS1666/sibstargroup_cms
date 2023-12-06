@@ -5,9 +5,15 @@ Trestle.resource(:titles) do
 
   scopes do
     scope :all, default: true
-    scope :ru, -> { Title.where(language: "ru") }
-    scope :en, -> { Title.where(language: "en") }
-    scope :zh, -> { Title.where(language: "zh") }
+    scope :ru_main, -> { Title.where(language: "ru", page: 'main') }
+    scope :en_main, -> { Title.where(language: "en", page: 'main') }
+    scope :zh_main, -> { Title.where(language: "zh", page: 'main') }
+    scope :ru_about, -> { Title.where(language: "ru", page: 'about') }
+    scope :en_about, -> { Title.where(language: "en", page: 'about') }
+    scope :zh_about, -> { Title.where(language: "zh", page: 'about') }
+    scope :ru_sales, -> { Title.where(language: "ru", page: 'sales') }
+    scope :en_sales, -> { Title.where(language: "en", page: 'sales') }
+    scope :zh_sales, -> { Title.where(language: "zh", page: 'sales') }
   end
 
   scope :all, default: true

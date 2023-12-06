@@ -3,10 +3,10 @@ development:
   encoding: unicode
   pool: 10
   host: <%= ENV.fetch('DATABASE_HOST', 'localhost') %>
-  port: <%= ENV.fetch('DATABASE_PORT', 5434) %>
+  port: <%= ENV.fetch('DATABASE_PORT', 5432) %>
   database: sibstar_g
   username: sushi
-  password: 0590
+  password: password
 
 production:
   adapter: postgresql

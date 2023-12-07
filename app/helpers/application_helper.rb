@@ -13,5 +13,8 @@ module ApplicationHelper
     @coal_grades = CoalGrade.all
     @coal_grade_items = CoalGradeItem.all
     @command = Command.items
+
+    @feedback = Feedback.new
+    @order = Order.new
   end
 end

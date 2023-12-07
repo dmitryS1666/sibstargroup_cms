@@ -81,15 +81,21 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'yourdomain.com' }
+  host = 'https://sibstargroup-9fca5f8e8782.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
+
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+
   config.action_mailer.smtp_settings = {
-    address: 'smtp.example.com',
-    port: 587,
-    domain: 'yourdomain.com',
-    user_name: 'your_username',
-    password: 'your_password',
+    address: 'smtp.mail.ru',
+    port: 465,
+    domain: 'https://sibstargroup-9fca5f8e8782.herokuapp.com', # замените на ваш домен
+    # user_name: 'inbox@sibstargroup.com',
+    user_name: 'inbox@sibstargroup.com',
+    # password: 'rt2o3zYoOPR*',
+    password: 'KgizqattusEyWuLr3SCQ',
     authentication: 'plain',
-    enable_starttls_auto: true
+    tls: true
   }
 end

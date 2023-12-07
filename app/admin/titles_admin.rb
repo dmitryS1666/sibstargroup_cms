@@ -33,7 +33,9 @@ Trestle.resource(:titles) do
       else
         col(sm: 3) { text_field :name }
       end
-      col(sm: 3) { text_field :title }
+      end
+    row do
+      col(sm: 6) { text_area :title }
     end
     row do
       col(sm: 3) { select :language, %w[ru zh en] }

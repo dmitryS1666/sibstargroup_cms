@@ -43,6 +43,7 @@ export const getHTML = (url, callback) => {
  *
  */
 export const formPOST = (url, callback) => {
+  console.log(url);
   const xhr = new XMLHttpRequest();
   xhr.open('POST', url, true);
   xhr.responseType = 'json';

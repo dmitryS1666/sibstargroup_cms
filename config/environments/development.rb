@@ -64,17 +64,33 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
-  # config.action_mailer.default_url_options = { host: 'sibstargroup.com' }
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   address: 'smtp.mail.ru',
-  #   port: 465,
-  #   domain: 'sibstargroup.com',
-  #   user_name: 'inbox',
-  #   password: 'rt2o3zYoOPR*',
-  #   authentication: 'plain',
-  #   enable_starttls_auto: true
-  # }
-  config.action_mailer.delivery_method = :letter_opener
+  host = 'https://sibstargroup-9fca5f8e8782.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mail.ru',
+    port: 465,
+    domain: 'https://sibstargroup-9fca5f8e8782.herokuapp.com', # замените на ваш домен
+    # user_name: 'inbox@sibstargroup.com',
+    user_name: 'inbox@sibstargroup.com',
+    # password: 'rt2o3zYoOPR*',
+    password: 'KgizqattusEyWuLr3SCQ',
+    authentication: 'plain',
+    tls: true
+  }
+
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.yandex.ru',
+  #   port: 465, # или 587, в зависимости от настроек Яндекса
+  #   domain: 'https://geniuschild-41a561615164.herokuapp.com', # замените на ваш домен
+  #   user_name: 'ntartkids.com@yandex.ru',
+  #   password: 'wujjlpixpypsippb',
+  #   authentication: :plain,
+  #   tls: true
+  # }
+
+  # config.action_mailer.delivery_method = :letter_opener
 end

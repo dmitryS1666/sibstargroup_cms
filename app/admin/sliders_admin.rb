@@ -38,7 +38,7 @@ Trestle.resource(:sliders) do
     end
 
     row do
-      col(sm: 3) { file_field :image, as: :file, input_html: { direct_upload: true } }
+      col(sm: 3) { file_field :image, as: :file, direct_upload: true, accept: "image/png, image/gif, image/jpeg" }
       unless slider.base_image_url.blank?
         col(sm: 3) { image_tag slider.base_image_url.gsub('/assets/', ''),
                                style: 'max-width: 100%; height: auto;' }

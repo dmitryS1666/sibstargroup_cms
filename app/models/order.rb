@@ -1,3 +1,5 @@
 class Order < ApplicationRecord
-  validates :name, :email, :message, presence: true
+  validates :coal_name, :basis_supply, :delivery_direction, :destination_station,
+            :name, :email, :message, :count, :organization, :price, :phone,
+            presence: true
 end

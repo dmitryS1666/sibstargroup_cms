@@ -1,0 +1,18 @@
+<cente>
+  <h2>Новый заказ #<%= @order.id %></h2>
+  <hr>
+  <p>Имя: <%= @order.name %></p>
+  <p>Телефон: <%= @order.phone %></p>
+  <p>email: <%= @order.email %></p>
+  <p>Сообщение: <%= @order.message %></p>
+  <p>Сообщение: <%= @order.organization %></p>
+  <hr>
+  <p>Тип угля: <%= @order.coal_name %></p>
+  <p>Тип доставки: <%= @order.basis_supply %></p>
+  <p>Станция отправки: <%= @order.delivery_direction %></p>
+  <p>Станция назначения: <%= @order.destination_station %></p>
+  <p>Кол-во: <%= @order.count %></p>
+  <p>Желаемая цена: <%= @order.price %></p>
+  <hr>
+  <p>Создано: <%= Time.zone.now %></p>
+</cente>

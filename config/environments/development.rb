@@ -59,27 +59,58 @@ Rails.application.configure do
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
+  # Use a real queuing backend for Active Art (and separate queues per environment)
+  # config.active_art.queue_adapter     = :resque
+  # config.active_art.queue_name_prefix = "art_board_#{Rails.env}"
+  config.action_mailer.perform_caching = false
+
+  # Ignore bad email addresses and do not raise email delivery errors.
+  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  config.action_mailer.raise_delivery_errors = true
+
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  config.action_mailer.delivery_method = :smtp
   host = 'https://sibstargroup-9fca5f8e8782.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
 
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
 
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.mail.ru',
-    port: 465,
-    domain: 'https://sibstargroup-9fca5f8e8782.herokuapp.com', # замените на ваш домен
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.yandex.ru',
+  #   port: 465, # или 587, в зависимости от настроек Яндекса
+  #   domain: host,
+  #   user_name: 'ntartkids.com@yandex.ru',
+  #   password: 'wujjlpixpypsippb',
+  #   authentication: :plain,
+  #   tls: true
+  # }
+
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.mail.ru',
+  #   port: 25,
+    # domain: 'https://sibstargroup-9fca5f8e8782.herokuapp.com',
     # user_name: 'inbox@sibstargroup.com',
-    user_name: 'inbox@sibstargroup.com',
     # password: 'rt2o3zYoOPR*',
-    password: 'KgizqattusEyWuLr3SCQ',
-    authentication: 'plain',
-    tls: true
+    # password: 'KgizqattusEyWuLr3SCQ', #приложение
+    # authentication: 'login',
+    # tls: true
+  # }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mail.ru',
+    port:                 465,
+    user_name:            'inbox@sibstargroup.com',
+    password:             'KgizqattusEyWuLr3SCQ',
+    authentication:       'plain',
+    ssl:                   true,
+    open_timeout:         5,
+    read_timeout:         5
   }
 
   # config.action_mailer.smtp_settings = {

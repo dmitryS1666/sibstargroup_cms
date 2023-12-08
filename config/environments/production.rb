@@ -54,6 +54,15 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+  # Use a real queuing backend for Active Art (and separate queues per environment)
+  # config.active_art.queue_adapter     = :resque
+  # config.active_art.queue_name_prefix = "art_board_#{Rails.env}"
+  config.action_mailer.perform_caching = false
+
+  # Ignore bad email addresses and do not raise email delivery errors.
+  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+  config.action_mailer.raise_delivery_errors = true
+
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "sibstargroup_cms_production"
@@ -84,18 +93,17 @@ Rails.application.configure do
   host = 'https://sibstargroup-9fca5f8e8782.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
 
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
 
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mail.ru',
-    port: 465,
-    domain: 'https://sibstargroup-9fca5f8e8782.herokuapp.com', # замените на ваш домен
-    # user_name: 'inbox@sibstargroup.com',
-    user_name: 'inbox@sibstargroup.com',
-    # password: 'rt2o3zYoOPR*',
-    password: 'KgizqattusEyWuLr3SCQ',
-    authentication: 'plain',
-    tls: true
+    address:              'smtp.mail.ru',
+    port:                 465,
+    user_name:            'inbox@sibstargroup.com',
+    password:             'KgizqattusEyWuLr3SCQ',
+    authentication:       'plain',
+    ssl:                   true,
+    open_timeout:         5,
+    read_timeout:         5
   }
 end

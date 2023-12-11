@@ -2,6 +2,10 @@ class Command < ApplicationRecord
   has_one_attached :image
   before_save :remove_attach_img_by_flag
 
+  validates :person, presence: { message: 'can\'t be empty' }
+  validates :desc, presence: { message: 'can\'t be empty' }
+  validates :language, presence: { message: 'should be selected' }
+
   private
 
   def self.items

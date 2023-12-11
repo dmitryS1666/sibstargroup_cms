@@ -48,11 +48,6 @@ Trestle.resource(:news) do
                                style: 'max-width: 100%; height: auto;'
         }
       end
-      # if news.image.attached?
-      #   col(sm: 6) {
-      #     render 'admin/news_admin/image_field', news: news
-      #   }
-      # end
     end
     row do
       col(sm: 3) {}

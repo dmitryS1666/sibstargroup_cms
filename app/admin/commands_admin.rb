@@ -41,13 +41,12 @@ Trestle.resource(:commands) do
 
     row do
       col(sm: 3) { file_field :image, as: :file, input_html: { direct_upload: true } }
-      unless command.base_image_url.blank?
-        col(sm: 3) { image_tag command.base_image_url.gsub('assets/', ''),
-                               style: 'max-width: 100%; height: auto;' }
-      end
       if command.image.attached?
         col(sm: 3) { image_tag main_app.rails_blob_path(command.image),
-                        style: 'max-width: 100%; height: auto;' }
+                               style: 'max-width: 100%; height: auto;' }
+      elsif !command.base_image_url.blank?
+        col(sm: 3) { image_tag command.base_image_url.gsub('assets/', ''),
+                               style: 'max-width: 100%; height: auto;' }
       end
     end
     row do

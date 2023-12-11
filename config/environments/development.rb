@@ -80,48 +80,16 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
 
-  # config.action_mailer.smtp_settings = {
-  #   address: 'smtp.yandex.ru',
-  #   port: 465, # или 587, в зависимости от настроек Яндекса
-  #   domain: host,
-  #   user_name: 'ntartkids.com@yandex.ru',
-  #   password: 'wujjlpixpypsippb',
-  #   authentication: :plain,
-  #   tls: true
-  # }
-
-  # config.action_mailer.smtp_settings = {
-  #   address: 'smtp.mail.ru',
-  #   port: 25,
-    # domain: 'https://sibstargroup-9fca5f8e8782.herokuapp.com',
-    # user_name: 'inbox@sibstargroup.com',
-    # password: 'rt2o3zYoOPR*',
-    # password: 'KgizqattusEyWuLr3SCQ', #приложение
-    # authentication: 'login',
-    # tls: true
-  # }
-
-  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mail.ru',
-    port:                 465,
-    user_name:            'inbox@sibstargroup.com',
-    password:             'KgizqattusEyWuLr3SCQ',
-    authentication:       'plain',
-    ssl:                   true,
-    open_timeout:         5,
-    read_timeout:         5
+    address: 'smtp.mail.ru',
+    port: 465,
+    user_name: 'inbox@sibstargroup.com',
+    password: 'KgizqattusEyWuLr3SCQ', #приложение
+    authentication: 'plain',
+    ssl: true,
+    open_timeout: 5,
+    read_timeout: 5
   }
-
-  # config.action_mailer.smtp_settings = {
-  #   address: 'smtp.yandex.ru',
-  #   port: 465, # или 587, в зависимости от настроек Яндекса
-  #   domain: 'https://geniuschild-41a561615164.herokuapp.com', # замените на ваш домен
-  #   user_name: 'ntartkids.com@yandex.ru',
-  #   password: 'wujjlpixpypsippb',
-  #   authentication: :plain,
-  #   tls: true
-  # }
 
   # config.action_mailer.delivery_method = :letter_opener
 end

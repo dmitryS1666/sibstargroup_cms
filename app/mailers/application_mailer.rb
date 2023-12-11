@@ -1,6 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  # default from: 'inbox@sibstargroup.com'
-  default from: 'ntartkids.com@yandex.ru'
+  default from: 'inbox@sibstargroup.com'
   layout 'mailer'
 end
 

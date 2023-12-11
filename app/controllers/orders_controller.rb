@@ -27,6 +27,8 @@ class OrdersController < ApplicationController
     order_params.delete(:destination_station_china)
     order_params.delete(:destination_station_turkey)
 
+    hash[:created_at] = Time.zone.now
+
     hash.merge(order_params)
   end
 

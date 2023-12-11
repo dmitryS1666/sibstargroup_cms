@@ -9,11 +9,11 @@ class News < ApplicationRecord
   private
 
   def self.items
-    where(language: I18n.locale).limit(3)
+    where(language: I18n.locale).order(created_at: :desc).limit(3)
   end
 
   def self.items_by_locale
-    where(language: I18n.locale)
+    where(language: I18n.locale).order(created_at: :desc)
   end
 
   def remove_attach_img_by_flag

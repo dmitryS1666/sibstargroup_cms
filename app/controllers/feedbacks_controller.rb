@@ -6,6 +6,8 @@ class FeedbacksController < ApplicationController
 
   def create
     @feedback = Feedback.new(feedback_params)
+    @feedback[:created_at] = Time.zone.now
+
     if @feedback.save
       FeedbackMailer.feedback_email(@feedback).deliver_now
       redirect_to root_path, notice: 'Thank you for your message!'

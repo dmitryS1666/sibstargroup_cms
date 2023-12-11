@@ -21,22 +21,38 @@ Trestle.resource(:orders) do
     column :price
     column :phone
     column :message
+    column :created_at, header: "Create Date" do |order|
+      order.created_at.strftime("%Y-%m-%d")
+    end
     actions do
       :show
     end
   end
 
-  # form do |el|
-  #   row do
-  #     if el&.name
-  #       col(sm: 3) { text_field :name, disabled: true }
-  #     else
-  #       col(sm: 3) { text_field :name }
-  #     end
-  #     col(sm: 3) { select :language, %w[ru zh en] }
-  #   end
-  #   row do
-  #     col { editor :text }
-  #   end
-  # end
+  form do |el|
+    row do
+      col(sm: 3) { text_field :coal_name, disabled: true }
+      col(sm: 3) { text_field :basis_supply, disabled: true }
+    end
+    row do
+      col(sm: 3) { text_field :delivery_direction, disabled: true }
+      col(sm: 3) { text_field :destination_station, disabled: true }
+      col(sm: 3) { text_field :count, disabled: true }
+    end
+    row do
+      col(sm: 3) { text_field :name, disabled: true }
+      col(sm: 3) { text_field :organization, disabled: true }
+    end
+    row do
+      col(sm: 3) { text_field :price, disabled: true }
+    end
+    row do
+      col(sm: 3) { text_field :email, disabled: true }
+      col(sm: 3) { text_field :phone, disabled: true }
+    end
+    row do
+      col(sm: 3) { text_field :message, disabled: true }
+      col(sm: 3) { text_field :created_at, disabled: true }
+    end
+  end
 end

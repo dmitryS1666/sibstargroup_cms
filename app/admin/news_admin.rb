@@ -4,7 +4,7 @@ Trestle.resource(:news) do
   end
 
   scopes do
-    scope :all, default: true
+    scope :all, -> { News.all.order(created_at: :desc) }, default: true
     scope :ru, -> { News.where(language: "ru") }
     scope :en, -> { News.where(language: "en") }
     scope :zh, -> { News.where(language: "zh") }
@@ -27,12 +27,18 @@ Trestle.resource(:news) do
       a.edit
       a.delete
     end
+    column :created_at, header: "Create Date" do |news|
+      news.created_at.strftime("%Y-%m-%d")
+    end
   end
 
   form do |news|
     row do
       col(sm: 3) { text_field :title }
       col(sm: 3) { select :language, %w[ru zh en] }
+    end
+    row do
+      col(sm: 3) { datetime_field :created_at }
     end
     row do
       col(sm: 3) { file_field :image, as: :file, input_html: { direct_upload: true } }

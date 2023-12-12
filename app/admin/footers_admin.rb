@@ -27,7 +27,7 @@ Trestle.resource(:footers) do
       col(sm: 3) { select :language, %w[ru zh en] }
     end
     row do
-      col(sm: 9) { editor :title }
+      col(sm: 6) { text_area :title }
     end
   end
 end

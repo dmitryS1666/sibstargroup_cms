@@ -57,7 +57,7 @@ Trestle.resource(:news) do
     end
 
     row do
-      col(sm: 9) { editor :content }
+      col(sm: 9) { text_area :content }
     end
   end
 end

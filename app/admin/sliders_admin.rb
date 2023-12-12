@@ -33,7 +33,7 @@ Trestle.resource(:sliders) do
 
   form do |slider|
     row do
-      col(sm: 6) { editor :text }
+      col(sm: 6) { text_area :text }
       col(sm: 3) { select :language, %w[ru zh en] }
     end
 

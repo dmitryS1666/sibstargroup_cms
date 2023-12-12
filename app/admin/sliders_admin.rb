@@ -38,7 +38,9 @@ Trestle.resource(:sliders) do
     end
 
     row do
-      col(sm: 3) { file_field :image, as: :file, direct_upload: true, accept: "image/png, image/gif, image/jpeg" }
+      col(sm: 3) {
+        file_field :image, as: :file, direct_upload: true, accept: "image/png, image/gif, image/jpeg"
+      }
       if slider.image.attached?
         col(sm: 3) { image_tag main_app.rails_blob_path(slider.image),
                                style: 'max-width: 100%; height: auto;' }

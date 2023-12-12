@@ -40,7 +40,9 @@ Trestle.resource(:commands) do
     end
 
     row do
-      col(sm: 3) { file_field :image, as: :file, input_html: { direct_upload: true } }
+      col(sm: 3) {
+        file_field :image, as: :file, input_html: { direct_upload: true }
+      }
       if command.image.attached?
         col(sm: 3) { image_tag main_app.rails_blob_path(command.image),
                                style: 'max-width: 100%; height: auto;' }

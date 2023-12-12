@@ -38,13 +38,14 @@ Trestle.resource(:slider_sales) do
     end
 
     row do
-      col(sm: 3) { file_field :image, as: :file, input_html: { direct_upload: true } }
-      unless slider.base_image_url.blank?
-        col(sm: 3) { image_tag slider.base_image_url.gsub('/assets/', ''),
-                               style: 'max-width: 100%; height: auto;' }
-      end
+      col(sm: 3) {
+        file_field :image, as: :file, direct_upload: true, accept: "image/png, image/gif, image/jpeg"
+      }
       if slider.image.attached?
         col(sm: 3) { image_tag main_app.rails_blob_path(slider.image),
+                               style: 'max-width: 100%; height: auto;' }
+      elsif !slider.base_image_url.blank?
+        col(sm: 3) { image_tag slider.base_image_url.gsub('/assets/', ''),
                                style: 'max-width: 100%; height: auto;' }
       end
     end

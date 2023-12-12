@@ -88,7 +88,7 @@
           </div>
           <div class="about-page-command-item__image">
             <% if item.image.attached? %>
-              <img src="/<%= assets_path(item.image) %>" alt=""/>
+              <img src="<%= url_for(item.image) %>" alt="" style="max-width: 95%; height: auto;"/>
             <% elsif !item.base_image_url.blank? %>
               <img src="/<%= url_for(item.base_image_url) %>" alt=""/>
             <% else %>
